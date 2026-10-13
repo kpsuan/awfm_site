@@ -4,7 +4,7 @@ import StoryDeck from '@/components/StoryDeck';
 import HeroOrbit from '@/components/HeroOrbit';
 import FilmHero from '@/components/community/FilmHero';
 import FundExplorer from '@/components/FundExplorer';
-import StagePath from '@/components/StagePath';
+import StageExplorer from '@/components/StageExplorer';
 import HomeMotion from '@/components/HomeMotion';
 import QuestionJourney from '@/components/QuestionJourney';
 import SponsorJourney from '@/components/SponsorJourney';
@@ -193,7 +193,7 @@ export default function Home() {
               terminal illnesses.
             </p>
           </div>
-          <StagePath />
+          <StageExplorer />
         </div>
       </section>
 

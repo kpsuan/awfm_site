@@ -5,8 +5,10 @@
     "name": "Permission",
     "tagline": "You're here. That's enough for now.",
     "gain": "Emotional permission to face reality alongside hope.",
+    "description": "Name what you hope for. Name what you fear. Give yourselves permission to walk both roads at once — hope and preparation are both acts of love.",
     "icon": "hand-heart",
     "color": "#b432a3",
+    "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=900&q=70",
     "exercises": [
       {
         "id": "1.1",
@@ -40,8 +42,10 @@
     "name": "Clarity",
     "tagline": "Now you know who you are and what matters.",
     "gain": "A clear understanding of yourself, your values, and what matters most — articulated in words that can travel anywhere.",
+    "description": "Before you can advocate, you have to know what you are advocating for. Replace assumption with articulation.",
     "icon": "compass",
     "color": "#a83eb1",
+    "image": "https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?auto=format&fit=crop&w=900&q=70",
     "exercises": [
       {
         "id": "2.1",
@@ -75,8 +79,10 @@
     "name": "Connection",
     "tagline": "You're not doing this alone. Here is your team.",
     "gain": "A visible, organized team with named roles, defined responsibilities, and mapped relationships.",
+    "description": "Name who's in. Identify the caregiver and the backup decision-maker (often different people, often in different countries). Map the whole team across borders.",
     "icon": "users",
     "color": "#9b4abf",
+    "image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=900&q=70",
     "exercises": [
       {
         "id": "3.1",
@@ -110,8 +116,10 @@
     "name": "Voice",
     "tagline": "Now your loved one's voice can travel without them.",
     "gain": "Care preferences documented, the care recipient's voice made portable — able to travel to hospitals, across borders, into rooms where they cannot be present.",
+    "description": "Working / Not Working assessment, Decision Making Agreement, Communication Chart. Where the Conspiracy of Silence first gets broken — together.",
     "icon": "message-circle",
     "color": "#8e56cd",
+    "image": "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=900&q=70",
     "exercises": [
       {
         "id": "4.1",
@@ -145,8 +153,10 @@
     "name": "Readiness",
     "tagline": "You're organized and prepared.",
     "gain": "Documents gathered, horizons named, the next medical appointment planned.",
+    "description": "The most operational stage. Every document, every gap, every action item with an owner and a deadline. Now / Next / Later horizon planning.",
     "icon": "clipboard-check",
     "color": "#8262db",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=70",
     "exercises": [
       {
         "id": "5.1",
@@ -180,8 +190,10 @@
     "name": "Advocacy",
     "tagline": "You've spoken up.",
     "gain": "Scripts and plans for the conversations you have been putting off — opening line through full encounter plan.",
+    "description": "Stage 6 is a performance stage. First conversation, branching scripts, full advocacy-encounter plan. Asking is planning, not imposing.",
     "icon": "megaphone",
     "color": "#756ee9",
+    "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=900&q=70",
     "exercises": [
       {
         "id": "6.1",
@@ -215,8 +227,10 @@
     "name": "Resilience",
     "tagline": "You know you can keep doing this.",
     "gain": "Burnout caught early, growth named, the team reviewing how care is going.",
+    "description": "Sustaining what you've built. Burnout Early Warning, Reflective Bookend (which auto-populates from Stage 1's Hopes and Fears), Person-Centred Reviews.",
     "icon": "sprout",
     "color": "#697af7",
+    "image": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=900&q=70",
     "exercises": [
       {
         "id": "7.1",

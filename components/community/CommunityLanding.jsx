@@ -100,6 +100,7 @@ export default function CommunityLanding() {
         primary={{ label: 'Join the community', href: COMMUNITY_URL }}
         secondary={{ label: 'See how it works', href: '#experience' }}
         inset
+        image="https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_2000/v1791190625/Dreamy_Bayanihan_at_Sunrise_s80ewz.png"
       />
 
       <div className="cl cl--embed" ref={root}>

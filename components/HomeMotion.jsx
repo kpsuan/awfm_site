@@ -83,25 +83,8 @@ export default function HomeMotion() {
         ScrollTrigger.create({ trigger: sj, start: 'top 70%', once: true, onEnter: () => tl.play() });
       }
 
-      // Advocacy path draws on scroll; stages light as the line reaches them
-      const spath = document.querySelector('.spath');
-      const line = spath && spath.querySelector('.spath__line');
-      if (line && getComputedStyle(spath.querySelector('svg')).display !== 'none') {
-        const stages = [...spath.querySelectorAll('.spath__stage')];
-        const len = line.getTotalLength();
-        const light = (p) => stages.forEach((s, i) => s.classList.toggle('is-lit', p >= i / (stages.length - 1) - 0.02));
-        light(0);
-        gsap.fromTo(line, { strokeDasharray: len, strokeDashoffset: len }, {
-          strokeDashoffset: 0, ease: 'none',
-          scrollTrigger: {
-            trigger: spath, start: 'top 75%', end: 'bottom 50%', scrub: 0.4,
-            onUpdate: (self) => light(self.progress),
-          },
-        });
-      }
-
       return () => {
-        document.querySelectorAll('.spath__stage, .sj-step').forEach((el) => el.classList.add(el.classList.contains('sj-step') ? 'is-on' : 'is-lit'));
+        document.querySelectorAll('.sj-step').forEach((el) => el.classList.add('is-on'));
         document.querySelectorAll('.pd__n').forEach((el) => { if (el.dataset.figure) el.textContent = el.dataset.figure; });
       };
     });

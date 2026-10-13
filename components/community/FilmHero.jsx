@@ -49,7 +49,7 @@ function TypedPrompt({ prompts }) {
 
 // Full-bleed film hero: crossfading footage, glass question box, pink CTA,
 // copy anchored lower-left; shrinks into a rounded card on scroll.
-export default function FilmHero({ kicker, title, sub, prompts, primary, secondary, longTitle = false, inset = false }) {
+export default function FilmHero({ kicker, title, sub, prompts, primary, secondary, longTitle = false, inset = false, image = null }) {
   const root = useRef(null);
   useIsoLayoutEffect(() => {
     const mm = gsap.matchMedia();
@@ -83,8 +83,10 @@ export default function FilmHero({ kicker, title, sub, prompts, primary, seconda
     <div className={`cl cl--embed${inset ? ' cl-herowrap--inset' : ''}`} ref={root}>
       <section className={`cl-hero cl-hero--film${inset ? ' cl-hero--inset' : ''}`}>
         <div className="cl-hero__media" aria-hidden="true">
-          <HeroMontage clips={HERO_VIDEOS} />
-          <div className="cl-hero__scrim" />
+          {image
+            ? <img className="cl-hero__film cl-hero__still is-on" src={image} alt="" />
+            : <HeroMontage clips={HERO_VIDEOS} />}
+          <div className={`cl-hero__scrim${image ? ' cl-hero__scrim--still' : ''}`} />
         </div>
         <div className="cl-hero__inner">
           <span className="cl-eyebrow" data-reveal>{kicker}</span>

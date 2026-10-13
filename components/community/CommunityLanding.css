@@ -1032,3 +1032,15 @@
   padding-inline: clamp(24px, 4vw, 64px);
 }
 .cl-hero--inset .cl-h1 { font-size: clamp(38px, 5vw, 72px); }
+
+/* Still-image hero (community): bayanihan at sunrise, slow Ken Burns drift */
+.cl-hero__still { object-position: 70% 50%; }
+@media (prefers-reduced-motion: no-preference) {
+  .cl-hero__still { animation: cl-kenburns 24s ease-in-out infinite alternate; transform-origin: 70% 50%; }
+}
+@keyframes cl-kenburns { from { transform: scale(1.02); } to { transform: scale(1.12) translateX(-1.5%); } }
+.cl-hero__scrim--still {
+  background:
+    linear-gradient(90deg, rgba(26, 15, 25, 0.78) 0%, rgba(26, 15, 25, 0.5) 42%, rgba(26, 15, 25, 0.08) 75%),
+    linear-gradient(180deg, rgba(26, 15, 25, 0.25) 0%, transparent 30%, rgba(26, 15, 25, 0.35) 100%);
+}
