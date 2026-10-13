@@ -11,6 +11,14 @@ import './StageExplorer.css';
 const LEVEL = { EASY: 'Easy', MODERATE: 'Moderate', DIFFICULT: 'Difficult' };
 const DWELL = 6000;
 
+// Winding path geometry (viewBox 1000 x 230): stops alternate high / low.
+const PTS = STAGES.map((_, i) => ({ x: 70 + i * 143, y: i % 2 ? 150 : 72 }));
+const D = PTS.reduce((d, p, i) => {
+  if (i === 0) return `M ${p.x} ${p.y}`;
+  const a = PTS[i - 1];
+  return `${d} C ${a.x + 70} ${a.y}, ${p.x - 70} ${p.y}, ${p.x} ${p.y}`;
+}, '');
+
 export default function StageExplorer() {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
@@ -33,21 +41,27 @@ export default function StageExplorer() {
   return (
     <div className="se" ref={root} style={{ '--c': st.color }}>
       <div className="se-rail" role="tablist" aria-label="The seven stages">
-        <span className="se-rail__track" aria-hidden="true">
-          <i style={{ width: `${(active / (STAGES.length - 1)) * 100}%` }} />
-        </span>
-        {STAGES.map((s, i) => (
+        <svg viewBox="0 0 1000 230" className="se-path" aria-hidden="true">
+          <defs>
+            <linearGradient id="seFill" x1="0" x2="1">
+              {STAGES.map((x, i) => <stop key={x.key} offset={i / (STAGES.length - 1)} stopColor={x.color} />)}
+            </linearGradient>
+          </defs>
+          <path d={D} className="se-path__track" />
+          <path d={D} className="se-path__fill" pathLength="100" style={{ strokeDashoffset: 100 - (active / (STAGES.length - 1)) * 100 }} />
+        </svg>
+        {STAGES.map((x, i) => (
           <button
-            key={s.key}
+            key={x.key}
             type="button"
             role="tab"
             aria-selected={active === i}
-            className={`se-stop${i < active ? ' is-done' : ''}${i === active ? ' is-active' : ''}`}
-            style={{ '--sc': s.color }}
+            className={`se-stop${i < active ? ' is-done' : ''}${i === active ? ' is-active' : ''}${i % 2 ? ' is-low' : ''}`}
+            style={{ '--sc': x.color, left: `${(PTS[i].x / 1000) * 100}%`, top: `${(PTS[i].y / 230) * 100}%` }}
             onClick={() => pick(i)}
           >
-            <b>{s.number}</b>
-            <span>{s.name}</span>
+            <b>{x.number}</b>
+            <span>{x.name}</span>
           </button>
         ))}
       </div>

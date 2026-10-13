@@ -232,11 +232,6 @@ export default function CareTeamShowcase() {
     <div className={`ct-track${scrollMode ? ' is-scroll' : ''}`} ref={track} style={{ '--n': FEATURES.length }}>
     <div className="ct" ref={root}>
       <div className="ct-list" role="tablist" aria-label="Care team features">
-        {scrollMode && (
-          <span className="ct-progress" aria-hidden="true">
-            <i style={{ transform: `scaleY(${(active + 1) / FEATURES.length})` }} />
-          </span>
-        )}
         {FEATURES.map((f, i) => (
           <button
             key={f.title}

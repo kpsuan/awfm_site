@@ -215,5 +215,3 @@
   margin-top: 40px;
 }
 .ct-list { position: relative; }
-.ct-progress { position: absolute; left: -14px; top: 10px; bottom: 10px; width: 2px; border-radius: 2px; background: #ece3eb; }
-.ct-progress i { position: absolute; inset: 0; border-radius: 2px; background: linear-gradient(#b432a3, #ae59cf); transform-origin: top; transition: transform 0.4s ease; }

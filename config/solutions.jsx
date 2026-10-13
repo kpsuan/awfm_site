@@ -26,7 +26,7 @@ export const SOLUTIONS = [
         icon: p(<><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" /></>),
       },
       {
-        title: 'Witnesses & custodians',
+        title: 'Witness & Custodian',
         body: 'Affirm the family’s decisions and run Care Fund approvals and releases.',
         href: `${HELP_URL}#learn-by-role`,
         icon: p(<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" />),
