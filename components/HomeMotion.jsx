@@ -60,6 +60,29 @@ export default function HomeMotion() {
         ScrollTrigger.create({ trigger: pool, start: 'top 75%', once: true, onEnter: () => tl.play() });
       }
 
+      // Sponsor journey: the €30 arrives, the plan unlocks, the wall rises
+      const sj = document.querySelector('.sj');
+      if (sj) {
+        const q = (sel) => sj.querySelector(sel);
+        const steps = [...sj.querySelectorAll('.sj-step')];
+        const on = (i) => steps.forEach((st, k) => st.classList.toggle('is-on', k <= i));
+        on(-1);
+        gsap.set(q('.sj-pill--need'), { opacity: 1 });
+        gsap.set(q('.sj-pill--done'), { opacity: 0 });
+        gsap.set(q('.sj-wall'), { opacity: 0 });
+        const tl = gsap.timeline({ paused: true });
+        tl.call(() => on(0), null, 0)
+          .call(() => on(1), null, 0.9)
+          .fromTo(q('.sj-coin'), { opacity: 0, scale: 0.4, y: -30 }, { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: 'back.out(2)' }, 1)
+          .call(() => on(2), null, 2)
+          .to(q('.sj-coin'), { opacity: 0, scale: 0.6, duration: 0.35 }, 2)
+          .to(q('.sj-pill--need'), { opacity: 0, duration: 0.3 }, 2.1)
+          .to(q('.sj-pill--done'), { opacity: 1, duration: 0.4 }, 2.3)
+          .call(() => on(3), null, 3.4)
+          .to(q('.sj-wall'), { opacity: 1, duration: 0.8, ease: 'power2.out' }, 3.4);
+        ScrollTrigger.create({ trigger: sj, start: 'top 70%', once: true, onEnter: () => tl.play() });
+      }
+
       // Advocacy path draws on scroll; stages light as the line reaches them
       const spath = document.querySelector('.spath');
       const line = spath && spath.querySelector('.spath__line');
@@ -78,7 +101,7 @@ export default function HomeMotion() {
       }
 
       return () => {
-        document.querySelectorAll('.spath__stage').forEach((el) => el.classList.add('is-lit'));
+        document.querySelectorAll('.spath__stage, .sj-step').forEach((el) => el.classList.add(el.classList.contains('sj-step') ? 'is-on' : 'is-lit'));
         document.querySelectorAll('.pd__n').forEach((el) => { if (el.dataset.figure) el.textContent = el.dataset.figure; });
       };
     });

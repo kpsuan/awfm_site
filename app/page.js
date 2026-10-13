@@ -1,4 +1,4 @@
-import { REGISTER_URL } from '@/config/site';
+import { REGISTER_URL, LOGIN_URL, SPONSOR_URL } from '@/config/site';
 import Reveal from '@/components/Reveal';
 import StoryDeck from '@/components/StoryDeck';
 import HeroOrbit from '@/components/HeroOrbit';
@@ -7,6 +7,7 @@ import FundExplorer from '@/components/FundExplorer';
 import StagePath from '@/components/StagePath';
 import HomeMotion from '@/components/HomeMotion';
 import QuestionJourney from '@/components/QuestionJourney';
+import SponsorJourney from '@/components/SponsorJourney';
 import './home.css';
 
 export const metadata = {
@@ -197,22 +198,44 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Sponsor ── */}
+      {/* ── Sponsor a care team ── */}
       <section className="section section--cream">
-        <div className="wrap home-sponsor">
-          <Reveal>
+        <div className="wrap home-split home-sponsor">
+          <div className="home-sponsor__copy">
             <span className="eyebrow">Sponsor a care team</span>
-            <h2 className="h2">Stand behind a family you’ll never meet.</h2>
+            <h2 className="h2">€30 opens a family’s whole care plan.</h2>
             <p className="lead">
-              Sponsors can support a care team’s journey, helping families who would
-              otherwise face end-of-life costs alone get the planning, funding, and
-              learning they need.
+              Paid once, for the whole team. Your gift covers their platform fee — it never
+              becomes cash, and nothing about the family flows back to you.
             </p>
-          </Reveal>
-          <Reveal className="home-cta" delay={120}>
-            <a className="btn" href={REGISTER_URL}>Get Started Free</a>
-            <a className="btn btn--ghost" href="/community/">Join the community</a>
-          </Reveal>
+            <div className="home-cta">
+              <a className="btn" href={SPONSOR_URL}>Sponsor a family — €30</a>
+              <a className="btn btn--ghost" href={`${SPONSOR_URL}/organizations`}>Sponsoring as an organization?</a>
+            </div>
+          </div>
+          <SponsorJourney />
+        </div>
+      </section>
+
+      {/* ── Final: go to the app and sign up ── */}
+      <section className="home-signup">
+        <div className="wrap home-signup__grid">
+          <div>
+            <h2 className="h2">Start your family’s care plan today.</h2>
+            <p>
+              It’s free to begin. Create your account, bring your three circles of care
+              together, and answer your first question as a family.
+            </p>
+            <div className="home-cta">
+              <a className="btn btn--light" href={REGISTER_URL}>Create your free account</a>
+              <a className="btn btn--line" href={LOGIN_URL}>Sign in</a>
+            </div>
+          </div>
+          <ol className="home-signup__steps">
+            <li><b>1</b><div><strong>Create your account</strong><span>Sign up with your email — it takes a minute.</span></div></li>
+            <li><b>2</b><div><strong>Start your care team</strong><span>Invite your immediate family, your family back home, and your chosen family.</span></div></li>
+            <li><b>3</b><div><strong>Answer your first question</strong><span>“Is A Whole Family Matter for you?” — together.</span></div></li>
+          </ol>
         </div>
       </section>
     </>

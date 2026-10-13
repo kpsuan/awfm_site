@@ -73,8 +73,7 @@
 }
 @media (max-width: 860px) { .stages { grid-template-columns: repeat(4, 1fr); row-gap: 24px; } }
 
-.home-sponsor { display: grid; gap: 30px; justify-items: start; }
-.home-sponsor > div:first-child { display: grid; gap: 18px; max-width: 760px; }
+.home-sponsor__copy { display: grid; gap: 18px; justify-items: start; }
 .home-cta { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* ── The problem: one typographic row per failure ── */
@@ -135,3 +134,36 @@
 }
 .diff__item h3 { font-size: 24px; font-weight: 500; line-height: 1.2; }
 .diff__item p { font-size: 16.5px; color: var(--muted); max-width: 48ch; }
+
+/* ── Final sign-up band ── */
+.home-signup {
+  color: #fff;
+  background:
+    radial-gradient(620px 420px at 85% 10%, rgba(174, 89, 207, 0.35), transparent 65%),
+    radial-gradient(520px 380px at 5% 100%, rgba(180, 50, 163, 0.28), transparent 65%),
+    var(--dark);
+}
+.home-signup .wrap { padding-block: clamp(80px, 12vh, 130px); }
+.home-signup__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(36px, 6vw, 90px);
+  align-items: center;
+}
+@media (max-width: 860px) { .home-signup__grid { grid-template-columns: 1fr; } }
+.home-signup__grid > div { display: grid; gap: 20px; justify-items: start; }
+.home-signup .h2 { color: #fff; font-size: clamp(32px, 4.4vw, 56px); }
+.home-signup p { font-size: 19px; color: rgba(255, 255, 255, 0.72); max-width: 46ch; }
+.home-signup__steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+.home-signup__steps li {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 18px 20px; border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.home-signup__steps b {
+  width: 32px; height: 32px; border-radius: 99px; flex-shrink: 0;
+  display: grid; place-items: center; font-size: 15px; color: #fff;
+  background: linear-gradient(180deg, #b432a3, #ae59cf);
+}
+.home-signup__steps strong { display: block; font-family: var(--font-heading); font-size: 18px; font-weight: 500; color: #fff; }
+.home-signup__steps span { font-size: 15px; color: rgba(255, 255, 255, 0.65); }

@@ -5,6 +5,7 @@ export const SITE_URL = 'https://awholefamilymatter.org';
 export const REGISTER_URL = `${APP_URL}/register`;
 export const LOGIN_URL = `${APP_URL}/login`;
 export const COMMUNITY_URL = 'https://awholefamilymatter.com/';
+export const SPONSOR_URL = `${APP_URL}/sponsor-a-care-team`;
 
 // Same public-record values the app footer renders (app: config/legalEntity.js).
 export const LEGAL_ENTITY = {
