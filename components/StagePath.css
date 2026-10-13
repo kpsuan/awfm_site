@@ -1,0 +1,26 @@
+.spath { margin: 48px 0 0; }
+.spath svg { width: 100%; height: auto; display: block; overflow: visible; }
+.spath__track { fill: none; stroke: rgba(38, 32, 59, 0.1); stroke-width: 10; stroke-linecap: round; }
+.spath__line { fill: none; stroke: #c13fae; stroke-width: 4; stroke-linecap: round; }
+.spath__stage circle { fill: #f3ecf4; stroke: #fff; stroke-width: 4; transition: fill 0.45s ease; }
+.spath__n { font-family: var(--font-heading); font-size: 20px; font-weight: 600; fill: var(--muted); transition: fill 0.45s ease; }
+.spath__label { font-family: var(--font-heading); font-size: 16px; fill: var(--ink); }
+.spath__stage.is-lit circle { fill: #b432a3; }
+.spath__stage.is-lit .spath__n { fill: #fff; }
+.spath__list { display: none; }
+@media (max-width: 700px) {
+  .spath svg { display: none; }
+  .spath__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .spath__list li { display: flex; align-items: center; gap: 12px; font-family: var(--font-heading); font-size: 16px; }
+  .spath__list b {
+    width: 40px; height: 40px; border-radius: 99px; display: grid; place-items: center;
+    color: #fff; background: #b432a3; font-size: 16px;
+  }
+}

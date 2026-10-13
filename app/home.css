@@ -19,21 +19,56 @@
 
 .home-intro { display: grid; gap: 18px; max-width: 760px; }
 
+.cp-wrap { position: relative; margin-top: 56px; --cp: 1; }
+.cp-track {
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  width: calc((100% - 60px) * 2 / 3 + 60px - 18px);
+  height: 2px;
+  background: var(--line);
+}
+.cp-track i {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  transform: scaleX(var(--cp));
+  transform-origin: left;
+}
 .checkpoints {
-  margin-top: 56px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  counter-reset: cp;
+  gap: 30px;
 }
 .checkpoint {
+  position: relative;
   display: grid;
   gap: 12px;
   align-content: start;
-  padding: 6px 30px 6px 0;
-  border-left: none;
+  padding-top: 40px;
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
 }
-.checkpoint + .checkpoint { padding-left: 30px; border-left: 1px solid var(--line); }
+.checkpoint.is-lit { opacity: 1; }
+.checkpoint__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 99px;
+  background: #fff;
+  border: 2px solid var(--line);
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.checkpoint.is-lit .checkpoint__dot {
+  background: var(--brand);
+  border-color: var(--brand);
+  box-shadow: 0 0 0 6px rgba(180, 50, 163, 0.14);
+}
 .checkpoint__n {
   font-family: var(--font-heading);
   font-size: 13px;
@@ -53,9 +88,8 @@
   color: var(--ink);
 }
 @media (max-width: 860px) {
-  .checkpoints { grid-template-columns: 1fr; gap: 30px; }
-  .checkpoint, .checkpoint + .checkpoint { padding: 0; border-left: none; }
-  .checkpoint + .checkpoint { padding-top: 30px; border-top: 1px solid var(--line); }
+  .checkpoints { grid-template-columns: 1fr; gap: 34px; }
+  .cp-track { display: none; }
 }
 .home-note { margin-top: 48px; max-width: 760px; }
 .home-note p { font-size: 18px; color: var(--muted); }
@@ -69,15 +103,17 @@
 }
 .home-split > div:first-child { display: grid; gap: 18px; }
 @media (max-width: 860px) { .home-split { grid-template-columns: 1fr; } }
-.funds { display: grid; }
-.fund {
+.funds {
+  margin: 48px 0 0;
+  padding: 0;
+  list-style: none;
   display: grid;
-  gap: 4px;
-  padding-block: 20px;
-  border-top: 1px solid var(--line);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
 }
-.fund:first-child { border-top: none; padding-top: 0; }
-.fund strong { font-family: var(--font-heading); font-size: 24px; font-weight: 500; color: var(--ink); }
+@media (max-width: 860px) { .funds { grid-template-columns: 1fr 1fr; } }
+.fund { display: grid; gap: 4px; align-content: start; padding-top: 16px; border-top: 1px solid var(--line); }
+.fund strong { font-family: var(--font-heading); font-size: 19px; font-weight: 500; color: var(--ink); }
 .fund span { font-size: 16px; color: var(--muted); }
 
 .stages {

@@ -3,6 +3,9 @@ import Reveal from '@/components/Reveal';
 import StoryDeck from '@/components/StoryDeck';
 import HeroOrbit from '@/components/HeroOrbit';
 import FilmHero from '@/components/community/FilmHero';
+import FundPool from '@/components/FundPool';
+import StagePath from '@/components/StagePath';
+import HomeMotion from '@/components/HomeMotion';
 import './home.css';
 
 export const metadata = {
@@ -96,6 +99,8 @@ export default function Home() {
         secondary={{ label: 'See why it matters', href: '#problem' }}
       />
 
+      <HomeMotion />
+
       {/* ── The problem: pain, debt, silence, each answered by a pillar ── */}
       <section id="problem" className="section home-problem">
         <div className="wrap">
@@ -152,16 +157,20 @@ export default function Home() {
               question moves through three checkpoints.
             </p>
           </div>
-          <ol className="checkpoints">
-            {CHECKPOINTS.map((c, i) => (
-              <Reveal as="li" className="checkpoint" key={c.n} delay={i * 120}>
-                <span className="checkpoint__n">Checkpoint {c.n}</span>
-                <h3>{c.title}</h3>
-                <p>{c.body}</p>
-                {c.quotes.map((q) => <blockquote key={q}>“{q}”</blockquote>)}
-              </Reveal>
-            ))}
-          </ol>
+          <div className="cp-wrap">
+            <span className="cp-track" aria-hidden="true"><i /></span>
+            <ol className="checkpoints">
+              {CHECKPOINTS.map((c) => (
+                <li className="checkpoint is-lit" key={c.n}>
+                  <span className="checkpoint__dot" aria-hidden="true" />
+                  <span className="checkpoint__n">Checkpoint {c.n}</span>
+                  <h3>{c.title}</h3>
+                  <p>{c.body}</p>
+                  {c.quotes.map((q) => <blockquote key={q}>“{q}”</blockquote>)}
+                </li>
+              ))}
+            </ol>
+          </div>
           <Reveal className="home-note">
             <p>
               At every checkpoint, family members choose from options supported by medical
@@ -187,12 +196,15 @@ export default function Home() {
               end-of-life care, with shared visibility and family-agreed release.
             </p>
           </Reveal>
+          <FundPool />
+        </div>
+        <div className="wrap">
           <ul className="funds">
-            {FUNDS.map((f, i) => (
-              <Reveal as="li" className="fund" key={f.name} delay={i * 90}>
+            {FUNDS.map((f) => (
+              <li className="fund" key={f.name}>
                 <strong>{f.name}</strong>
                 <span>{f.desc}</span>
-              </Reveal>
+              </li>
             ))}
           </ul>
         </div>
@@ -213,11 +225,7 @@ export default function Home() {
               terminal illnesses.
             </p>
           </div>
-          <Reveal className="stages" aria-label="The seven stages">
-            {['Permission', 'Clarity', 'Connection', 'Voice', 'Readiness', 'Advocacy', 'Resilience'].map((st, i) => (
-              <span className="stage" key={st}><b>{i + 1}</b>{st}</span>
-            ))}
-          </Reveal>
+          <StagePath />
         </div>
       </section>
 

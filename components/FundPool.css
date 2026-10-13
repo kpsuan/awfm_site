@@ -1,0 +1,9 @@
+.pool { margin: 0; }
+.pool svg { width: 100%; height: auto; display: block; overflow: visible; }
+.pool__member circle { fill: #fff; stroke: rgba(180, 50, 163, 0.35); stroke-width: 1.5; }
+.pool__ini { font-family: var(--font-heading); font-size: 17px; font-weight: 600; fill: var(--brand); }
+.pool__who { font-family: var(--font-heading); font-size: 12.5px; fill: var(--muted); }
+.pool__jar { fill: #fff; stroke: rgba(38, 32, 59, 0.14); stroke-width: 1.5; }
+.pool__fill { fill: url(#poolFill); }
+.pool__name { font-family: var(--font-heading); font-size: 12.5px; fill: var(--ink); }
+.pool__coin { fill: #f6a51d; stroke: #fff; stroke-width: 2; }
