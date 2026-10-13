@@ -4,10 +4,11 @@ description: "In our free community, every hard question follows the same guided
 date: "2026-10-05"
 category: "Community"
 author: "A Whole Family Matter"
+cta: "community"
 cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791187404/b94fc3aa09ef24e08186dd440d436b2d_obahds.jpg"
 ---
 
-A Whole Family Matter's community is not a typical course — and it's not meant to be. It's a guided decision-learning space for some of the most difficult and personal questions you may ever face: serious illness, end-of-life care, and what truly matters.
+[A Whole Family Matter's community](https://awholefamilymatter.com/) is not a typical course — and it's not meant to be. It's a guided decision-learning space for some of the most difficult and personal questions you may ever face: serious illness, end-of-life care, and what truly matters.
 
 Here, learning is about **clarifying your values, understanding your reactions, and preparing for real-life decisions.**
 

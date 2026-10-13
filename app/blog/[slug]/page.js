@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getAllPosts, getPost, formatDate } from '@/lib/blog';
-import { REGISTER_URL, SITE_URL } from '@/config/site';
+import { REGISTER_URL, SITE_URL, COMMUNITY_URL } from '@/config/site';
 import '../blog.css';
 
 export function generateStaticParams() {
@@ -46,13 +46,23 @@ export default function Post({ params }) {
       <div className="bl-wrap"><div className="bl-cover" style={{ backgroundImage: `url(${post.cover})` }} /></div>
       <div className="bl-prose" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-      <div className="bl-wrap bl-cta">
-        <div>
-          <h2>Start your family’s care plan</h2>
-          <p>The first nine questions are free. Bring your three circles of care together.</p>
+      {post.cta === 'community' ? (
+        <div className="bl-wrap bl-cta">
+          <div>
+            <h2>Learn it together, for free</h2>
+            <p>Courses, guided questions and support groups for medical migrants and their families.</p>
+          </div>
+          <a className="btn" href={COMMUNITY_URL}>Join the free community</a>
         </div>
-        <a className="btn" href={REGISTER_URL}>Get Started Free</a>
-      </div>
+      ) : (
+        <div className="bl-wrap bl-cta">
+          <div>
+            <h2>Start your family’s care plan</h2>
+            <p>The first nine questions are free. Bring your three circles of care together.</p>
+          </div>
+          <a className="btn" href={REGISTER_URL}>Get Started Free</a>
+        </div>
+      )}
 
       {more.length > 0 && (
         <div className="bl-wrap bl-more-posts">

@@ -4,6 +4,7 @@ description: "In our collectivist cultures, the family decides. That love has a 
 date: "2026-10-12"
 category: "Global problems"
 author: "A Whole Family Matter"
+cta: "community"
 cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791187465/59c4149d07a67ba0f32acc98ef1bde0d_utvwmp.jpg"
 ---
 
@@ -23,6 +24,6 @@ The silence is a documented phenomenon, not a stereotype. And migration does not
 
 Breaking the silence doesn't mean overriding the family. It means giving the whole family a way to have the conversation together — especially when they disagree. That is what every question in A Whole Family Matter is designed to do: each family member states where they stand, names what's hard, and says what would change their mind.
 
-Our free community course, *The Conspiracy of Silence*, goes deeper: why diaspora families suffer in silence at end of life, and what it would take to make the words *"my family needs to plan"* sayable.
+Our free community course, [*The Conspiracy of Silence*](https://awholefamilymatter.com/spaces/23296608/content), goes deeper: why diaspora families suffer in silence at end of life, and what it would take to make the words *"my family needs to plan"* sayable.
 
 **#BreakTheSilence**

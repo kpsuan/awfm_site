@@ -4,6 +4,7 @@ description: "Twelve countries send the world its healthcare workers. Their fami
 date: "2026-10-08"
 category: "Global problems"
 author: "A Whole Family Matter"
+cta: "community"
 cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791205716/Motion-Blurred_Cartographic_Portrait_ite4jd.png"
 ---
 
@@ -15,7 +16,7 @@ They are the world's biggest exporters of healthcare workers, in order of magnit
 
 The countries that train and send the carers the world depends on are the same countries where dying well is hardest. A nurse can deliver a good death every working day abroad — and still be unable to secure one for a parent at home.
 
-Our free course *The Worst Places to Die* asks **where** that suffering concentrates, and why in these twelve countries — and not other poor countries. It walks through **ten structural factors** and the **three feedback loops** that lock them together, including which factors are most acute in your own origin country.
+Our free course [*The Worst Places to Die*](https://awholefamilymatter.com/spaces/23923002/content) asks **where** that suffering concentrates, and why in these twelve countries — and not other poor countries. It walks through **ten structural factors** and the **three feedback loops** that lock them together, including which factors are most acute in your own origin country.
 
 ## Death debt is structural
 

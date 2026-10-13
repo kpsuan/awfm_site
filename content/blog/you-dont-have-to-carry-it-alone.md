@@ -4,6 +4,7 @@ description: "Caring for family from far away is heavy. Our community support gr
 date: "2026-10-04"
 category: "Community"
 author: "A Whole Family Matter"
+cta: "community"
 cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791190625/Dreamy_Bayanihan_at_Sunrise_s80ewz.png"
 ---
 
@@ -19,7 +20,7 @@ This isn't a support group where you sit in a circle and recite your troubles. I
 
 ## ICP Care Team Leaders
 
-At the heart of it is one group: **ICP Care Team Leaders** — the people a few steps ahead, who guide other families and hold each other up while they do it.
+At the heart of it is one group: **[ICP Care Team Leaders](https://awholefamilymatter.com/spaces/23923057)** — the people a few steps ahead, who guide other families and hold each other up while they do it.
 
 They help each other redistribute the load of a world carried almost entirely by women. One day, some of them may be you.
 

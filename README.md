@@ -36,6 +36,7 @@ URL (`/blog/<slug>/`). Start it with front matter:
     author: "A Whole Family Matter"
     cover: "https://res.cloudinary.com/.../image.jpg"
     draft: true        # optional — hides the post until removed
+    cta: "community"   # optional — end with "Join the free community"
     ---
 
 Then write the article in Markdown (## headings, **bold**, lists, links).

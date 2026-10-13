@@ -4,18 +4,19 @@ description: "Our free Global Problems courses each answer one question — and 
 date: "2026-10-09"
 category: "Global problems"
 author: "A Whole Family Matter"
+cta: "community"
 cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791187465/59c4149d07a67ba0f32acc98ef1bde0d_utvwmp.jpg"
 ---
 
 You work a shift in London or Paris, Rotterdam or Lisbon, Madrid or Brussels. You deliver a good death every working day. Then you call home — and your family is dying inside a system that does not have what you have.
 
-**You live on both sides of it.** Our free community's *Global Problems* collection is the catalogue of what the evidence shows is broken: three courses, each built on its own evidence base, each written for you.
+**You live on both sides of it.** Our free community's [*Global Problems*](https://awholefamilymatter.com/spaces/24008273/page) collection is the catalogue of what the evidence shows is broken: three courses, each built on its own evidence base, each written for you.
 
 ## Three questions
 
-- **The Conspiracy of Silence asks why.** Why diaspora families suffer at end of life. Why a terminal diagnosis vanishes somewhere between the family, the physician, and a system with no room for the conversation. Why migration does not dissolve it. *#BreakTheSilence*
-- **The Worst Places to Die asks where.** Where that suffering concentrates, and why in twelve specific countries. Ten structural factors, three feedback loops, and a number for the cost of dying. *#DeathDebtIsStructural*
-- **The Six-Headed Hydra asks how.** How the same pattern replicates across six colonial language pipelines — English, French, Belgian, Dutch, Portuguese, Spanish — and how it regenerates. *#FightTheHydra*
+- **[The Conspiracy of Silence](https://awholefamilymatter.com/spaces/23296608/content) asks why.** Why diaspora families suffer at end of life. Why a terminal diagnosis vanishes somewhere between the family, the physician, and a system with no room for the conversation. Why migration does not dissolve it. *#BreakTheSilence*
+- **[The Worst Places to Die](https://awholefamilymatter.com/spaces/23923002/content) asks where.** Where that suffering concentrates, and why in twelve specific countries. Ten structural factors, three feedback loops, and a number for the cost of dying. *#DeathDebtIsStructural*
+- **[The Six-Headed Hydra](https://awholefamilymatter.com/spaces/23923011/content) asks how.** How the same pattern replicates across six colonial language pipelines — English, French, Belgian, Dutch, Portuguese, Spanish — and how it regenerates. *#FightTheHydra*
 
 ## Three silences
 

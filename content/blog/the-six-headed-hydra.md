@@ -4,10 +4,11 @@ description: "The same pattern of end-of-life suffering repeats across six colon
 date: "2026-10-07"
 category: "Global problems"
 author: "A Whole Family Matter"
+cta: "community"
 cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791187404/736f8c69c57e8174bab610b31793f5cd_slz7ik.jpg"
 ---
 
-You're living inside a system that is hundreds of years old. Our free course *The Six-Headed Hydra* asks **how** the end-of-life suffering of diaspora families keeps happening — and why it keeps coming back.
+You're living inside a system that is hundreds of years old. Our free course [*The Six-Headed Hydra*](https://awholefamilymatter.com/spaces/23923011/content) asks **how** the end-of-life suffering of diaspora families keeps happening — and why it keeps coming back.
 
 ## Six pipelines
 

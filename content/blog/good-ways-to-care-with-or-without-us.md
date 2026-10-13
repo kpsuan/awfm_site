@@ -4,6 +4,7 @@ description: "Proactive family involvement, shared decision-making and advance c
 date: "2026-10-06"
 category: "Guides"
 author: "A Whole Family Matter"
+cta: "community"
 cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791266530/Chairs_Beneath_a_Golden_Sky_m9bdhc.png"
 ---
 
@@ -27,9 +28,9 @@ Talking through what your family wants **ahead of time**, so love can guide the 
 
 Each practice has its own space in our community, built for proactive family leaders:
 
-- **Proactive Family Involvement** (27 topics) starts with *Positive Interdependence 101 for Proactive Families* — how communication helps it grow, the challenges of interdependent living, and why proactive involvement matters for living well with a terminal illness. It also includes *ACP: A Story of Trust Within the Family* and Kay Adams' *Bedside Witness*.
-- **Shared Decision-Making** (24 topics) covers proven models and decision aids families and clinicians can build together, including shared decision-making for people living with dementia.
-- **Advance Care Planning** (37 topics) includes *Advance Care Planning with Life Story Work* and a chapter-by-chapter guide to *Hope for the Best, Plan for the Rest* — beginning with *Walk Two Roads*, *Zoom Out* and *Know Your Style*.
+- **[Proactive Family Involvement](https://awholefamilymatter.com/spaces/19100533/content)** (27 topics) starts with *Positive Interdependence 101 for Proactive Families* — how communication helps it grow, the challenges of interdependent living, and why proactive involvement matters for living well with a terminal illness. It also includes *ACP: A Story of Trust Within the Family* and Kay Adams' *Bedside Witness*.
+- **[Shared Decision-Making](https://awholefamilymatter.com/spaces/19119769/content)** (24 topics) covers proven models and decision aids families and clinicians can build together, including shared decision-making for people living with dementia.
+- **[Advance Care Planning](https://awholefamilymatter.com/spaces/19144527/content)** (37 topics) includes *Advance Care Planning with Life Story Work* and a chapter-by-chapter guide to *Hope for the Best, Plan for the Rest* — beginning with *Walk Two Roads*, *Zoom Out* and *Know Your Style*.
 
 Each space closes with a **2026 systematic review of leading tools and solutions**: the evidence on whether the practice works, how it adapts across cultures and borders, what good looks like, and the research gaps that shape our own evidence agenda.
 
