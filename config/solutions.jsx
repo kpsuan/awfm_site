@@ -9,15 +9,9 @@ export const SOLUTIONS = [
     items: [
       {
         title: 'Medical migrants & their care teams',
-        body: 'Lead your immediate family, your family back home, and your chosen family as one care team — from wherever you work.',
+        body: 'Lead your immediate family, your family back home, and your chosen family as one care team — with a Leader, a Witness and a shared Care Fund.',
         href: REGISTER_URL,
         icon: p(<><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0" /><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6" /></>),
-      },
-      {
-        title: 'Leaders & officers',
-        body: 'Coordinate the team, witness its decisions, and run Care Fund approvals and releases.',
-        href: `${HELP_URL}#learn-by-role`,
-        icon: p(<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" />),
       },
       {
         title: 'ICP Facilitator Network',
