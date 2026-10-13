@@ -122,7 +122,6 @@ export default function Team() {
                 <h3>{m.name}</h3>
                 <span className="tm-role">{m.role}</span>
                 <span className="tm-school">{m.school}</span>
-                <p>{m.bio}</p>
               </article>
             ))}
             <article>
