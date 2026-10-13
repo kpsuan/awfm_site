@@ -1,4 +1,5 @@
 import Reveal from '@/components/Reveal';
+import WhyWeExist from '@/components/community/WhyWeExist';
 import { REGISTER_URL } from '@/config/site';
 import '../inner.css';
 
@@ -23,29 +24,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section--cream">
-        <div className="wrap prose-grid">
-          <Reveal>
-            <span className="eyebrow">Why we exist</span>
-            <h2 className="h2">The world’s worst places to die.</h2>
-          </Reveal>
-          <Reveal className="prose" delay={100}>
-            <p>
-              We fact-checked 1,041,387 medical migrants from 39 countries in 2020/21. Twelve
-              countries — the Philippines, Nigeria, Pakistan, India, Zimbabwe, Bangladesh,
-              Nepal, Ghana, Kenya, Jamaica, Ethiopia, and South Africa — are the world’s
-              biggest exporters of healthcare workers. Their families back home pay the highest
-              cost for end-of-life care while getting the worst quality of death.
-            </p>
-            <p>
-              All of them share collectivist family values. Because the family, not the
-              patient, makes decisions in our cultures, 77 to 98 percent of our terminal
-              patients don’t know they’re dying. They are kept safe from the truth by families
-              who love them.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <WhyWeExist />
 
       <section className="section">
         <div className="wrap prose-grid">

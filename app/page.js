@@ -2,6 +2,7 @@ import { REGISTER_URL } from '@/config/site';
 import Reveal from '@/components/Reveal';
 import StoryDeck from '@/components/StoryDeck';
 import HeroOrbit from '@/components/HeroOrbit';
+import FilmHero from '@/components/community/FilmHero';
 import './home.css';
 
 export const metadata = {
@@ -85,24 +86,15 @@ const DIFFERENT = [
 export default function Home() {
   return (
     <>
-      {/* ── Hero: the three circles of care ── */}
-      <section className="home-hero">
-        <div className="wrap home-hero__grid">
-          <div className="home-hero__copy">
-            <p className="home-hero__kicker">A healthcare app for end-of-life care</p>
-            <h1>Every day, 20,000 of our people die in pain, in debt, and in silence.</h1>
-            <p className="home-hero__sub">
-              A Whole Family Matter brings your three circles of care into one app, so
-              they can plan, fund, and advocate for a dignified death — together.
-            </p>
-            <div className="home-hero__ctas">
-              <a className="btn" href={REGISTER_URL}>Get Started Free</a>
-              <a className="btn btn--line" href="#problem">See why it matters</a>
-            </div>
-          </div>
-          <HeroOrbit />
-        </div>
-      </section>
+      <FilmHero
+        kicker="A healthcare app for end-of-life care"
+        title="Every day, 20,000 of our people die in pain, in debt, and in silence."
+        longTitle
+        sub="A Whole Family Matter brings your three circles of care into one app, so they can plan, fund, and advocate for a dignified death — together."
+        prompts={['Who will speak for you?', 'What matters most to you?', 'How do you really feel about death and dying?']}
+        primary={{ label: 'Get Started Free', href: REGISTER_URL }}
+        secondary={{ label: 'See why it matters', href: '#problem' }}
+      />
 
       {/* ── The problem: pain, debt, silence, each answered by a pillar ── */}
       <section id="problem" className="section home-problem">
@@ -127,6 +119,21 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── The three circles of care ── */}
+      <section className="home-circles">
+        <div className="wrap home-circles__grid">
+          <div className="home-circles__copy">
+            <h2 className="h2">Three circles of care, one support system.</h2>
+            <p>
+              Your immediate family, your local or chosen family, and your family back home
+              usually plan in separate conversations, if they plan at all. A Whole Family Matter
+              brings all three into the same place, around the person who matters most.
+            </p>
+          </div>
+          <HeroOrbit />
         </div>
       </section>
 

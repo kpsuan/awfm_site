@@ -1,31 +1,21 @@
-.home-hero {
-  position: relative;
-  overflow: hidden;
+.home-circles {
   color: #fff;
-  padding-block: clamp(130px, 18vh, 180px) clamp(70px, 10vh, 120px);
+  padding-block: clamp(80px, 12vh, 130px);
   background:
     radial-gradient(700px 520px at 74% 52%, rgba(180, 50, 163, 0.22), transparent 70%),
     var(--dark);
 }
-.home-hero__grid {
+.home-circles__grid {
   max-width: 1280px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(30px, 5vw, 80px);
   align-items: center;
 }
-@media (max-width: 960px) { .home-hero__grid { grid-template-columns: 1fr; } }
-.home-hero__kicker { font-family: var(--font-heading); font-size: 15px; color: #e6a8dd; margin-bottom: 22px; }
-.home-hero h1 {
-  color: #fff;
-  font-size: clamp(38px, 4.8vw, 70px);
-  font-weight: 300;
-  line-height: 1.06;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
-}
-.home-hero__sub { margin-top: 26px; font-size: clamp(18px, 1.8vw, 21px); color: rgba(255, 255, 255, 0.7); max-width: 46ch; }
-.home-hero__ctas { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 960px) { .home-circles__grid { grid-template-columns: 1fr; } }
+.home-circles__copy { display: grid; gap: 22px; }
+.home-circles .h2 { color: #fff; }
+.home-circles__copy p { font-size: 19px; color: rgba(255, 255, 255, 0.7); max-width: 46ch; }
 
 .home-intro { display: grid; gap: 18px; max-width: 760px; }
 
