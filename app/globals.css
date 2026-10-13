@@ -36,10 +36,8 @@ a { color: inherit; }
 
 .eyebrow {
   font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--brand);
 }
 
@@ -60,6 +58,8 @@ a { color: inherit; }
 .btn:hover { transform: translateY(-2px); color: #fff; }
 .btn--ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
 .btn--ghost:hover { color: var(--ink); border-color: var(--brand-2); }
+.btn--line { background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, 0.35); }
+.btn--line:hover { color: #fff; border-color: #fff; }
 .btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
 
 /* ── Shared page header (inner pages) ── */

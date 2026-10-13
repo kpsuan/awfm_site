@@ -224,7 +224,7 @@ export default function StoryDeck() {
         <section id="platform" className="cl-lassie" ref={root}>
           <div className="cl-lassie__head">
             <img className="cl-lassie__mark" src="/logo.png" alt="" />
-            <span className="eyebrow">Help is on the way — Interdependent Care Planning</span>
+            <span className="eyebrow">Help is on the way</span>
             <h2 className="h2 cl-lassie__title">
               One whole family<br />support system
             </h2>

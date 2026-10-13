@@ -1,0 +1,65 @@
+.orbit { margin: 0; display: grid; gap: 22px; justify-items: center; }
+.orbit svg { width: min(600px, 100%); height: auto; overflow: visible; }
+
+.orbit__ring { fill: none; stroke-width: 1.2; }
+.orbit__ring--near { stroke: rgba(230, 168, 221, 0.55); }
+.orbit__ring--chosen { stroke: rgba(174, 89, 207, 0.45); }
+.orbit__ring--home { stroke: rgba(246, 165, 29, 0.38); stroke-dasharray: 2 7; }
+
+.orbit__arm { transform-box: view-box; transform-origin: 300px 300px; transform: rotate(var(--deg)); }
+.orbit__thread { stroke-width: 1; }
+.orbit__arm--near .orbit__thread { stroke: rgba(230, 168, 221, 0.28); }
+.orbit__arm--chosen .orbit__thread { stroke: rgba(174, 89, 207, 0.24); }
+.orbit__arm--home .orbit__thread { stroke: rgba(246, 165, 29, 0.2); }
+.orbit__member { stroke: #1a0f19; stroke-width: 3; }
+.orbit__arm--near .orbit__member { fill: #e05cc9; }
+.orbit__arm--chosen .orbit__member { fill: #b98ae6; }
+.orbit__arm--home .orbit__member { fill: #f6a51d; }
+.orbit__core { fill: #fff; }
+
+.orbit__legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; }
+.orbit__key {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.72);
+}
+.orbit__key::before { content: ''; width: 9px; height: 9px; border-radius: 99px; }
+.orbit__key--near::before { background: #e05cc9; }
+.orbit__key--chosen::before { background: #b98ae6; }
+.orbit__key--home::before { background: #f6a51d; }
+
+/* One orchestrated load: rings draw in, then the family arrives, then the
+   whole system settles into a very slow orbit. */
+@media (prefers-reduced-motion: no-preference) {
+  .orbit__ring {
+    stroke-dasharray: var(--len);
+    stroke-dashoffset: var(--len);
+    animation: orbit-draw 1.6s cubic-bezier(0.65, 0, 0.35, 1) var(--d) forwards;
+  }
+  .orbit__ring--home { animation-name: orbit-draw-dashed; }
+  .orbit__arm {
+    opacity: 0;
+    animation:
+      orbit-arrive 0.9s ease-out var(--d) forwards,
+      orbit-spin var(--dur) linear infinite;
+  }
+  .orbit__halo { animation: orbit-breathe 6s ease-in-out infinite; transform-box: view-box; transform-origin: 300px 300px; }
+}
+@keyframes orbit-draw { to { stroke-dashoffset: 0; } }
+@keyframes orbit-draw-dashed {
+  0% { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); }
+  99% { stroke-dasharray: var(--len); stroke-dashoffset: 0; }
+  100% { stroke-dasharray: 2 7; stroke-dashoffset: 0; }
+}
+@keyframes orbit-arrive { to { opacity: 1; } }
+@keyframes orbit-spin {
+  from { transform: rotate(var(--deg)); }
+  to { transform: rotate(calc(var(--deg) + 360deg)); }
+}
+@keyframes orbit-breathe {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
