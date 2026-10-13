@@ -82,3 +82,13 @@
 .pr-fine ul { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 8px; list-style: disc; }
 .pr-fine li { font-size: 15.5px; color: var(--muted); }
 .pr-fine a { color: var(--brand); }
+
+.pr-circles { margin-top: 44px; display: flex; align-items: center; gap: 22px; }
+.pr-circles > div { flex-shrink: 0; }
+.pr-circles__dots { position: relative; width: 74px; height: 64px; }
+.pr-circles__dots i { position: absolute; width: 38px; height: 38px; border-radius: 99px; mix-blend-mode: multiply; }
+.pr-circles__dots i:nth-child(1) { left: 0; top: 0; background: #f0b4e6; }
+.pr-circles__dots i:nth-child(2) { left: 36px; top: 0; background: #c9b3f0; }
+.pr-circles__dots i:nth-child(3) { left: 18px; top: 26px; background: #f9d58e; }
+.pr-circles p { font-size: 16.5px; color: var(--muted); max-width: 80ch; }
+.pr-circles b { color: var(--ink); font-weight: 600; }

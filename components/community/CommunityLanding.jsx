@@ -347,7 +347,15 @@ export default function CommunityLanding() {
               </div>
               {GROUPS.map((g) => <div className="cm-group" key={g}><strong>{g}</strong></div>)}
               <div className="cm-group cm-group--soon">
-                <strong>ICP Facilitator Network</strong><em>Coming soon</em>
+                <div className="cm-fac">
+                  <div className="cm-fac__top"><strong>ICP Facilitator Network</strong><em>Coming soon</em></div>
+                  <span>Guides from your own diaspora who share your values and lived experience.</span>
+                  <ul>
+                    <li><b>For families</b> — care planning, fund pooling and advocacy learning become social justice work.</li>
+                    <li><b>For facilitators</b> — a practical opportunity to help their people.</li>
+                    <li><b>For everyone’s future</b> — death education becomes death modeling: living the example.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

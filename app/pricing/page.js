@@ -91,6 +91,14 @@ export default function Pricing() {
             </div>
           ))}
         </div>
+        <div className="pr-wrap pr-circles">
+          <div className="pr-circles__dots" aria-hidden="true"><i /><i /><i /></div>
+          <p>
+            <b>Three circles, one family.</b> Each circle of care — your immediate family, your family
+            back home, and your local or chosen family — is its own care team and pays for itself:
+            €30 each, or €90 to open the care plan for a whole family support system.
+          </p>
+        </div>
         <p className="pr-wrap pr-note">Prices in euros · Questions 1–9 are always free · Paid unlocks apply to your whole care team</p>
       </section>
 
