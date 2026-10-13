@@ -27,7 +27,7 @@ function SolutionsMenu({ open, onClose }) {
               <span className="mega__ico" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{it.icon}</svg>
               </span>
-              <span><strong>{it.title}</strong><em>{it.body}</em></span>
+              <span><strong>{it.title}{it.soon && <i className="mega__soon">Coming soon</i>}</strong><em>{it.body}</em></span>
             </a>
           ))}
         </div>

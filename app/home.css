@@ -124,16 +124,53 @@
   .pd__answer { justify-self: start; text-align: left; margin-top: 6px; }
 }
 
-/* ── What makes us different ── */
-.diff { margin-top: 48px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
-@media (max-width: 760px) { .diff { grid-template-columns: 1fr; } }
-.diff__item { display: grid; gap: 10px; align-content: start; padding: 30px 32px 30px 0; border-top: 1px solid var(--line); }
-.diff__item:nth-child(even) { padding-left: 32px; padding-right: 0; border-left: 1px solid var(--line); }
-@media (max-width: 760px) {
-  .diff__item, .diff__item:nth-child(even) { padding: 26px 0; border-left: none; }
+/* ── What makes us different: bento with a graphic per point ── */
+.diff { margin-top: 48px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.diff__item {
+  grid-column: span 2; display: grid; gap: 12px; align-content: start;
+  padding: 28px; border-radius: 24px; background: var(--band);
 }
-.diff__item h3 { font-size: 24px; font-weight: 500; line-height: 1.2; }
-.diff__item p { font-size: 16.5px; color: var(--muted); max-width: 48ch; }
+.diff__item--wide { grid-column: span 3; }
+@media (max-width: 960px) {
+  .diff { grid-template-columns: 1fr; }
+  .diff__item, .diff__item--wide { grid-column: auto; grid-template-columns: 1fr; }
+}
+.diff__item h3 { font-size: 23px; font-weight: 400; line-height: 1.2; color: var(--ink); }
+.diff__item p { font-size: 16px; color: var(--muted); max-width: 46ch; }
+.diff__art { min-height: 120px; display: flex; align-items: center; justify-content: center; gap: 16px; border-radius: 18px; background: #fff; padding: 18px; }
+
+.diff__one i { display: block; width: 46px; height: 46px; border-radius: 99px; background: #e6dde6; }
+.diff__vs { font-family: var(--font-heading); font-size: 22px; color: var(--faint); }
+.diff__many { display: flex; }
+.diff__many img { width: 46px; height: 46px; border-radius: 99px; object-fit: cover; border: 3px solid #fff; margin-left: -12px; }
+.diff__many img:first-child { margin-left: 0; }
+
+.diff__art--stages { gap: 6px; }
+.diff__art--stages i {
+  font-style: normal; width: 30px; height: 30px; border-radius: 99px; display: grid; place-items: center;
+  font-family: var(--font-heading); font-size: 13px; font-weight: 600; color: #fff;
+  transform: translateY(calc((var(--i) - 3) * (var(--i) - 3) * -1.6px));
+}
+
+.diff__seal {
+  width: 82px; height: 82px; flex-shrink: 0; border-radius: 99px; display: grid; place-content: center; text-align: center;
+  border: 2px dashed rgba(180, 50, 163, 0.5); color: var(--brand);
+}
+.diff__seal b { font-family: var(--font-heading); font-size: 14px; }
+.diff__seal em { font-style: normal; font-size: 12px; color: var(--muted); }
+.diff__qs { display: grid; grid-template-columns: repeat(6, 10px); gap: 5px; }
+.diff__qs i { width: 10px; height: 10px; border-radius: 3px; background: #ead9e8; }
+.diff__qs i:nth-child(-n + 9) { background: var(--brand); }
+
+.diff__art--money { gap: 0; }
+.diff__plan {
+  display: grid; gap: 4px; max-width: 150px; padding: 12px; border-radius: 14px; background: #f8f3f7;
+  font-family: var(--font-heading); font-size: 12.5px; color: var(--ink); line-height: 1.3;
+}
+.diff__plan b { font-size: 11px; color: var(--brand); }
+.diff__link { width: 36px; height: 2px; background: repeating-linear-gradient(90deg, var(--brand) 0 5px, transparent 5px 9px); }
+.diff__fund { display: flex; align-items: flex-end; gap: 6px; height: 72px; padding: 6px; border-radius: 12px; background: #f8f3f7; }
+.diff__fund i { width: 14px; border-radius: 4px; background: linear-gradient(180deg, #c13fae, #8f5bd6); }
 
 /* ── Final sign-up band ── */
 .home-signup {

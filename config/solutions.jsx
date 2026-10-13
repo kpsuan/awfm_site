@@ -1,4 +1,4 @@
-import { REGISTER_URL, SPONSOR_URL, HELP_URL } from './site';
+import { APP_URL, REGISTER_URL, SPONSOR_URL, HELP_URL } from './site';
 
 // Solutions menu: who A Whole Family Matter is for. Roles mirror the app's
 // Help Center ("Learn by role") and the Sponsor a Care Team pages.
@@ -8,14 +8,8 @@ export const SOLUTIONS = [
     heading: 'For families',
     items: [
       {
-        title: 'Medical migrants',
-        body: 'Lead your immediate family, your family back home, and your chosen family — from wherever you work.',
-        href: '/about/',
-        icon: p(<><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" /></>),
-      },
-      {
-        title: 'Care teams',
-        body: 'Start your family’s team or join one — everyone answers in their own words, together.',
+        title: 'Medical migrants & their care teams',
+        body: 'Lead your immediate family, your family back home, and your chosen family as one care team — from wherever you work.',
         href: REGISTER_URL,
         icon: p(<><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0" /><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6" /></>),
       },
@@ -24,6 +18,13 @@ export const SOLUTIONS = [
         body: 'Coordinate the team, witness its decisions, and run Care Fund approvals and releases.',
         href: `${HELP_URL}#learn-by-role`,
         icon: p(<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" />),
+      },
+      {
+        title: 'ICP Facilitator Network',
+        body: 'Guides from your own diaspora, trained to walk families through the journey.',
+        href: `${APP_URL}/facilitator-preview`,
+        soon: true,
+        icon: p(<><circle cx="12" cy="7" r="3" /><path d="M5.5 21a6.5 6.5 0 0 1 13 0" /><path d="M19 4l1.5-1.5M5 4 3.5 2.5" /></>),
       },
     ],
   },

@@ -152,3 +152,8 @@
   .mega__col + .mega__col { border-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .mega, .nav__menubtn svg { transition: none; } }
+.mega__soon {
+  display: inline-block; margin-left: 8px; vertical-align: 2px;
+  font-style: normal; font-family: var(--font-heading); font-size: 10.5px; font-weight: 600;
+  padding: 2px 8px; border-radius: 999px; color: #9a5b00; background: #fdf0d8;
+}

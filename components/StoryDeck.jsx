@@ -207,7 +207,7 @@ export default function StoryDeck() {
                 scrollTrigger: { start: () => slot() - vh(), end: () => slot(), scrub: true },
               });
               gsap.to(prevCopy, {
-                opacity: 0.08,
+                opacity: 0,
                 ease: 'none',
                 scrollTrigger: { start: () => slot() - vh() * 0.9, end: () => slot() - vh() * 0.4, scrub: true },
               });

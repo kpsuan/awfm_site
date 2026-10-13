@@ -1044,3 +1044,67 @@
     linear-gradient(90deg, rgba(26, 15, 25, 0.78) 0%, rgba(26, 15, 25, 0.5) 42%, rgba(26, 15, 25, 0.08) 75%),
     linear-gradient(180deg, rgba(26, 15, 25, 0.25) 0%, transparent 30%, rgba(26, 15, 25, 0.35) 100%);
 }
+
+/* ── Global Problems ── */
+.cm-problems { background: #1a0f19; }
+.cm-problems .cl-wrap { padding-block: clamp(80px, 12vh, 130px) !important; }
+.cm-head--light .cl-h2 { color: #fff; }
+.cm-head--light .cl-eyebrow { color: #e6a8dd; }
+.cm-head--light .cm-lead { color: rgba(255, 255, 255, 0.68); }
+.cl .cm-courses { margin-top: 52px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+@media (max-width: 900px) { .cl .cm-courses { grid-template-columns: 1fr; } }
+.cm-course {
+  position: relative; overflow: hidden; min-height: 480px; border-radius: 24px;
+  display: grid; align-content: space-between; padding: 26px;
+  background-size: cover; background-position: center;
+}
+.cm-course::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,15,25,0.15) 0%, rgba(26,15,25,0.55) 45%, rgba(26,15,25,0.92) 100%); }
+.cm-course > * { position: relative; }
+.cm-course__q { font-family: var(--font-heading); font-size: clamp(54px, 6vw, 84px); font-weight: 300; line-height: 1; letter-spacing: -0.03em; color: #fff; }
+.cm-course__body { display: grid; gap: 10px; justify-items: start; }
+.cm-course__meta { font-family: var(--font-heading); font-size: 13px; color: rgba(255,255,255,0.7); }
+.cm-course h3 { font-size: 26px; font-weight: 400; line-height: 1.15; color: #fff; }
+.cm-course p { font-size: 15.5px; line-height: 1.55; color: rgba(255,255,255,0.78); }
+.cm-course__breaks { font-family: var(--font-heading); font-size: 14px; color: #ffe2a0; }
+.cm-course__tag {
+  font-family: var(--font-heading); font-size: 13px; font-weight: 600; color: #fff;
+  padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22);
+}
+
+/* ── Leading Solutions ── */
+.cl .cm-practices { margin: 0; padding: 0; list-style: none; display: grid; }
+.cm-practices li { display: grid; gap: 4px; padding-block: 22px; border-top: 1px solid var(--cl-line); }
+.cm-practices li:first-child { border-top: 0; padding-top: 0; }
+.cm-practices strong { font-family: var(--font-heading); font-size: 22px; font-weight: 400; color: var(--cl-ink); }
+.cm-practices span { font-size: 16.5px; color: var(--cl-muted); }
+
+/* ── Our Innovations ── */
+.cl .cm-innov { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 900px) { .cl .cm-innov { grid-template-columns: 1fr; } }
+.cm-innov article { display: grid; gap: 10px; align-content: start; padding: 28px; border-radius: 22px; background: #f8f3f7; }
+.cm-innov article.is-lead {
+  grid-row: span 2; align-content: end; min-height: 340px; color: #fff;
+  background: linear-gradient(160deg, #b432a3 0%, #7a5ad6 100%);
+}
+@media (max-width: 900px) { .cm-innov article.is-lead { grid-row: auto; min-height: 0; } }
+.cm-innov h3 { font-size: 22px; font-weight: 400; line-height: 1.2; color: var(--cl-ink); }
+.cm-innov article:nth-child(4) { grid-column: span 2; }
+@media (max-width: 900px) { .cm-innov article:nth-child(4) { grid-column: auto; } }
+.cm-innov p { font-size: 15.5px; color: var(--cl-muted); }
+.cm-innov span { font-family: var(--font-heading); font-size: 13px; color: var(--cl-brand); }
+.cm-innov .is-lead h3 { font-size: 28px; color: #fff; }
+.cm-innov .is-lead p { color: rgba(255,255,255,0.85); }
+.cm-innov .is-lead span { color: #ffe2a0; }
+
+/* ── Support groups ── */
+.cm-groups__list { display: grid; gap: 10px; }
+.cm-group { display: flex; align-items: center; gap: 10px; padding: 16px 20px; border-radius: 16px; border: 1px solid var(--cl-line); background: #fff; }
+.cm-group strong { font-family: var(--font-heading); font-size: 17px; font-weight: 400; color: var(--cl-ink); }
+.cm-group--lead { display: grid; gap: 6px; padding: 22px; background: #fbf3f9; border-color: rgba(180,50,163,0.25); }
+.cm-group--lead strong { font-size: 21px; color: var(--cl-brand); }
+.cm-group--lead span { font-size: 15.5px; color: var(--cl-muted); }
+.cm-group--soon { border-style: dashed; }
+.cm-group--soon em {
+  margin-left: auto; font-style: normal; font-family: var(--font-heading); font-size: 11px; font-weight: 600;
+  padding: 3px 9px; border-radius: 999px; color: #9a5b00; background: #fdf0d8;
+}

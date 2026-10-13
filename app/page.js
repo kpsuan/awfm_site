@@ -9,6 +9,7 @@ import HomeMotion from '@/components/HomeMotion';
 import QuestionJourney from '@/components/QuestionJourney';
 import SponsorJourney from '@/components/SponsorJourney';
 import CareTeamShowcase from '@/components/CareTeamShowcase';
+import { FACES } from '@/components/faces';
 import './home.css';
 
 export const metadata = {
@@ -45,7 +46,7 @@ const PDS = [
 const DIFFERENT = [
   {
     title: 'Built for the “we”, not the “I”',
-    body: 'Every other planning tool assumes one patient deciding alone. Ours is built for collectivist families, where the whole family decides together.',
+    body: 'Most planning tools assume one patient deciding alone. Ours is built for collectivist families, where the whole family decides together.',
   },
   {
     title: 'The world’s first digital palliative workbook',
@@ -204,12 +205,43 @@ export default function Home() {
             <h2 className="h2">Nothing else is built for families like ours.</h2>
           </div>
           <div className="diff">
-            {DIFFERENT.map((d) => (
-              <article className="diff__item" key={d.title}>
-                <h3>{d.title}</h3>
-                <p>{d.body}</p>
-              </article>
-            ))}
+            <article className="diff__item diff__item--wide">
+              <div className="diff__art diff__art--we" aria-hidden="true">
+                <span className="diff__one"><i /></span>
+                <span className="diff__vs">→</span>
+                <span className="diff__many">
+                  {Object.values(FACES).map((src) => <img key={src} src={src} alt="" />)}
+                </span>
+              </div>
+              <h3>{DIFFERENT[0].title}</h3>
+              <p>{DIFFERENT[0].body}</p>
+            </article>
+            <article className="diff__item">
+              <div className="diff__art diff__art--stages" aria-hidden="true">
+                {['#b432a3', '#a83eb1', '#9b4abf', '#8e56cd', '#8262db', '#756ee9', '#697af7'].map((c, i) => (
+                  <i key={c} style={{ background: c, '--i': i }}>{i + 1}</i>
+                ))}
+              </div>
+              <h3>{DIFFERENT[1].title}</h3>
+              <p>{DIFFERENT[1].body}</p>
+            </article>
+            <article className="diff__item">
+              <div className="diff__art diff__art--law" aria-hidden="true">
+                <span className="diff__seal"><b>UHCDA</b><em>2023</em></span>
+                <span className="diff__qs">{Array.from({ length: 30 }, (_, i) => <i key={i} />)}</span>
+              </div>
+              <h3>{DIFFERENT[2].title}</h3>
+              <p>{DIFFERENT[2].body}</p>
+            </article>
+            <article className="diff__item diff__item--wide">
+              <div className="diff__art diff__art--money" aria-hidden="true">
+                <span className="diff__plan"><b>Q21</b>Where would you feel most at peace?</span>
+                <span className="diff__link" />
+                <span className="diff__fund">{[62, 50, 36, 30, 56].map((h, i) => <i key={i} style={{ height: `${h}%` }} />)}</span>
+              </div>
+              <h3>{DIFFERENT[3].title}</h3>
+              <p>{DIFFERENT[3].body}</p>
+            </article>
           </div>
         </div>
       </section>
