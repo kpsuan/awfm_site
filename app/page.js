@@ -36,22 +36,93 @@ const FUNDS = [
   { name: 'Mutual aid', desc: 'Support for whoever in the circle needs it next.' },
 ];
 
+// No one dies in pain, in debt, and in silence: each failure maps to the
+// pillar that answers it.
+const PDS = [
+  {
+    word: 'silence',
+    n: '77–98%',
+    fact: 'of our terminal patients don’t know they’re dying — because the family, not the patient, decides.',
+    answer: 'Care team planning',
+    href: '#plan',
+  },
+  {
+    word: 'debt',
+    n: '85M',
+    fact: 'people across these twelve countries are pushed into poverty by individual healthcare spending.',
+    answer: 'Care fund pooling',
+    href: '#fund',
+  },
+  {
+    word: 'pain',
+    n: '20.1M',
+    fact: 'are projected to die every year with unaddressed severe pain by 2060 — two and a half times today.',
+    answer: 'Patient advocacy learning',
+    href: '#advocate',
+  },
+];
+
+const DIFFERENT = [
+  {
+    title: 'Built for the “we”, not the “I”',
+    body: 'Every other planning tool assumes one patient deciding alone. Ours is built for collectivist families, where the whole family decides together.',
+  },
+  {
+    title: 'The world’s first digital palliative workbook',
+    body: 'The first digital integration of workbook exercises from specialised palliative care experts, based on the 7 keys framework of Dr. Sammy Winemaker and Dr. Hsien Seow.',
+  },
+  {
+    title: 'Grounded in law and lived experience',
+    body: 'Thirty questions built on the Uniform Health-Care Decisions Act 2023 with subject matter experts, and on the lived experience of medical migrants.',
+  },
+  {
+    title: 'Plans that come with the money',
+    body: 'Planning and funding live in one place, so a family’s wishes come with the shared resources to honour them.',
+  },
+];
+
 export default function Home() {
   return (
     <>
-      {/* ── Hero ── */}
+      {/* ── Hero: the fact that stops the scroll ── */}
       <section className="home-hero">
         <div className="wrap">
           <span className="eyebrow">A healthcare app for end-of-life care</span>
-          <h1>Care planning is a conversation, not a form.</h1>
+          <h1>Every day, 20,000 of our people die in pain, in debt, and in silence.</h1>
           <p>
-            Interdependent Care Planning brings your immediate family, your family back
-            home, and your local or chosen family into one place to plan, fund, and
-            advocate for dignified end-of-life care — together.
+            A Whole Family Matter helps medical migrants and their collectivist families
+            plan, fund, and advocate for dignified end-of-life care — together, in one app.
           </p>
           <div className="home-hero__ctas">
             <a className="btn" href={REGISTER_URL}>Get Started Free</a>
-            <a className="btn btn--ghost" href="#plan">How it works</a>
+            <a className="btn btn--ghost" href="#problem">Why it matters</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── The problem: pain, debt, silence, each answered by a pillar ── */}
+      <section id="problem" className="section section--cream">
+        <div className="wrap">
+          <Reveal className="home-intro">
+            <span className="eyebrow">The problem</span>
+            <h2 className="h2">The families who care for the world get the worst care at the end.</h2>
+            <p className="lead">
+              Twelve countries — the Philippines, Nigeria, India and more — are the world’s
+              biggest exporters of healthcare workers. Their families back home pay the
+              highest cost for end-of-life care and get the worst quality of death.
+            </p>
+          </Reveal>
+          <div className="pds">
+            {PDS.map((x, i) => (
+              <Reveal as="article" className="pd" key={x.word} delay={i * 120}>
+                <span className="pd__word">In {x.word}</span>
+                <strong className="pd__n">{x.n}</strong>
+                <p className="pd__fact">{x.fact}</p>
+                <a className="pd__answer" href={x.href}>
+                  <span>Our answer</span> {x.answer} →
+                </a>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -62,7 +133,7 @@ export default function Home() {
       <section id="plan" className="section">
         <div className="wrap">
           <Reveal className="home-intro">
-            <span className="eyebrow">Care team planning</span>
+            <span className="eyebrow">How it works — care team planning</span>
             <h2 className="h2">It starts with a question.</h2>
             <p className="lead">
               Based on the Uniform Health-Care Decisions Act (UHCDA) 2023 and collaboration
@@ -97,7 +168,7 @@ export default function Home() {
       <section id="fund" className="section section--cream">
         <div className="wrap home-split">
           <Reveal>
-            <span className="eyebrow">Care fund pooling</span>
+            <span className="eyebrow">How it works — care fund pooling</span>
             <h2 className="h2">What families already do, made dependable.</h2>
             <p className="lead">
               Pooling money is something our cultures already know — <i>paluwagan</i> in the
@@ -121,7 +192,7 @@ export default function Home() {
       <section id="advocate" className="section">
         <div className="wrap">
           <Reveal className="home-intro">
-            <span className="eyebrow">Patient advocacy learning</span>
+            <span className="eyebrow">How it works — patient advocacy</span>
             <h2 className="h2">Learn to speak for each other.</h2>
             <p className="lead">
               We formalised palliative care workbooks into seven stages of a care team’s
@@ -137,6 +208,25 @@ export default function Home() {
               <span className="stage" key={st}><b>{i + 1}</b>{st}</span>
             ))}
           </Reveal>
+        </div>
+      </section>
+
+      {/* ── What makes us different ── */}
+      <section className="section">
+        <div className="wrap">
+          <Reveal className="home-intro">
+            <span className="eyebrow">Why A Whole Family Matter</span>
+            <h2 className="h2">Nothing else is built for families like ours.</h2>
+          </Reveal>
+          <div className="diff">
+            {DIFFERENT.map((d, i) => (
+              <Reveal as="article" className="diff__item" key={d.title} delay={(i % 2) * 110}>
+                <span className="diff__n">0{i + 1}</span>
+                <h3>{d.title}</h3>
+                <p>{d.body}</p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
