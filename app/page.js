@@ -1,5 +1,6 @@
 import { REGISTER_URL } from '@/config/site';
 import Reveal from '@/components/Reveal';
+import StoryDeck from '@/components/StoryDeck';
 import './home.css';
 
 export const metadata = {
@@ -54,6 +55,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <StoryDeck />
 
       {/* ── Plan: the checkpoint conversation ── */}
       <section id="plan" className="section">
