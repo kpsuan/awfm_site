@@ -63,6 +63,12 @@ const DIFFERENT = [
   },
 ];
 
+// Five family members on a ring (viewBox 240x170) around a shared question.
+const WE_RING = [-90, -18, 54, 126, 198].map((d) => {
+  const r = (d * Math.PI) / 180;
+  return [Math.round(120 + 62 * Math.cos(r)), Math.round(80 + 62 * Math.sin(r))];
+});
+
 export default function Home() {
   return (
     <>
@@ -208,11 +214,23 @@ export default function Home() {
           <div className="diff">
             <article className="diff__item diff__item--wide">
               <div className="diff__art diff__art--we" aria-hidden="true">
-                <span className="diff__one"><i /></span>
-                <span className="diff__vs">→</span>
-                <span className="diff__many">
-                  {Object.values(FACES).map((src) => <img key={src} src={src} alt="" />)}
-                </span>
+                <div className="we-solo">
+                  <span className="we-solo__ava"><img src={FACES['near-1']} alt="" /></span>
+                  <span className="we-solo__form"><i /><i /><i /></span>
+                  <em>Planning alone</em>
+                </div>
+                <span className="we-arrow" />
+                <div className="we-ring">
+                  <svg viewBox="0 0 240 170">
+                    {WE_RING.map(([x, y]) => <line key={`${x}-${y}`} x1="120" y1="80" x2={x} y2={y} />)}
+                    <circle cx="120" cy="80" r="62" className="we-ring__orbit" />
+                  </svg>
+                  <span className="we-ring__core">Q8</span>
+                  {Object.values(FACES).map((src, i) => (
+                    <img key={src} src={src} alt="" style={{ left: `${(WE_RING[i][0] / 240) * 100}%`, top: `${(WE_RING[i][1] / 196) * 100}%` }} />
+                  ))}
+                  <em>Planning together</em>
+                </div>
               </div>
               <h3>{DIFFERENT[0].title}</h3>
               <p>{DIFFERENT[0].body}</p>
