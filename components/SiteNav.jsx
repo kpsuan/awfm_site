@@ -4,7 +4,9 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LOGIN_URL, REGISTER_URL } from '@/config/site';
-import { SOLUTIONS } from '@/config/solutions';
+import { SOLUTIONS, COMPANY } from '@/config/solutions';
+
+const MENUS = { solutions: SOLUTIONS, company: COMPANY };
 import './SiteNav.css';
 
 const LINKS = [
@@ -14,13 +16,13 @@ const LINKS = [
   { href: '/pricing/', label: 'Pricing' },
   { href: '/security/', label: 'Security' },
   { href: '/blog/', label: 'Blog' },
-  { href: '/about/', label: 'About' },
+  { menu: 'company', label: 'Company' },
 ];
 
-function SolutionsMenu({ open, onClose }) {
+function MegaMenu({ cols, open, onClose }) {
   return (
-    <div className={`mega${open ? ' is-open' : ''}`} role="menu" aria-hidden={!open}>
-      {SOLUTIONS.map((col) => (
+    <div className={`mega${open ? ' is-open' : ''}${cols.length === 1 ? ' mega--single' : ''}`} role="menu" aria-hidden={!open}>
+      {cols.map((col) => (
         <div className="mega__col" key={col.heading}>
           <span className="mega__h">{col.heading}</span>
           {col.items.map((it) => (
@@ -90,7 +92,7 @@ export default function SiteNav() {
               {l.label}
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </button>
-            <SolutionsMenu open={menu === l.menu} onClose={() => { setMenu(null); setOpen(false); }} />
+            <MegaMenu cols={MENUS[l.menu]} open={menu === l.menu} onClose={() => { setMenu(null); setOpen(false); }} />
           </div>
         ) : (
           <Link key={l.href} href={l.href} aria-current={pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href)) ? 'page' : undefined}>

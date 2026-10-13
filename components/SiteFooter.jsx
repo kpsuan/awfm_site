@@ -24,7 +24,7 @@ export default function SiteFooter() {
           </div>
           <div className="foot__col">
             <h4>Organisation</h4>
-            <Link href="/about/">About</Link>
+            <Link href="/about/">Our Story</Link>
             <Link href="/team/">Team</Link>
             <Link href="/security/">Security</Link>
             <Link href="/community/">Community</Link>
