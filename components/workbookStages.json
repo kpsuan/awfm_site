@@ -1,0 +1,247 @@
+[
+  {
+    "key": "permission",
+    "number": 1,
+    "name": "Permission",
+    "tagline": "You're here. That's enough for now.",
+    "gain": "Emotional permission to face reality alongside hope.",
+    "icon": "hand-heart",
+    "color": "#b432a3",
+    "exercises": [
+      {
+        "id": "1.1",
+        "title": "Hopes and Fears",
+        "complexity": "EASY",
+        "duration": "15–20 min",
+        "collaborative": false,
+        "blurb": "A map of what you're hoping for and what keeps you up at night — on paper, not just in your head."
+      },
+      {
+        "id": "1.2",
+        "title": "Walk Two Roads",
+        "complexity": "MODERATE",
+        "duration": "30–40 min",
+        "collaborative": true,
+        "blurb": "Your family's shared declaration that hope and preparation are both acts of love."
+      },
+      {
+        "id": "1.3",
+        "title": "Good Days / Bad Days",
+        "complexity": "MODERATE",
+        "duration": "15–25 min",
+        "collaborative": false,
+        "blurb": "A concrete picture of what good and bad days actually look like — for your loved one AND for you."
+      }
+    ]
+  },
+  {
+    "key": "clarity",
+    "number": 2,
+    "name": "Clarity",
+    "tagline": "Now you know who you are and what matters.",
+    "gain": "A clear understanding of yourself, your values, and what matters most — articulated in words that can travel anywhere.",
+    "icon": "compass",
+    "color": "#a83eb1",
+    "exercises": [
+      {
+        "id": "2.1",
+        "title": "What Matters to Me",
+        "complexity": "EASY",
+        "duration": "15–20 min",
+        "collaborative": false,
+        "blurb": "One sentence about what matters most — portable enough to hand to any doctor in any country."
+      },
+      {
+        "id": "2.2",
+        "title": "Important To / Important For",
+        "complexity": "MODERATE",
+        "duration": "25–35 min",
+        "collaborative": false,
+        "blurb": "A clear view of the tension between what your loved one wants and what they need."
+      },
+      {
+        "id": "2.3",
+        "title": "One Page Profile",
+        "complexity": "DIFFICULT",
+        "duration": "30–40 min",
+        "collaborative": false,
+        "blurb": "A single page that introduces your loved one as a person, not just a patient — printable, shareable, translatable."
+      }
+    ]
+  },
+  {
+    "key": "connection",
+    "number": 3,
+    "name": "Connection",
+    "tagline": "You're not doing this alone. Here is your team.",
+    "gain": "A visible, organized team with named roles, defined responsibilities, and mapped relationships.",
+    "icon": "users",
+    "color": "#9b4abf",
+    "exercises": [
+      {
+        "id": "3.1",
+        "title": "Caregiver + Backup Person",
+        "complexity": "EASY",
+        "duration": "15–20 min",
+        "collaborative": false,
+        "blurb": "Clear names for who provides daily care and who makes decisions — often different people."
+      },
+      {
+        "id": "3.2",
+        "title": "Circle of Influence",
+        "complexity": "MODERATE",
+        "duration": "25–35 min",
+        "collaborative": false,
+        "blurb": "\"Everything is impossible\" becomes \"here are three things we can do this week.\""
+      },
+      {
+        "id": "3.3",
+        "title": "Relationship Circle",
+        "complexity": "DIFFICULT",
+        "duration": "30–40 min",
+        "collaborative": true,
+        "blurb": "A visual map of your whole care team — who is close, who is far, where the gaps are."
+      }
+    ]
+  },
+  {
+    "key": "voice",
+    "number": 4,
+    "name": "Voice",
+    "tagline": "Now your loved one's voice can travel without them.",
+    "gain": "Care preferences documented, the care recipient's voice made portable — able to travel to hospitals, across borders, into rooms where they cannot be present.",
+    "icon": "message-circle",
+    "color": "#8e56cd",
+    "exercises": [
+      {
+        "id": "4.1",
+        "title": "Working / Not Working",
+        "complexity": "EASY",
+        "duration": "15–25 min",
+        "collaborative": true,
+        "blurb": "An honest assessment of what's going well and what isn't — from every perspective on the team."
+      },
+      {
+        "id": "4.2",
+        "title": "Decision Making Agreement",
+        "complexity": "MODERATE",
+        "duration": "30–45 min",
+        "collaborative": true,
+        "blurb": "A signed agreement about who decides what — so nobody has to guess during a crisis."
+      },
+      {
+        "id": "4.3",
+        "title": "Communication Charts",
+        "complexity": "DIFFICULT",
+        "duration": "40–60 min",
+        "collaborative": true,
+        "blurb": "The document that explains what your loved one really means when they say \"I'm fine.\""
+      }
+    ]
+  },
+  {
+    "key": "readiness",
+    "number": 5,
+    "name": "Readiness",
+    "tagline": "You're organized and prepared.",
+    "gain": "Documents gathered, horizons named, the next medical appointment planned.",
+    "icon": "clipboard-check",
+    "color": "#8262db",
+    "exercises": [
+      {
+        "id": "5.1",
+        "title": "Health Documents Inventory",
+        "complexity": "EASY",
+        "duration": "15–25 min",
+        "collaborative": false,
+        "blurb": "Every important document from every country, gathered in one place with a clear gap list."
+      },
+      {
+        "id": "5.2",
+        "title": "Now/Next/Later Planner",
+        "complexity": "MODERATE",
+        "duration": "25–35 min",
+        "collaborative": false,
+        "blurb": "Horizon planning — what we handle now, what is coming next, what is later."
+      },
+      {
+        "id": "5.3",
+        "title": "Clinic Visit Preparation",
+        "complexity": "DIFFICULT",
+        "duration": "30–40 min",
+        "collaborative": false,
+        "blurb": "A complete before / during / after plan for your next medical appointment."
+      }
+    ]
+  },
+  {
+    "key": "advocacy",
+    "number": 6,
+    "name": "Advocacy",
+    "tagline": "You've spoken up.",
+    "gain": "Scripts and plans for the conversations you have been putting off — opening line through full encounter plan.",
+    "icon": "megaphone",
+    "color": "#756ee9",
+    "exercises": [
+      {
+        "id": "6.1",
+        "title": "First Conversation Guide",
+        "complexity": "EASY",
+        "duration": "15–20 min",
+        "collaborative": false,
+        "blurb": "The opening line for the conversation you've been putting off — customised to your voice."
+      },
+      {
+        "id": "6.2",
+        "title": "Branching Script Builder",
+        "complexity": "MODERATE",
+        "duration": "25–35 min",
+        "collaborative": false,
+        "blurb": "A five-step script for requesting help without shame — because asking is planning, not imposing."
+      },
+      {
+        "id": "6.3",
+        "title": "Advocacy Encounter Plan",
+        "complexity": "DIFFICULT",
+        "duration": "30–45 min",
+        "collaborative": false,
+        "blurb": "A full practice conversation with decision branches — if they say yes, if they say no, if they change the subject."
+      }
+    ]
+  },
+  {
+    "key": "resilience",
+    "number": 7,
+    "name": "Resilience",
+    "tagline": "You know you can keep doing this.",
+    "gain": "Burnout caught early, growth named, the team reviewing how care is going.",
+    "icon": "sprout",
+    "color": "#697af7",
+    "exercises": [
+      {
+        "id": "7.1",
+        "title": "Burnout Early Warning",
+        "complexity": "EASY",
+        "duration": "10–15 min",
+        "collaborative": false,
+        "blurb": "An honest check-in with yourself. Indicator checklist + severity scale + one thing for yourself this week."
+      },
+      {
+        "id": "7.2",
+        "title": "Reflective Bookend",
+        "complexity": "MODERATE",
+        "duration": "25–40 min",
+        "collaborative": false,
+        "blurb": "Your original Hopes and Fears placed next to what actually happened. Name your growth. Leave a message for the next family."
+      },
+      {
+        "id": "7.3",
+        "title": "Person-Centred Reviews",
+        "complexity": "DIFFICULT",
+        "duration": "60–90 min",
+        "collaborative": true,
+        "blurb": "The full team review — everyone together, looking back at what you have built and planning what comes next."
+      }
+    ]
+  }
+]
