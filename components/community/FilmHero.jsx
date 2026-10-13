@@ -15,7 +15,7 @@ function TypedPrompt({ prompts }) {
   const [qi, setQi] = useState(0);
   useEffect(() => {
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setText(prompts[0]);
+      setText(prompts[0].text);
       return undefined;
     }
     let phrase = 0;
@@ -23,7 +23,7 @@ function TypedPrompt({ prompts }) {
     let deleting = false;
     let t;
     const tick = () => {
-      const full = prompts[phrase];
+      const full = prompts[phrase].text;
       pos += deleting ? -1 : 1;
       setText(full.slice(0, pos));
       let delay = deleting ? 24 : 52;
@@ -41,7 +41,7 @@ function TypedPrompt({ prompts }) {
   }, [prompts]);
   return (
     <>
-      <span className="cl-ask__q">{`Q${qi + 1}`}</span>
+      <span className="cl-ask__q">{prompts[qi].chip}</span>
       <span className="cl-ask__text">{text}<i className="cl-ask__caret" /></span>
     </>
   );
@@ -49,7 +49,7 @@ function TypedPrompt({ prompts }) {
 
 // Full-bleed film hero: crossfading footage, glass question box, pink CTA,
 // copy anchored lower-left; shrinks into a rounded card on scroll.
-export default function FilmHero({ kicker, title, sub, prompts, primary, secondary, longTitle = false }) {
+export default function FilmHero({ kicker, title, sub, prompts, primary, secondary, longTitle = false, inset = false }) {
   const root = useRef(null);
   useIsoLayoutEffect(() => {
     const mm = gsap.matchMedia();
@@ -61,10 +61,10 @@ export default function FilmHero({ kicker, title, sub, prompts, primary, seconda
           opacity: 0, y: 26, duration: 0.9, ease: 'power3.out', stagger: 0.12, delay: 0.15,
         });
 
-        // Hero (Lassie-style): the full-bleed film shrinks into a rounded
+        // Hero (Lassie-style; full-bleed variant only): the full-bleed film shrinks into a rounded
         // inset card as the visitor scrolls away from the top.
         const heroEl = root.current.querySelector('.cl-hero--film');
-        if (heroEl) {
+        if (heroEl && !inset) {
           gsap.to(heroEl, {
             scale: 0.955,
             borderRadius: 40,
@@ -80,8 +80,8 @@ export default function FilmHero({ kicker, title, sub, prompts, primary, seconda
   }, []);
 
   return (
-    <div className="cl cl--embed" ref={root}>
-      <section className="cl-hero cl-hero--film">
+    <div className={`cl cl--embed${inset ? ' cl-herowrap--inset' : ''}`} ref={root}>
+      <section className={`cl-hero cl-hero--film${inset ? ' cl-hero--inset' : ''}`}>
         <div className="cl-hero__media" aria-hidden="true">
           <HeroMontage clips={HERO_VIDEOS} />
           <div className="cl-hero__scrim" />

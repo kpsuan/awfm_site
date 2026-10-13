@@ -18,7 +18,7 @@ const LINKS = [
 // everywhere it turns into a compact glass bar once the visitor scrolls.
 export default function SiteNav() {
   const pathname = usePathname();
-  const overlay = ['/', '/community/', '/community'].includes(pathname);
+  const overlay = pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 

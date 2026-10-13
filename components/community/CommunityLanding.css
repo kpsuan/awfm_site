@@ -873,7 +873,7 @@
 /* Glassmorphic ask box: dark translucent blur, typed question, send chip */
 .cl-ask {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   width: min(480px, 100%);
   padding: 14px 15px;
@@ -904,8 +904,7 @@
   min-height: 1.5em;
   font-size: 16.5px;
   color: rgba(255, 255, 255, 0.92);
-  white-space: nowrap;
-  overflow: hidden;
+  line-height: 1.4;
 }
 .cl-ask__caret {
   display: inline-block;
@@ -1020,3 +1019,16 @@
   line-height: 1.06;
   max-width: 18ch;
 }
+
+/* Inset film hero for subpages: a rounded panel under the regular nav */
+.cl-herowrap--inset { padding: 96px clamp(16px, 2.5vw, 32px) 0; }
+.cl-hero--film.cl-hero--inset {
+  min-height: min(72vh, 680px);
+  border-radius: 32px;
+}
+.cl-hero--inset .cl-hero__inner {
+  min-height: min(72vh, 680px);
+  padding-block: 64px !important;
+  padding-inline: clamp(24px, 4vw, 64px);
+}
+.cl-hero--inset .cl-h1 { font-size: clamp(38px, 5vw, 72px); }

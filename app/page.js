@@ -74,7 +74,11 @@ export default function Home() {
         title="Every day, 20,000 of our people die in pain, in debt, and in silence."
         longTitle
         sub="A Whole Family Matter brings your three circles of care into one app, so they can plan, fund, and advocate for a dignified death — together."
-        prompts={['Who will speak for you?', 'What matters most to you?', 'How do you really feel about death and dying?']}
+        prompts={[
+          { chip: 'Q8', text: 'How do you really feel about death and dying?' },
+          { chip: 'Q5', text: 'Who are the most important people in your life?' },
+          { chip: 'Q21', text: 'When your time comes, where would you feel most at peace?' },
+        ]}
         primary={{ label: 'Get Started Free', href: REGISTER_URL }}
         secondary={{ label: 'See why it matters', href: '#problem' }}
       />

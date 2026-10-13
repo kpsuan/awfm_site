@@ -49,7 +49,7 @@ const IS_NOT = [
   'A passive learning experience',
 ];
 
-const HERO_PROMPTS = CHECKPOINTS.map(([, q]) => q);
+const HERO_PROMPTS = CHECKPOINTS.map(([, q], i) => ({ chip: `Checkpoint ${i + 1}`, text: q }));
 
 export default function CommunityLanding() {
   const root = useRef(null);
@@ -99,6 +99,7 @@ export default function CommunityLanding() {
         prompts={HERO_PROMPTS}
         primary={{ label: 'Join the community', href: COMMUNITY_URL }}
         secondary={{ label: 'See how it works', href: '#experience' }}
+        inset
       />
 
       <div className="cl cl--embed" ref={root}>
