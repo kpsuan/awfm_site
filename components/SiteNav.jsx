@@ -13,6 +13,7 @@ const LINKS = [
   { href: '/community/', label: 'Community' },
   { href: '/pricing/', label: 'Pricing' },
   { href: '/security/', label: 'Security' },
+  { href: '/blog/', label: 'Blog' },
   { href: '/about/', label: 'About' },
 ];
 
@@ -92,7 +93,7 @@ export default function SiteNav() {
             <SolutionsMenu open={menu === l.menu} onClose={() => { setMenu(null); setOpen(false); }} />
           </div>
         ) : (
-          <Link key={l.href} href={l.href} aria-current={pathname === l.href ? 'page' : undefined}>
+          <Link key={l.href} href={l.href} aria-current={pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href)) ? 'page' : undefined}>
             {l.label}
           </Link>
         )))}

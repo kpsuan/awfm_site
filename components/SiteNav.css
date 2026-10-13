@@ -25,7 +25,7 @@
 }
 .nav__brand img { width: 34px; height: 34px; }
 .nav__brand strong { font-weight: 700; }
-.nav__links { display: flex; align-items: center; gap: 28px; }
+.nav__links { display: flex; align-items: center; gap: clamp(16px, 2vw, 28px); }
 .nav__links a {
   font-family: var(--font-heading);
   font-size: 15px;

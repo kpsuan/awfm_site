@@ -22,3 +22,21 @@ lives at awholefamilymatter.app; all sign-in / join links point there.
 
 Before launch: confirm Team names/titles/photos and have Security copy
 signed off against the GDPR audit.
+
+## Writing a blog post
+
+Add a Markdown file to `content/blog/<slug>.md` — the filename becomes the
+URL (`/blog/<slug>/`). Start it with front matter:
+
+    ---
+    title: "Your title"
+    description: "One or two sentences for the card and link previews."
+    date: "2026-10-13"
+    category: "Product"
+    author: "A Whole Family Matter"
+    cover: "https://res.cloudinary.com/.../image.jpg"
+    draft: true        # optional — hides the post until removed
+    ---
+
+Then write the article in Markdown (## headings, **bold**, lists, links).
+Run `npm run build` and the post appears on /blog, newest first.

@@ -28,6 +28,7 @@ export default function SiteFooter() {
             <Link href="/team/">Team</Link>
             <Link href="/security/">Security</Link>
             <Link href="/community/">Community</Link>
+            <Link href="/blog/">Blog</Link>
           </div>
           <div className="foot__col">
             <h4>Account</h4>
