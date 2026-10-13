@@ -217,10 +217,21 @@ export default function Home() {
               <p>{DIFFERENT[0].body}</p>
             </article>
             <article className="diff__item">
-              <div className="diff__art diff__art--stages" aria-hidden="true">
-                {['#b432a3', '#a83eb1', '#9b4abf', '#8e56cd', '#8262db', '#756ee9', '#697af7'].map((c, i) => (
-                  <i key={c} style={{ background: c, '--i': i }}>{i + 1}</i>
-                ))}
+              <div className="diff__art diff__art--book" aria-hidden="true">
+                <div className="wb">
+                  <div className="wb__page">
+                    <span className="wb__k">Stage 1 · Permission</span>
+                    <b className="wb__t">Hopes and Fears</b>
+                    {['Name what you hope for', 'Name what you fear', 'Walk both roads at once'].map((t, i) => (
+                      <span className="wb__row" key={t} style={{ '--i': i }}><i />{t}</span>
+                    ))}
+                  </div>
+                  <div className="wb__tabs">
+                    {['#b432a3', '#a83eb1', '#9b4abf', '#8e56cd', '#8262db', '#756ee9', '#697af7'].map((c, i) => (
+                      <i key={c} style={{ background: c }} className={i === 0 ? 'is-on' : ''}>{i + 1}</i>
+                    ))}
+                  </div>
+                </div>
               </div>
               <h3>{DIFFERENT[1].title}</h3>
               <p>{DIFFERENT[1].body}</p>
