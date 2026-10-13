@@ -4,6 +4,7 @@ import { APP_URL, HELP_URL, LEGAL_ENTITY, REGISTER_URL } from '@/config/site';
 import './security.css';
 
 export const metadata = {
+  alternates: { canonical: '/security/' },
   title: 'Security & Privacy',
   description:
     'How A Whole Family Matter protects your family’s most sensitive conversations: EU hosting, encryption, private recordings, consent-first analytics and your GDPR rights.',

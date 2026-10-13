@@ -1,7 +1,7 @@
 import './globals.css';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
-import { SITE_URL } from '@/config/site';
+import { SITE_URL, LEGAL_ENTITY } from '@/config/site';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -14,8 +14,10 @@ export const metadata = {
   openGraph: {
     siteName: 'A Whole Family Matter',
     type: 'website',
-    images: ['/logo.png'],
+    locale: 'en_GB',
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'A Whole Family Matter — interdependent care planning' }],
   },
+  twitter: { card: 'summary_large_image', images: ['/og.png'] },
   icons: { icon: '/logo.png' },
 };
 
@@ -29,6 +31,21 @@ export default function RootLayout({ children }) {
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'A Whole Family Matter',
+            legalName: LEGAL_ENTITY.name,
+            url: SITE_URL,
+            logo: `${SITE_URL}/logo.png`,
+            email: LEGAL_ENTITY.email,
+            telephone: LEGAL_ENTITY.phone,
+            address: { '@type': 'PostalAddress', streetAddress: 'Fluwelen Burgwal 58', postalCode: '2511 CJ', addressLocality: 'The Hague', addressCountry: 'NL' },
+            sameAs: ['https://awholefamilymatter.app', 'https://awholefamilymatter.com'],
+          }) }}
+        />
         <SiteNav />
         <main>{children}</main>
         <SiteFooter />

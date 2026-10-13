@@ -3,6 +3,7 @@ import { getAllPosts, formatDate } from '@/lib/blog';
 import './blog.css';
 
 export const metadata = {
+  alternates: { canonical: '/blog/' },
   title: 'Blog',
   description: 'Stories, research and product notes from A Whole Family Matter — on care planning, the protective silence, and families caring across borders.',
 };

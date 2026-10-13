@@ -4,6 +4,7 @@ import { REGISTER_URL } from '@/config/site';
 import '../inner.css';
 
 export const metadata = {
+  alternates: { canonical: '/about/' },
   title: 'About',
   description:
     'A Filipino startup for social impact helping medical migrants and their collectivist families plan, fund, and advocate for dignified end-of-life care.',

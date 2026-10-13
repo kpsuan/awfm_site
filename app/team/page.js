@@ -2,6 +2,7 @@ import { REGISTER_URL, LEGAL_ENTITY } from '@/config/site';
 import './team.css';
 
 export const metadata = {
+  alternates: { canonical: '/team/' },
   title: 'Team',
   description: 'Meet the Filipino innovators building A Whole Family Matter — interdependent care planning for medical migrants and their collectivist families.',
 };

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getAllPosts, getPost, formatDate } from '@/lib/blog';
-import { REGISTER_URL } from '@/config/site';
+import { REGISTER_URL, SITE_URL } from '@/config/site';
 import '../blog.css';
 
 export function generateStaticParams() {
@@ -12,7 +12,8 @@ export function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.description,
-    openGraph: { title: post.title, description: post.description, images: [post.cover], type: 'article' },
+    alternates: { canonical: `/blog/${post.slug}/` },
+    openGraph: { title: post.title, description: post.description, images: [post.cover], type: 'article', publishedTime: post.date },
   };
 }
 
@@ -21,6 +22,20 @@ export default function Post({ params }) {
   const more = getAllPosts().filter((p) => p.slug !== post.slug).slice(0, 2);
   return (
     <article className="bl-post">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: post.title,
+          description: post.description,
+          image: post.cover,
+          datePublished: post.date,
+          author: { '@type': 'Organization', name: post.author },
+          publisher: { '@type': 'Organization', name: 'A Whole Family Matter', logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` } },
+          mainEntityOfPage: `${SITE_URL}/blog/${post.slug}/`,
+        }) }}
+      />
       <header className="bl-wrap bl-post__head">
         <Link href="/blog/" className="bl-back">← All articles</Link>
         <span className="bl-meta"><b>{post.category}</b> · {formatDate(post.date)} · {post.minutes} min read</span>

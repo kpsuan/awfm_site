@@ -13,6 +13,7 @@ import { FACES } from '@/components/faces';
 import './home.css';
 
 export const metadata = {
+  alternates: { canonical: '/' },
   title: { absolute: 'A Whole Family Matter — Interdependent care planning' },
 };
 

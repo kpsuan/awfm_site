@@ -2,6 +2,7 @@ import { REGISTER_URL, SPONSOR_URL, HELP_URL, APP_URL } from '@/config/site';
 import './pricing.css';
 
 export const metadata = {
+  alternates: { canonical: '/pricing/' },
   title: 'Pricing',
   description:
     'Start free. €30 once opens the guided care plan for your whole team; €10 a month adds the advocacy workbook in Full mode. One fee per family, never per person.',
