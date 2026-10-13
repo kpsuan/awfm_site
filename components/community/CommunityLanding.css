@@ -995,7 +995,7 @@
 .cm-checks__n { font-family: var(--font-heading); font-size: 14px; color: var(--cl-brand); }
 .cm-checks strong { font-family: var(--font-heading); font-size: 26px; font-weight: 400; color: var(--cl-ink); }
 .cm-checks p { font-family: var(--font-heading); font-size: 18px; color: var(--cl-muted); }
-.cm-profile { margin-top: 30px; font-size: 18px; color: var(--cl-muted); max-width: 62ch; }
+.cl .cm-profile { margin-top: 30px; font-size: 18px; color: var(--cl-muted); max-width: 62ch; }
 .cm-profile b { color: var(--cl-ink); font-weight: 600; }
 
 .cm-isnot {
