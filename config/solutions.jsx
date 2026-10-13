@@ -8,26 +8,20 @@ export const SOLUTIONS = [
     heading: 'For families',
     items: [
       {
-        title: 'Start a care team',
-        body: 'Bring your three circles of care together and lead the planning as the team’s Leader.',
-        href: REGISTER_URL,
-        icon: p(<><path d="M12 5v14M5 12h14" /></>),
-      },
-      {
-        title: 'Join your family’s team',
-        body: 'Answer the questions in your own words, one a day, alongside everyone else.',
-        href: '/#team',
-        icon: p(<><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0" /><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6" /></>),
-      },
-      {
         title: 'Medical migrants',
         body: 'Lead your immediate family, your family back home, and your chosen family — from wherever you work.',
         href: '/about/',
         icon: p(<><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" /></>),
       },
       {
-        title: 'Witness & Custodian',
-        body: 'Affirm the family’s decisions and run Care Fund approvals and releases.',
+        title: 'Care teams',
+        body: 'Start your family’s team or join one — everyone answers in their own words, together.',
+        href: REGISTER_URL,
+        icon: p(<><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20a6.5 6.5 0 0 1 13 0" /><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6" /></>),
+      },
+      {
+        title: 'Leaders & officers',
+        body: 'Coordinate the team, witness its decisions, and run Care Fund approvals and releases.',
         href: `${HELP_URL}#learn-by-role`,
         icon: p(<path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z" />),
       },
