@@ -44,7 +44,7 @@
 }
 .qj-mock__steps span.is-done { color: var(--ink); border-top-color: var(--brand); }
 
-.qj-mock__stage { display: grid; min-height: 360px; }
+.qj-mock__stage { display: grid; }
 .qj-pane {
   grid-area: 1 / 1;
   display: grid;
