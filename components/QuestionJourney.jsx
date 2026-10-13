@@ -32,12 +32,93 @@ const STEPS = [
   },
   {
     n: 4,
+    label: 'Then',
+    title: 'What your choices reveal',
+    ask: null,
+    body: 'Your three answers are matched to a pattern grounded in published research — naming what is really going on, so you can reflect on it.',
+  },
+  {
+    n: 5,
     label: 'Then, together',
     title: 'Explain it, and affirm each other',
     ask: null,
     body: 'Record the reasoning behind your choices by video, audio, or text. Your care team sees your answers — and affirms them.',
   },
 ];
+
+// Q8, Pattern 9 — the seeded pattern for exactly the picks shown above.
+const PPR = {
+  picks: [
+    'I would rather not think about my own death',
+    'My culture makes it hard to talk honestly about death',
+    'An honest conversation with someone I trust',
+  ],
+  text: 'Your choices reveal a compounded avoidance pattern. You would rather not think about death, your culture makes it hard to talk honestly, and an honest conversation would change your mind. Fan and colleagues studied 161 adults in Singapore and found that even those who completed advance care planning still showed significant death avoidance because cultural taboos persisted beneath preparation. Your combination names the double seal: internal avoidance and cultural prohibition reinforce each other until someone breaks both at once.',
+};
+
+const REASON = 'Papa always said we don’t talk about these things. I think that’s exactly why we should — together, before we have to.';
+const MODES = ['Video', 'Audio', 'Text'];
+
+// Recording demo: cycles video → audio → text while its step is active.
+function Recorder({ on }) {
+  const [mode, setMode] = useState(0);
+  const [secs, setSecs] = useState(0);
+  const [typed, setTyped] = useState('');
+
+  useEffect(() => {
+    if (!on) return undefined;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setTyped(REASON);
+      return undefined;
+    }
+    const t = setInterval(() => setMode((m) => (m + 1) % MODES.length), 4200);
+    return () => clearInterval(t);
+  }, [on]);
+
+  useEffect(() => {
+    if (!on) return undefined;
+    setSecs(0);
+    setTyped('');
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { setTyped(REASON); return undefined; }
+    if (MODES[mode] === 'Text') {
+      let i = 0;
+      const t = setInterval(() => { i += 2; setTyped(REASON.slice(0, i)); if (i >= REASON.length) clearInterval(t); }, 45);
+      return () => clearInterval(t);
+    }
+    const t = setInterval(() => setSecs((x) => x + 1), 1000);
+    return () => clearInterval(t);
+  }, [mode, on]);
+
+  const clock = `0:${String(secs).padStart(2, '0')}`;
+  return (
+    <div className="qj-recorder">
+      <div className="qj-tabs">
+        {MODES.map((m, i) => <span key={m} className={i === mode ? 'is-on' : ''}>{m}</span>)}
+      </div>
+      <div className="qj-screen">
+        {MODES[mode] === 'Video' && (
+          <div className="qj-video">
+            <span className="qj-video__face" />
+            <span className="qj-rec"><i />REC {clock}</span>
+          </div>
+        )}
+        {MODES[mode] === 'Audio' && (
+          <div className="qj-audio">
+            <div className="qj-wave">{Array.from({ length: 22 }, (_, i) => <i key={i} style={{ animationDelay: `${(i % 7) * 0.11}s` }} />)}</div>
+            <span className="qj-rec"><i />{clock}</span>
+          </div>
+        )}
+        {MODES[mode] === 'Text' && (
+          <div className="qj-text">
+            <span className="qj-text__label">Reason for my Answers</span>
+            <p>{typed}<b className="qj-caret" /></p>
+          </div>
+        )}
+      </div>
+      <span className="qj-who">Who can see this? <strong>My Teams</strong></span>
+    </div>
+  );
+}
 
 const CHECKPOINT_TITLES = ['Your position', 'Your challenges', 'Your mind-changer'];
 
@@ -106,12 +187,19 @@ function Mock({ active }) {
         <div className={`qj-pane${active === 2 ? ' is-on' : ''}`}><Options pane={PANES[2]} multi /></div>
         <div className={`qj-pane${active === 3 ? ' is-on' : ''}`}><Options pane={PANES[3]} multi /></div>
 
-        {/* After the checkpoints: explanation + team affirmation */}
+        {/* Summary: the matched Personal Pattern Recognition */}
         <div className={`qj-pane${active === 4 ? ' is-on' : ''}`}>
-          <p className="qj-pane__prompt">Record your explanation</p>
-          <div className="qj-rec">
-            <span>Record video</span><span>Record audio</span><span>Enter text</span>
+          <p className="qj-pane__prompt">What Your Choices Reveal About You</p>
+          <div className="qj-picks">
+            {PPR.picks.map((pk, i) => <span key={pk}><b>Checkpoint {i + 1}</b>{pk}</span>)}
           </div>
+          <p className="qj-ppr">{PPR.text}</p>
+        </div>
+
+        {/* Then: record an explanation + team affirmation */}
+        <div className={`qj-pane${active === 5 ? ' is-on' : ''}`}>
+          <p className="qj-pane__prompt">Record your Explanation</p>
+          <Recorder on={active === 5} />
           <div className="qj-affirm">
             <span className="qj-affirm__title">Team affirmations</span>
             <div className="qj-affirm__row">
