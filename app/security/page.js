@@ -1,6 +1,6 @@
 import SecurityHero from '@/components/security/SecurityHero';
 import Compliance from '@/components/security/Compliance';
-import { APP_URL, LEGAL_ENTITY, REGISTER_URL } from '@/config/site';
+import { APP_URL, HELP_URL, LEGAL_ENTITY, REGISTER_URL } from '@/config/site';
 import './security.css';
 
 export const metadata = {
@@ -161,8 +161,13 @@ export default function Security() {
             </p>
             <div className="sx__contact-ctas">
               <a className="btn" href={`mailto:${LEGAL_ENTITY.email}`}>{LEGAL_ENTITY.email}</a>
-              <a className="btn btn--ghost" href={REGISTER_URL}>Get Started Free</a>
+              <a className="btn btn--ghost" href={HELP_URL}>Visit the Help Center</a>
             </div>
+            <p className="sx__contact-note">
+              Looking for answers on accounts, the Care Fund or sponsorship? Browse the{' '}
+              <a href={`${HELP_URL}#faq`}>frequently asked questions</a>, or{' '}
+              <a href={REGISTER_URL}>get started free</a>.
+            </p>
           </div>
         </div>
       </section>

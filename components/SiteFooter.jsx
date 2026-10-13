@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LEGAL_ENTITY, REGISTER_URL, LOGIN_URL, APP_URL } from '@/config/site';
+import { LEGAL_ENTITY, REGISTER_URL, LOGIN_URL, APP_URL, HELP_URL } from '@/config/site';
 import './SiteFooter.css';
 
 export default function SiteFooter() {
@@ -33,6 +33,7 @@ export default function SiteFooter() {
             <h4>Account</h4>
             <a href={REGISTER_URL}>Join free</a>
             <a href={LOGIN_URL}>Sign in</a>
+            <a href={HELP_URL}>Help Center</a>
             <a href={`${APP_URL}/legal`}>Privacy &amp; Legal Center</a>
           </div>
         </div>

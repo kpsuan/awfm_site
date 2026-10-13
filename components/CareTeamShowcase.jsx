@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { FACES } from './faces';
 import './CareTeamShowcase.css';
 
@@ -149,6 +149,28 @@ const FEATURES = [
   { title: 'Team Wrapped', body: 'A story-style digest of what your team shared — sent daily or weekly.', C: Wrapped },
 ];
 
+const TABS = ['Posts', 'Daily Habit', 'Members', 'Insights', 'Digests', 'Channels'];
+const TAB_FOR = ['Posts', 'Posts', 'Insights', 'Posts', 'Daily Habit', 'Digests'];
+
+// Tab track with a pill that slides to the active tab.
+function Tabs({ active }) {
+  const refs = useRef({});
+  const [pill, setPill] = useState(null);
+  const iso = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+  iso(() => {
+    const el = refs.current[active];
+    if (el) setPill({ left: el.offsetLeft, width: el.offsetWidth });
+  }, [active]);
+  return (
+    <div className="ct-app__tabs">
+      {pill && <i className="ct-app__pill" style={{ transform: `translateX(${pill.left}px)`, width: pill.width }} />}
+      {TABS.map((t) => (
+        <span key={t} ref={(el) => { refs.current[t] = el; }} className={t === active ? 'is-on' : ''}>{t}</span>
+      ))}
+    </div>
+  );
+}
+
 export default function CareTeamShowcase() {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
@@ -189,20 +211,20 @@ export default function CareTeamShowcase() {
         <div className="ct-app__banner" />
         <div className="ct-app__head">
           <span className="ct-app__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 10.5 12 3l9 7.5" /><path d="M5 9.5V21h14V9.5" /><path d="M10 21v-6h4v6" /></svg></span>
-          <div>
+          <div className="ct-app__id">
             <span className="ct-app__level">Immediate Family</span>
             <strong>The Santos Family</strong>
-            <span className="ct-app__meta">Private group · 5 members · <b>Full plan</b></span>
+            <span className="ct-app__meta">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="11" width="16" height="10" rx="2" /><path d="M8 11V7a4 4 0 0 1 8 0v4" /></svg>
+              Private group · 5 members <b>Full plan</b>
+            </span>
           </div>
-          <div className="ct-app__stack">{PEOPLE.map((p) => <Ava key={p.n} p={p} size={30} />)}</div>
+          <div className="ct-app__people">
+            <div className="ct-app__stack">{PEOPLE.map((p) => <Ava key={p.n} p={p} size={28} />)}</div>
+            <span className="ct-app__invite">+ Invite</span>
+          </div>
         </div>
-        <div className="ct-app__tabs">
-          {['Posts', 'Daily Habit', 'Members', 'Insights', 'Digests', 'Channels'].map((t) => {
-            const on = (t === 'Posts' && active <= 1) || (t === 'Insights' && active === 2) || (t === 'Posts' && active === 3)
-              || (t === 'Daily Habit' && active === 4) || (t === 'Digests' && active === 5);
-            return <span key={t} className={on ? 'is-on' : ''}>{t}</span>;
-          })}
-        </div>
+        <Tabs active={TAB_FOR[active]} />
         <div className="ct-app__feed">
           <div className="ct-swap" key={active}><Card /></div>
         </div>

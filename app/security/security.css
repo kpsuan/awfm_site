@@ -98,3 +98,5 @@
 .sx__contact-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
 
 @media (prefers-reduced-motion: reduce) { .sc-detail { transition: none; } }
+.sx__contact-note { font-size: 15px !important; }
+.sx__contact-note a { color: var(--brand); }
