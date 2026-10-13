@@ -35,21 +35,6 @@ export default function HomeMotion() {
         });
       });
 
-      // Checkpoints: a line travels 1 -> 2 -> 3, lighting each on arrival
-      const cpWrap = document.querySelector('.cp-wrap');
-      const cps = cpWrap ? [...cpWrap.querySelectorAll('.checkpoint')] : [];
-      if (cpWrap) {
-        const light = (p) => cps.forEach((c, i) => c.classList.toggle('is-lit', p >= i / (cps.length - 1) - 0.02));
-        light(0);
-        gsap.fromTo(cpWrap, { '--cp': 0 }, {
-          '--cp': 1, ease: 'none',
-          scrollTrigger: {
-            trigger: cpWrap, start: 'top 72%', end: 'bottom 62%', scrub: 0.4,
-            onUpdate: (self) => light(self.progress),
-          },
-        });
-      }
-
       // Care fund pool: three rounds of monthly contributions fill the funds
       const pool = document.querySelector('.pool');
       if (pool) {
@@ -93,7 +78,7 @@ export default function HomeMotion() {
       }
 
       return () => {
-        document.querySelectorAll('.checkpoint, .spath__stage').forEach((el) => el.classList.add('is-lit'));
+        document.querySelectorAll('.spath__stage').forEach((el) => el.classList.add('is-lit'));
         document.querySelectorAll('.pd__n').forEach((el) => { if (el.dataset.figure) el.textContent = el.dataset.figure; });
       };
     });

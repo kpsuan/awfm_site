@@ -6,32 +6,12 @@ import FilmHero from '@/components/community/FilmHero';
 import FundPool from '@/components/FundPool';
 import StagePath from '@/components/StagePath';
 import HomeMotion from '@/components/HomeMotion';
+import QuestionJourney from '@/components/QuestionJourney';
 import './home.css';
 
 export const metadata = {
   title: { absolute: 'A Whole Family Matter — Interdependent care planning' },
 };
-
-const CHECKPOINTS = [
-  {
-    n: '1',
-    title: 'The question',
-    body: 'Start with any of 30 questions that lead to love.',
-    quotes: ['How do you really feel about death and dying?', 'When might you consider Voluntarily Stopping Eating & Drinking (VSED)?'],
-  },
-  {
-    n: '2',
-    title: 'The challenges',
-    body: 'The same question follows every answer, all the way through.',
-    quotes: ['What concerns, issues, or challenges might you be facing?'],
-  },
-  {
-    n: '3',
-    title: 'The turning point',
-    body: 'And the one that keeps the conversation honest.',
-    quotes: ['What would make you change your mind?'],
-  },
-];
 
 const FUNDS = [
   { name: 'Urgent', desc: 'For the emergency no one saw coming.' },
@@ -157,29 +137,12 @@ export default function Home() {
               question moves through three checkpoints.
             </p>
           </div>
-          <div className="cp-wrap">
-            <span className="cp-track" aria-hidden="true"><i /></span>
-            <ol className="checkpoints">
-              {CHECKPOINTS.map((c) => (
-                <li className="checkpoint is-lit" key={c.n}>
-                  <span className="checkpoint__dot" aria-hidden="true" />
-                  <span className="checkpoint__n">Checkpoint {c.n}</span>
-                  <h3>{c.title}</h3>
-                  <p>{c.body}</p>
-                  {c.quotes.map((q) => <blockquote key={q}>“{q}”</blockquote>)}
-                </li>
-              ))}
-            </ol>
-          </div>
-          <Reveal className="home-note">
-            <p>
-              At every checkpoint, family members choose from options supported by medical
-              and legal, relational and social education on systemic end-of-life suffering —
-              generated with AI and grounded in the lived experiences of medical migrants and
-              their collectivist families. Each person can explain their reasoning by
-              <b> video, audio, or text</b>, for collective discussion and team affirmation.
-            </p>
-          </Reveal>
+          <QuestionJourney />
+          <p className="home-footnote">
+            Every option comes with medical and legal, relational and social education on
+            end-of-life care — generated with AI and grounded in the lived experiences of
+            medical migrants and their collectivist families.
+          </p>
         </div>
       </section>
 
