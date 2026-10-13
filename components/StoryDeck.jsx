@@ -34,13 +34,13 @@ const STORY = [
     eyebrow: 'Fund',
     title: 'Fund each other’s care, transparently',
     body: 'Pool end-of-life care funds with shared visibility and family-agreed release — because generations are financially interdependent, and no one should carry the cost alone.',
-    points: ['Shared pools with goals', 'Family-agreed approval and release', 'Every movement visible to the team'],
+    points: ['Shared pools with goals', 'Family-agreed approval and release', 'Every movement on the record'],
     card: {
-      head: 'Care fund — €2,450 of €3,800',
+      head: 'Care Fund — €2.450 · 64% of €3.800 target',
       rows: [
-        ['L', 'Auntie Liezel contributed', '€150'],
-        ['✓', 'Release approved by approvers', '3 of 3'],
-        ['€', 'Custodian released for medicines', '€600'],
+        ['L', 'Auntie Liezel logged a contribution', 'Received'],
+        ['✓', 'Withdrawal approved', '2 of 2 approvals'],
+        ['€', 'Custodian released funds for medicines', '€600'],
       ],
     },
   },

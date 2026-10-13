@@ -20,9 +20,9 @@ const JAR = { w: 76, top: 180, h: 128, gap: 22, left: 25 };
 const jarX = (k) => JAR.left + k * (JAR.w + JAR.gap);
 const COINS = 15; // three rounds of five drops
 
-export default function FundPool() {
+export default function FundPool({ active = null }) {
   return (
-    <figure className="pool" aria-label="Family members pooling monthly contributions into five purpose-based care funds.">
+    <figure className="pool" data-active={active === null ? undefined : active} aria-label="Family members pooling monthly contributions into five purpose-based care funds.">
       <svg viewBox="0 0 540 350" aria-hidden="true">
         <defs>
           <linearGradient id="poolFill" x1="0" y1="0" x2="0" y2="1">
@@ -47,7 +47,7 @@ export default function FundPool() {
         {FUNDS.map((f, k) => {
           const fillH = Math.round(JAR.h * f.level);
           return (
-            <g key={f.name}>
+            <g key={f.name} className={`pool__jarset${active === k ? ' is-active' : ''}`}>
               <rect className="pool__jar" x={jarX(k)} y={JAR.top} width={JAR.w} height={JAR.h} rx="16" />
               <rect
                 className="pool__fill"

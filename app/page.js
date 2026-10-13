@@ -3,7 +3,7 @@ import Reveal from '@/components/Reveal';
 import StoryDeck from '@/components/StoryDeck';
 import HeroOrbit from '@/components/HeroOrbit';
 import FilmHero from '@/components/community/FilmHero';
-import FundPool from '@/components/FundPool';
+import FundExplorer from '@/components/FundExplorer';
 import StagePath from '@/components/StagePath';
 import HomeMotion from '@/components/HomeMotion';
 import QuestionJourney from '@/components/QuestionJourney';
@@ -13,13 +13,6 @@ export const metadata = {
   title: { absolute: 'A Whole Family Matter — Interdependent care planning' },
 };
 
-const FUNDS = [
-  { name: 'Urgent', desc: 'For the emergency no one saw coming.' },
-  { name: 'Quality of life', desc: 'Comfort, care, and dignity in the time that remains.' },
-  { name: 'Legacy and rites', desc: 'Honouring a life the way the family believes it should be.' },
-  { name: 'Repatriation', desc: 'Bringing a loved one home.' },
-  { name: 'Mutual aid', desc: 'Support for whoever in the circle needs it next.' },
-];
 
 // No one dies in pain, in debt, and in silence: each failure maps to the
 // pillar that answers it.
@@ -152,29 +145,20 @@ export default function Home() {
 
       {/* ── Fund: purpose-based care funds ── */}
       <section id="fund" className="section section--cream">
-        <div className="wrap home-split">
-          <Reveal>
-            <span className="eyebrow">Care fund pooling</span>
-            <h2 className="h2">What families already do, made dependable.</h2>
-            <p className="lead">
-              Pooling money is something our cultures already know — <i>paluwagan</i> in the
-              Philippines, <i>esusu</i> in Nigeria. Instead of reactionary cash remittances
-              during a family emergency, care teams proactively pool monthly for each other’s
-              end-of-life care, with shared visibility and family-agreed release.
-            </p>
-          </Reveal>
-          <FundPool />
-        </div>
-        <div className="wrap">
-          <ul className="funds">
-            {FUNDS.map((f) => (
-              <li className="fund" key={f.name}>
-                <strong>{f.name}</strong>
-                <span>{f.desc}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <FundExplorer
+          intro={(
+              <div>
+                <span className="eyebrow">Care fund pooling</span>
+                <h2 className="h2">What families already do, made dependable.</h2>
+                <p className="lead">
+                  Pooling money is something our cultures already know — <i>paluwagan</i> in the
+                  Philippines, <i>esusu</i> in Nigeria. Instead of reactionary cash remittances
+                  during a family emergency, care teams proactively pool monthly for each other’s
+                  end-of-life care, with shared visibility and family-agreed release.
+                </p>
+              </div>
+          )}
+        />
       </section>
 
       {/* ── Advocate: the 7-stage workbook ── */}
