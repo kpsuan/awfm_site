@@ -215,3 +215,34 @@
   margin-top: 40px;
 }
 .ct-list { position: relative; }
+
+/* Elections */
+.ct-vote__ico { width: 36px; height: 36px; flex-shrink: 0; border-radius: 10px; display: grid; place-items: center; color: #fff; background: linear-gradient(160deg, #b432a3, #7a5ad6); }
+.ct-vote__ico svg { width: 18px; height: 18px; }
+.ct-badge--open { color: #157a46; background: #e3f4ea; }
+.ct-badge--amber { color: #fff; background: #f59e0b; }
+.ct-cands { display: grid; gap: 8px; }
+.ct-cand { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 14px; border: 1.5px solid var(--line); }
+.ct-cand.is-lead { border-color: rgba(180, 50, 163, 0.4); background: #fcf5fb; }
+.ct-cand__body { flex: 1; display: grid; gap: 6px; }
+.ct-cand__body strong { font-family: var(--font-heading); font-size: 14px; font-weight: 500; color: var(--ink); }
+.ct-cand__bar { height: 6px; border-radius: 99px; background: #efe5ee; overflow: hidden; }
+.ct-cand__bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, #b432a3, #ae59cf); animation: ct-grow 0.9s ease both; }
+.ct-cand > b { font-family: var(--font-heading); font-size: 18px; font-weight: 500; color: var(--ink); }
+
+/* Polls */
+.ct-poll { display: grid; gap: 8px; }
+.ct-poll__opt {
+  position: relative; overflow: hidden; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 11px 14px; border-radius: 12px; border: 1.5px solid var(--line); font-size: 13.5px; color: var(--ink);
+}
+.ct-poll__opt > i {
+  position: absolute; left: 0; top: 0; bottom: 0; background: #f4ecf4;
+  animation: ct-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: calc(var(--i) * 0.12s);
+}
+.ct-poll__opt.is-mine { border-color: rgba(180, 50, 163, 0.45); }
+.ct-poll__opt.is-mine > i { background: #f6dff1; }
+.ct-poll__opt span, .ct-poll__opt b { position: relative; }
+.ct-poll__opt em { margin-left: 8px; font-style: normal; font-family: var(--font-heading); font-size: 11px; font-weight: 600; color: var(--brand); }
+.ct-poll__opt b { font-family: var(--font-heading); font-weight: 500; }
+@media (prefers-reduced-motion: reduce) { .ct-cand__bar i, .ct-poll__opt > i { animation: none; } }

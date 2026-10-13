@@ -140,17 +140,77 @@ function Wrapped() {
   );
 }
 
+function Election() {
+  const voters = PEOPLE.slice(1);
+  return (
+    <div className="ct-post">
+      <div className="ct-post__head">
+        <span className="ct-vote__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12h16v8H4z" /><path d="m8 8 3 3 5-6" /></svg></span>
+        <div className="ct-post__who">
+          <p><strong>Election</strong> <span className="ct-badge ct-badge--open">Open</span></p>
+          <span>Elect a new Leader for the Santos Family · closes in 2 days</span>
+        </div>
+      </div>
+      <div className="ct-cands">
+        {[[PEOPLE[2], 'Mila', 3, true], [PEOPLE[4], 'Lolo', 1, false]].map(([pp, n, v, lead]) => (
+          <div className={`ct-cand${lead ? ' is-lead' : ''}`} key={n}>
+            <Ava p={pp} size={34} />
+            <div className="ct-cand__body">
+              <strong>{n} for Leader</strong>
+              <span className="ct-cand__bar"><i style={{ width: `${(v / 4) * 100}%` }} /></span>
+            </div>
+            <b>{v}</b>
+          </div>
+        ))}
+      </div>
+      <div className="ct-post__foot">
+        <span className="ct-affirm">
+          <span className="ct-affirm__stack">{voters.map((pp) => <Ava key={pp.n} p={pp} size={20} />)}</span>
+          4 of 5 ballots cast · every ballot on the record
+        </span>
+        <span className="ct-btn">Cast your ballot</span>
+      </div>
+    </div>
+  );
+}
+
+function Poll() {
+  const opts = [['At home, with all of us around', 58, true], ['Back home in Iloilo', 28, false], ['In a hospice near family', 14, false]];
+  return (
+    <div className="ct-post">
+      <div className="ct-post__head">
+        <Ava p={PEOPLE[1]} size={36} />
+        <div className="ct-post__who">
+          <p><strong>Lola</strong> <span className="ct-badge ct-badge--amber">Poll</span></p>
+          <span>Where would Papa feel most at peace? · 6 votes</span>
+        </div>
+      </div>
+      <div className="ct-poll">
+        {opts.map(([o, pct, mine], i) => (
+          <div className={`ct-poll__opt${mine ? ' is-mine' : ''}`} key={o} style={{ '--i': i }}>
+            <i style={{ width: `${pct}%` }} />
+            <span>{o}{mine && <em>Your vote</em>}</span>
+            <b>{pct}%</b>
+          </div>
+        ))}
+      </div>
+      <div className="ct-post__foot"><span className="ct-muted">Poll closes Sunday</span><span className="ct-muted">Discuss in #q21</span></div>
+    </div>
+  );
+}
+
 const FEATURES = [
-  { title: 'Answers become cards', body: 'Every completed question posts to the team feed — flip through each person’s choices and affirm them.', C: Completion },
-  { title: 'Weekly Team Pulse', body: 'One shared conversation a week, and a check-in on how everyone is really doing.', C: Pulse },
-  { title: 'Where we differ', body: 'See where the family agrees and where it doesn’t — then talk it through in that question’s channel.', C: Insights },
-  { title: 'Celebrations', body: 'New members, new leaders, milestones — the team marks them together.', C: Celebration },
-  { title: 'A question a day', body: 'The Daily Habit walks the whole family through the care plan, one reflection at a time.', C: DailyHabit },
-  { title: 'Team Wrapped', body: 'A story-style digest of what your team shared — sent daily or weekly.', C: Wrapped },
+  { title: 'Answers become cards', body: 'Every completed question posts to the team feed — flip through each person’s choices and affirm them.', C: Completion, tab: 'Posts' },
+  { title: 'Weekly Team Pulse', body: 'One shared conversation a week, and a check-in on how everyone is really doing.', C: Pulse, tab: 'Posts' },
+  { title: 'Where we differ', body: 'See where the family agrees and where it doesn’t — then talk it through in that question’s channel.', C: Insights, tab: 'Insights' },
+  { title: 'Polls', body: 'Ask the whole team a quick question and see where everyone leans before the bigger conversation.', C: Poll, tab: 'Posts' },
+  { title: 'Team elections', body: 'Elect a Leader or Witness, or open a removal vote — the family governs itself, every ballot on the record.', C: Election, tab: 'Members' },
+  { title: 'Celebrations', body: 'New members, new leaders, milestones — the team marks them together.', C: Celebration, tab: 'Posts' },
+  { title: 'A question a day', body: 'The Daily Habit walks the whole family through the care plan, one reflection at a time.', C: DailyHabit, tab: 'Daily Habit' },
+  { title: 'Team Wrapped', body: 'A story-style digest of what your team shared — sent daily or weekly.', C: Wrapped, tab: 'Digests' },
 ];
 
 const TABS = ['Posts', 'Daily Habit', 'Members', 'Insights', 'Digests', 'Channels'];
-const TAB_FOR = ['Posts', 'Posts', 'Insights', 'Posts', 'Daily Habit', 'Digests'];
 
 // Tab track with a pill that slides to the active tab.
 function Tabs({ active }) {
@@ -265,7 +325,7 @@ export default function CareTeamShowcase() {
             <span className="ct-app__invite">+ Invite</span>
           </div>
         </div>
-        <Tabs active={TAB_FOR[active]} />
+        <Tabs active={FEATURES[active].tab} />
         <div className="ct-app__feed">
           <div className="ct-swap" key={active}><Card /></div>
         </div>
