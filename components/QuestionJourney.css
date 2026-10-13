@@ -118,16 +118,12 @@
   padding: 6px 12px; border-radius: 999px; color: var(--muted); background: #f4eff3; transition: all 0.3s ease;
 }
 .qj-tabs span.is-on { color: #fff; background: linear-gradient(180deg, var(--brand), var(--brand-2)); }
-.qj-screen { height: 118px; border-radius: 14px; overflow: hidden; }
+.qj-screen { height: 170px; border-radius: 14px; overflow: hidden; }
 .qj-video {
   position: relative; height: 100%;
   background: radial-gradient(circle at 50% 40%, #6d4a68, #26172a);
 }
-.qj-video__face {
-  position: absolute; left: 50%; top: 18px; width: 64px; height: 64px; margin-left: -32px;
-  border-radius: 999px; background: radial-gradient(circle at 50% 35%, #e9c3a5 0 30%, #b98a6c 31% 55%, transparent 56%);
-  box-shadow: 0 60px 0 18px #8e5a7e;
-}
+.qj-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
 .qj-rec {
   position: absolute; left: 10px; top: 10px; display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--font-heading); font-size: 11.5px; font-weight: 600; color: #fff;
@@ -150,3 +146,6 @@
   .qj-rec i, .qj-caret, .qj-wave i { animation: none; }
   .qj-wave i { transform: scaleY(0.6); }
 }
+
+.qj-mock__intro { display: grid; gap: 16px; }
+.qj-mock__intro.is-hidden { display: none; }

@@ -83,6 +83,7 @@ a { color: inherit; }
 }
 .section { padding-block: clamp(60px, 10vh, 110px); }
 .section--cream { background: var(--cream); }
+.section--band { background: var(--band); }
 .h2 {
   font-size: clamp(28px, 3.6vw, 46px);
   font-weight: 400;

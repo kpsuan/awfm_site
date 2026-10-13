@@ -56,6 +56,9 @@ const PPR = {
   text: 'Your choices reveal a compounded avoidance pattern. You would rather not think about death, your culture makes it hard to talk honestly, and an honest conversation would change your mind. Fan and colleagues studied 161 adults in Singapore and found that even those who completed advance care planning still showed significant death avoidance because cultural taboos persisted beneath preparation. Your combination names the double seal: internal avoidance and cultural prohibition reinforce each other until someone breaks both at once.',
 };
 
+// Real footage for the video-recording demo (licensed hero clip, cropped).
+const REC_CLIP = 'https://res.cloudinary.com/de3kbbv2o/video/upload/so_4,eo_11,c_crop,w_760,h_600,x_220,y_0/c_scale,w_480/q_auto/v1791179341/smiling-woman-assisted-by-caregiver-in-a-living-ro-2026-10-03-05-37-16-utc_hmz827';
+
 const REASON = 'Papa always said we don’t talk about these things. I think that’s exactly why we should — together, before we have to.';
 const MODES = ['Video', 'Audio', 'Text'];
 
@@ -98,7 +101,14 @@ function Recorder({ on }) {
       <div className="qj-screen">
         {MODES[mode] === 'Video' && (
           <div className="qj-video">
-            <span className="qj-video__face" />
+            <video
+              src={`${REC_CLIP}.mp4`}
+              poster={`${REC_CLIP.replace('so_4,eo_11', 'so_6')}.jpg`}
+              muted
+              loop
+              autoPlay
+              playsInline
+            />
             <span className="qj-rec"><i />REC {clock}</span>
           </div>
         )}
@@ -175,11 +185,13 @@ function Mock({ active }) {
         <span className="qj-mock__chip">Q8</span>
         <span className="qj-mock__sect">What Matters Most</span>
       </div>
+      <div className={`qj-mock__intro${active > 3 ? ' is-hidden' : ''}`}>
       <p className="qj-mock__q">How do you really feel about death and dying?</p>
       <div className="qj-mock__steps">
         {CHECKPOINT_TITLES.map((t, i) => (
           <span key={t} className={i + 1 <= active ? 'is-done' : ''}>{t}</span>
         ))}
+      </div>
       </div>
 
       <div className="qj-mock__stage">

@@ -8,6 +8,7 @@ import StagePath from '@/components/StagePath';
 import HomeMotion from '@/components/HomeMotion';
 import QuestionJourney from '@/components/QuestionJourney';
 import SponsorJourney from '@/components/SponsorJourney';
+import CareTeamShowcase from '@/components/CareTeamShowcase';
 import './home.css';
 
 export const metadata = {
@@ -141,6 +142,21 @@ export default function Home() {
             end-of-life care — generated with AI and grounded in the lived experiences of
             medical migrants and their collectivist families.
           </p>
+        </div>
+      </section>
+
+      {/* ── The care team page ── */}
+      <section id="team" className="section section--band">
+        <div className="wrap">
+          <div className="home-intro">
+            <span className="eyebrow">Your care team page</span>
+            <h2 className="h2">Everything your family shares, in one place.</h2>
+            <p className="lead">
+              Every care team gets its own private space — a feed of answers, check-ins and
+              celebrations, and the tools that keep a family close through the hardest season.
+            </p>
+          </div>
+          <CareTeamShowcase />
         </div>
       </section>
 
