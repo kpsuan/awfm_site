@@ -174,10 +174,38 @@ function Tabs({ active }) {
 export default function CareTeamShowcase() {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
+  const [scrollMode, setScrollMode] = useState(false);
   const root = useRef(null);
+  const track = useRef(null);
+
+  // Desktop: the section pins while the visitor scrolls through it; each
+  // stretch of scroll advances one feature.
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
+    const set = () => setScrollMode(mq.matches);
+    set();
+    mq.addEventListener('change', set);
+    return () => mq.removeEventListener('change', set);
+  }, []);
 
   useEffect(() => {
-    if (!auto || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    if (!scrollMode) return undefined;
+    const onScroll = () => {
+      const el = track.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const span = el.offsetHeight - window.innerHeight;
+      const p = Math.min(Math.max(-r.top / span, 0), 0.999);
+      setActive(Math.floor(p * FEATURES.length));
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [scrollMode]);
+
+  // Mobile / reduced motion: auto-advance while in view until a tap.
+  useEffect(() => {
+    if (scrollMode || !auto || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
     let timer;
     const io = new IntersectionObserver(([e]) => {
       clearInterval(timer);
@@ -185,20 +213,38 @@ export default function CareTeamShowcase() {
     }, { threshold: 0.35 });
     io.observe(root.current);
     return () => { io.disconnect(); clearInterval(timer); };
-  }, [auto]);
+  }, [auto, scrollMode]);
+
+  const pick = (i) => {
+    if (scrollMode && track.current) {
+      const el = track.current;
+      const span = el.offsetHeight - window.innerHeight;
+      const top = el.getBoundingClientRect().top + window.scrollY + span * ((i + 0.5) / FEATURES.length);
+      window.scrollTo({ top, behavior: 'smooth' });
+      return;
+    }
+    setAuto(false);
+    setActive(i);
+  };
 
   const Card = FEATURES[active].C;
   return (
+    <div className={`ct-track${scrollMode ? ' is-scroll' : ''}`} ref={track} style={{ '--n': FEATURES.length }}>
     <div className="ct" ref={root}>
       <div className="ct-list" role="tablist" aria-label="Care team features">
+        {scrollMode && (
+          <span className="ct-progress" aria-hidden="true">
+            <i style={{ transform: `scaleY(${(active + 1) / FEATURES.length})` }} />
+          </span>
+        )}
         {FEATURES.map((f, i) => (
           <button
             key={f.title}
             type="button"
             role="tab"
             aria-selected={active === i}
-            className={`ct-item${active === i ? ' is-active' : ''}${active === i && auto ? ' is-timed' : ''}`}
-            onClick={() => { setAuto(false); setActive(i); }}
+            className={`ct-item${active === i ? ' is-active' : ''}${active === i && auto && !scrollMode ? ' is-timed' : ''}`}
+            onClick={() => pick(i)}
           >
             <strong>{f.title}</strong>
             <span>{f.body}</span>
@@ -229,6 +275,7 @@ export default function CareTeamShowcase() {
           <div className="ct-swap" key={active}><Card /></div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

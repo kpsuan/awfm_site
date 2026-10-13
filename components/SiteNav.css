@@ -25,7 +25,7 @@
 }
 .nav__brand img { width: 34px; height: 34px; }
 .nav__brand strong { font-weight: 700; }
-.nav__links { display: flex; gap: 28px; }
+.nav__links { display: flex; align-items: center; gap: 28px; }
 .nav__links a {
   font-family: var(--font-heading);
   font-size: 15px;
@@ -98,3 +98,57 @@
 @media (max-width: 480px) {
   .nav__brand span { display: none; }
 }
+
+/* ── Solutions mega menu ── */
+.nav__menu { position: relative; }
+.nav__menubtn {
+  display: inline-flex; align-items: center; gap: 4px; line-height: inherit;
+  border: 0; background: none; cursor: pointer; padding: 0;
+  font-family: var(--font-heading); font-size: 15px; font-weight: 500; color: var(--muted);
+}
+.nav__menubtn svg { width: 15px; height: 15px; transition: transform 0.25s ease; }
+.nav__menu.is-open .nav__menubtn { color: var(--ink); }
+.nav__menu.is-open .nav__menubtn svg { transform: rotate(180deg); }
+.nav__menubtn:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
+.nav--overlay:not(.is-scrolled):not(.is-open) .nav__menubtn { color: rgba(255, 255, 255, 0.82); }
+.nav--overlay:not(.is-scrolled):not(.is-open) .nav__menu.is-open .nav__menubtn { color: #fff; }
+
+.mega {
+  position: absolute; top: calc(100% + 18px); left: 50%;
+  width: min(760px, 92vw);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  padding: 14px; border-radius: 18px; background: #fff;
+  box-shadow: 0 30px 70px -30px rgba(38, 32, 59, 0.4), 0 0 0 1px var(--line);
+  opacity: 0; visibility: hidden; transform: translate(-50%, 8px);
+  transition: opacity 0.2s ease, transform 0.25s ease, visibility 0s linear 0.25s;
+}
+.mega::before { content: ''; position: absolute; left: 0; right: 0; top: -20px; height: 20px; }
+.mega.is-open { opacity: 1; visibility: visible; transform: translate(-50%, 0); transition-delay: 0s; }
+.mega__col { display: grid; gap: 2px; align-content: start; padding: 8px; }
+.mega__col + .mega__col { border-left: 1px solid var(--line); }
+.mega__h { font-family: var(--font-heading); font-size: 12.5px; color: var(--faint); padding: 4px 12px 8px; }
+.mega__item {
+  display: flex; gap: 14px; align-items: flex-start; padding: 12px; border-radius: 12px;
+  text-decoration: none; transition: background 0.15s ease;
+}
+.mega__item:hover, .mega__item:focus-visible { background: #f8f3f7; outline: none; }
+.mega__ico {
+  width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; display: grid; place-items: center;
+  background: #f4eef3; color: var(--brand);
+}
+.mega__ico svg { width: 19px; height: 19px; }
+.mega__item strong { display: block; font-family: var(--font-heading); font-size: 15px; font-weight: 500; color: var(--ink); }
+.mega__item em { display: block; font-style: normal; font-size: 13.5px; line-height: 1.45; color: var(--muted); margin-top: 2px; }
+
+@media (max-width: 900px) {
+  .nav__menu { display: grid; }
+  .nav__menubtn { font-size: 18px; padding-block: 10px; color: var(--ink); }
+  .mega {
+    position: static; width: 100%; transform: none; box-shadow: none; padding: 0;
+    grid-template-columns: 1fr; display: none;
+  }
+  .mega.is-open { display: grid; transform: none; }
+  .mega::before { display: none; }
+  .mega__col + .mega__col { border-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .mega, .nav__menubtn svg { transition: none; } }

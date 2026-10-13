@@ -207,3 +207,13 @@
   .ct-swap, .ct-tarot__card, .ct-feels span, .ct-bar i, .ct-wrapped__grid div, .ct-story i.is-run::after { animation: none; }
   .ct-confetti { display: none; }
 }
+
+/* Scroll-driven mode (desktop): pin the showcase while scrolling through it */
+.ct-track.is-scroll { height: calc(var(--n) * 62vh + 100vh); }
+.ct-track.is-scroll .ct {
+  position: sticky; top: max(84px, calc(50vh - 340px));
+  margin-top: 40px;
+}
+.ct-list { position: relative; }
+.ct-progress { position: absolute; left: -14px; top: 10px; bottom: 10px; width: 2px; border-radius: 2px; background: #ece3eb; }
+.ct-progress i { position: absolute; inset: 0; border-radius: 2px; background: linear-gradient(#b432a3, #ae59cf); transform-origin: top; transition: transform 0.4s ease; }
