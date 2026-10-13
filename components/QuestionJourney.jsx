@@ -53,7 +53,9 @@ const PPR = {
     'My culture makes it hard to talk honestly about death',
     'An honest conversation with someone I trust',
   ],
-  text: 'Your choices reveal a compounded avoidance pattern. You would rather not think about death, your culture makes it hard to talk honestly, and an honest conversation would change your mind. Fan and colleagues studied 161 adults in Singapore and found that even those who completed advance care planning still showed significant death avoidance because cultural taboos persisted beneath preparation. Your combination names the double seal: internal avoidance and cultural prohibition reinforce each other until someone breaks both at once.',
+  // Pattern 9 text, split into its research and closing sentences.
+  research: 'Fan and colleagues studied 161 adults in Singapore and found that even those who completed advance care planning still showed significant death avoidance because cultural taboos persisted beneath preparation.',
+  close: 'Your combination names the double seal: internal avoidance and cultural prohibition reinforce each other until someone breaks both at once.',
 };
 
 // Real footage for the video-recording demo (licensed hero clip, cropped).
@@ -200,12 +202,19 @@ function Mock({ active }) {
         <div className={`qj-pane${active === 3 ? ' is-on' : ''}`}><Options pane={PANES[3]} multi /></div>
 
         {/* Summary: the matched Personal Pattern Recognition */}
-        <div className={`qj-pane${active === 4 ? ' is-on' : ''}`}>
-          <p className="qj-pane__prompt">What Your Choices Reveal About You</p>
-          <div className="qj-picks">
-            {PPR.picks.map((pk, i) => <span key={pk}><b>Checkpoint {i + 1}</b>{pk}</span>)}
+        <div className={`qj-pane qj-ppr-pane${active === 4 ? ' is-on' : ''}`}>
+          <p className="qj-ppr__k">What Your Choices Reveal About You</p>
+          <p className="qj-ppr__title">A compounded avoidance pattern</p>
+          <ol className="qj-chain">
+            {PPR.picks.map((pk, i) => (
+              <li key={pk} style={{ '--i': i }}><b>{i + 1}</b><span>{pk}</span></li>
+            ))}
+          </ol>
+          <div className="qj-research" style={{ '--i': 3 }}>
+            <span className="qj-research__tag">Research</span>
+            <p>{PPR.research}</p>
           </div>
-          <p className="qj-ppr">{PPR.text}</p>
+          <p className="qj-ppr__close" style={{ '--i': 4 }}>{PPR.close}</p>
         </div>
 
         {/* Then: record an explanation + team affirmation */}

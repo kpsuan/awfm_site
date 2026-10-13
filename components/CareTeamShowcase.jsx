@@ -19,23 +19,46 @@ const Ava = ({ p, size = 32 }) => (
   <img className="ct-ava" src={p.img} alt="" width={size} height={size} style={{ width: size, height: size }} />
 );
 
+const ART = [
+  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1791187465/59c4149d07a67ba0f32acc98ef1bde0d_utvwmp.jpg',
+  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1791187404/b94fc3aa09ef24e08186dd440d436b2d_obahds.jpg',
+  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1791187404/736f8c69c57e8174bab610b31793f5cd_slz7ik.jpg',
+];
+const LAYERS = [
+  ['Your position', 'I would rather not think about my own death'],
+  ['Your challenges', 'My culture makes it hard to talk honestly about death'],
+  ['Your mind-changer', 'An honest conversation with someone I trust'],
+];
+
 function Completion() {
   return (
     <div className="ct-post">
       <div className="ct-post__head">
-        <Ava p={PEOPLE[0]} />
-        <p><strong>Ate</strong> <span className="ct-badge ct-badge--pink">Completion</span> completed <b>Q8: How do you really feel about death and dying?</b></p>
+        <Ava p={PEOPLE[0]} size={36} />
+        <div className="ct-post__who">
+          <p><strong>Ate</strong> completed <b>Q8</b> <span className="ct-badge ct-badge--pink">Completion</span></p>
+          <span>How do you really feel about death and dying? · 2h</span>
+        </div>
       </div>
       <div className="ct-tarot">
-        {['I would rather not think about my own death', 'My culture makes it hard to talk honestly about death', 'An honest conversation with someone I trust'].map((t, i) => (
-          <div className="ct-tarot__card" key={t} style={{ '--i': i }}>
-            <span>Layer {i + 1}</span><p>{t}</p>
+        {LAYERS.map(([k, t], i) => (
+          <div className="ct-tarot__card" key={t} style={{ '--i': i, backgroundImage: `url(${ART[i]})` }}>
+            <span className="ct-tarot__frame" />
+            <span className="ct-tarot__n">{['I', 'II', 'III'][i]}</span>
+            <div className="ct-tarot__txt"><em>{k}</em><p>{t}</p></div>
           </div>
         ))}
       </div>
       <div className="ct-post__foot">
-        <span className="ct-react">❤️🔥🙏 Lola, Mila and 2 others</span>
-        <span className="ct-affirm">3 affirmations · <b>Affirm</b></span>
+        <span className="ct-reacts">
+          <i>❤️</i><i>🙏</i><i>🔥</i>
+          <span>Lola, Mila and 2 others</span>
+        </span>
+        <span className="ct-affirm">
+          <span className="ct-affirm__stack">{PEOPLE.slice(1, 4).map((p) => <Ava key={p.n} p={p} size={20} />)}</span>
+          3 affirmations
+          <b>Affirm</b>
+        </span>
       </div>
     </div>
   );
