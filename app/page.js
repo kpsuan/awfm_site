@@ -7,7 +7,7 @@ import FundExplorer from '@/components/FundExplorer';
 import StageExplorer from '@/components/StageExplorer';
 import HomeMotion from '@/components/HomeMotion';
 import QuestionJourney from '@/components/QuestionJourney';
-import SponsorJourney from '@/components/SponsorJourney';
+import SponsorCards from '@/components/SponsorCards';
 import CareTeamShowcase from '@/components/CareTeamShowcase';
 import { FACES } from '@/components/faces';
 import './home.css';
@@ -276,22 +276,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Sponsor a care team ── */}
+      {/* ── Sponsor a care team (Primefold-style expanding cards) ── */}
       <section className="section section--cream">
-        <div className="wrap home-split home-sponsor">
-          <div className="home-sponsor__copy">
+        <div className="wrap">
+          <div className="home-sc-head">
             <span className="eyebrow">Sponsor a care team</span>
-            <h2 className="h2">€30 opens a family’s whole care plan.</h2>
+            <h2 className="h2">€30 opens a family’s<br />whole care plan.</h2>
             <p className="lead">
               Paid once, for the whole team. Your gift covers their platform fee — it never
               becomes cash, and nothing about the family flows back to you.
             </p>
-            <div className="home-cta">
-              <a className="btn" href={SPONSOR_URL}>Sponsor a family — €30</a>
-              <a className="btn btn--ghost" href={`${SPONSOR_URL}/organizations`}>Sponsoring as an organization?</a>
-            </div>
           </div>
-          <SponsorJourney />
+          <SponsorCards />
         </div>
       </section>
 

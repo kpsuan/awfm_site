@@ -244,3 +244,6 @@
 }
 .home-signup__steps strong { display: block; font-family: var(--font-heading); font-size: 18px; font-weight: 500; color: #fff; }
 .home-signup__steps span { font-size: 15px; color: rgba(255, 255, 255, 0.65); }
+
+.home-sc-head { display: grid; gap: 16px; justify-items: center; text-align: center; }
+.home-sc-head .lead { max-width: 56ch; }
