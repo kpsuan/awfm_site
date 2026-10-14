@@ -1,4 +1,4 @@
-import { REGISTER_URL, LEGAL_ENTITY } from '@/config/site';
+import { REGISTER_URL } from '@/config/site';
 import './team.css';
 
 export const metadata = {
@@ -128,13 +128,6 @@ export default function Team() {
                 <span className="tm-school">{m.school}</span>
               </article>
             ))}
-            <article>
-              <span className="tm-ava tm-ava--plus" aria-hidden="true">+</span>
-              <h3>You?</h3>
-              <span className="tm-role">Opportunities</span>
-              <p>We grow carefully. If helping families break the silence sounds like work you’d want to do, get in touch.</p>
-              <a className="tm-mail" href={`mailto:${LEGAL_ENTITY.email.replace('privacy@', 'info@')}`}>{LEGAL_ENTITY.email.replace('privacy@', 'info@')}</a>
-            </article>
           </div>
         </div>
       </section>
