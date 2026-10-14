@@ -19,10 +19,11 @@ const Ava = ({ p, size = 32 }) => (
   <img className="ct-ava" src={p.img} alt="" width={size} height={size} style={{ width: size, height: size }} />
 );
 
+// The real Q8 option images from the app (awfm/options/Q8_opt3, opt7, opt13).
 const ART = [
-  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1791187465/59c4149d07a67ba0f32acc98ef1bde0d_utvwmp.jpg',
-  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1791187404/b94fc3aa09ef24e08186dd440d436b2d_obahds.jpg',
-  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1791187404/736f8c69c57e8174bab610b31793f5cd_slz7ik.jpg',
+  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1774079654/awfm/options/Q8_opt3/gtb7i1wwvxi9i0mkuawy.jpg',
+  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1774079724/awfm/options/Q8_opt7/b6jf4vqj6d9m20k0kh04.jpg',
+  'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_400/v1774080126/awfm/options/Q8_opt13/bh7vyxk1uqljwcoqgf3s.jpg',
 ];
 const LAYERS = [
   ['Your position', 'I would rather not think about my own death'],
