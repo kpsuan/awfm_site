@@ -7,7 +7,7 @@ export const EVENTS = [
     place: 'Philippines',
     type: 'Launch',
     body: 'We open to families on the day families across the Philippines remember their dead — and begin planning together.',
-    image: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791190625/Dreamy_Bayanihan_at_Sunrise_s80ewz.png',
+    image: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791966482/the-binnenhof-in-the-hague-the-netherlands-2026-09-22-01-12-55-utc_cxxbf4.jpg',
   },
   {
     date: '2025',

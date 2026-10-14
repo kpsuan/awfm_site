@@ -13,8 +13,8 @@ export default function Families() {
       kicker="For families & medical migrants"
       title="Lead your whole family’s care plan — from wherever you work"
       lead="You care for strangers every shift. A Whole Family Matter gives your own family a way to plan, fund and advocate together — your immediate family, your family back home, and your local or chosen family."
-      image="https://res.cloudinary.com/de3kbbv2o/video/upload/so_5,f_auto,q_auto,w_1400,ar_5:4,c_fill,g_auto/v1791963282/loving-father-drawing-with-child-at-home-2026-10-02-11-03-30-utc_wleowv.jpg"
-      imageAlt="A father drawing with his young daughter at home."
+      image="https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1400,ar_5:4,c_fill,g_auto/v1791962845/21.0_lcb5wq.jpg"
+      imageAlt="An older man resting on a park bench."
       ctas={[{ label: 'Get Started Free', href: REGISTER_URL }, { label: 'See pricing', href: '/pricing/' }]}
       stepsTitle="From one question to one family plan"
       steps={[
