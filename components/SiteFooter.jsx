@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { LEGAL_ENTITY, REGISTER_URL, LOGIN_URL, APP_URL, HELP_URL } from '@/config/site';
+import CookieSettingsLink from './CookieSettingsLink';
 import './SiteFooter.css';
 
 export default function SiteFooter() {
@@ -40,6 +41,7 @@ export default function SiteFooter() {
             <Link href="/about/">Our story</Link>
             <Link href="/team/">Team</Link>
             <a href={`${APP_URL}/legal`}>Privacy &amp; Legal</a>
+            <CookieSettingsLink />
             <a href={LOGIN_URL}>Sign in</a>
           </div>
         </div>

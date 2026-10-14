@@ -1,6 +1,7 @@
 import './globals.css';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import CookieBanner from '@/components/CookieBanner';
 import HashScroll from '@/components/HashScroll';
 import { SITE_URL, LEGAL_ENTITY } from '@/config/site';
 import { getAllPosts } from '@/lib/blog';
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <SiteFooter />
         <HashScroll />
+        <CookieBanner />
       </body>
     </html>
   );

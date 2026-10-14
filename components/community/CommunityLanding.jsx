@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import FilmHero from './FilmHero';
 import { HERO_VIDEOS, WordChip, wds } from './media';
+import { videosAllowed } from '../consent';
 import { COMMUNITY_URL } from '@/config/site';
 import './CommunityLanding.css';
 
@@ -181,7 +182,11 @@ export default function CommunityLanding() {
                 <button
                   type="button"
                   className="cl-video__poster"
-                  onClick={() => setPlayVideo(true)}
+                  onClick={() => {
+                    // Embed only with consent; otherwise watch on YouTube.
+                    if (videosAllowed()) setPlayVideo(true);
+                    else window.open(`https://www.youtube.com/watch?v=${VIDEO_ID}`, '_blank', 'noopener');
+                  }}
                   aria-label="Play: This is A Whole Family Matter"
                 >
                   <img src={`https://i.ytimg.com/vi/${VIDEO_ID}/maxresdefault.jpg`} alt="" loading="lazy" />
