@@ -236,7 +236,7 @@ const DWELL = 6500;
 // Teton-style stage: a large artwork panel holding the app mock, with a
 // frosted numbered list floating top-left. Click a feature, or let it
 // auto-advance (a thin bar shows the time left) while the stage is in view.
-export default function CareTeamShowcase() {
+export default function CareTeamShowcase({ intro }) {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
   const [inView, setInView] = useState(false);
@@ -259,6 +259,8 @@ export default function CareTeamShowcase() {
 
   return (
     <div className="ct-stage" ref={root}>
+      <div className="ct-left">
+      {intro && <div className="ct-intro">{intro}</div>}
       <div className="ct-panel" role="tablist" aria-label="Care team features">
         {FEATURES.map((f, i) => (
           <button
@@ -285,6 +287,8 @@ export default function CareTeamShowcase() {
             )}
           </button>
         ))}
+      </div>
+
       </div>
 
       <div className="ct-stage__app">

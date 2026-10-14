@@ -153,19 +153,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── The care team page ── */}
-      <section id="team" className="section section--band">
-        <div className="wrap">
-          <div className="home-intro">
-            <span className="eyebrow">Your care team page</span>
-            <h2 className="h2">Everything your family shares, in one place.</h2>
-            <p className="lead">
-              Every care team gets its own private space — a feed of answers, check-ins and
-              celebrations, and the tools that keep a family close through the hardest season.
-            </p>
-          </div>
-          <CareTeamShowcase />
-        </div>
+      {/* ── The care team page (full-screen stage) ── */}
+      <section id="team">
+        <CareTeamShowcase
+          intro={(
+            <>
+              <span className="ct-intro__k">Your care team page</span>
+              <h2>Everything your family shares, in one place.</h2>
+              <p>
+                Every care team gets its own private space — a feed of answers, check-ins and
+                celebrations, and the tools that keep a family close through the hardest season.
+              </p>
+            </>
+          )}
+        />
       </section>
 
       {/* ── Fund: purpose-based care funds ── */}
