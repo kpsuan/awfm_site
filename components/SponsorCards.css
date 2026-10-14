@@ -51,11 +51,12 @@
 .sc-card:not(.is-open) .sc-btn { display: none; }
 .sc-btn {
   flex-shrink: 0; font-family: var(--font-heading); font-size: 15px; font-weight: 500; color: #fff; text-decoration: none;
-  padding: 11px 20px; border-radius: 999px; background: var(--ink);
+  padding: 11px 20px; border-radius: 999px; background: linear-gradient(180deg, var(--brand) 0%, var(--brand-2) 100%);
+  box-shadow: 0 10px 22px -12px rgba(180, 50, 163, 0.6);
   opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
 }
 .sc-card.is-open .sc-btn { opacity: 1; pointer-events: auto; }
-.sc-btn:hover { color: #fff; background: var(--brand); }
+.sc-btn:hover { color: #fff; filter: brightness(1.08); }
 
 @media (max-width: 900px) {
   .sc { flex-direction: column; }
