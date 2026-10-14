@@ -56,9 +56,9 @@ const HERO_PROMPTS = [
 ];
 
 const ART = {
-  a: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791962844/12.1_1_tcncpf.jpg',
-  b: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791962845/2.2_znxeak.jpg',
-  c: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791962846/0.1_wpqlos.jpg',
+  a: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791965548/Dreamy_Forest_Motion_Portrait_zqhppd.png',
+  b: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791965161/Dreamlike_Decay__Rusted_Wheelchair_in_a_Sunlit_Ruin_n7gf71.png',
+  c: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_900/v1791965288/Spectral_Hydra_in_the_Medical_Mist_edpy7o.png',
 };
 
 // Global Problems: the community's three courses (copy from the community).
