@@ -181,6 +181,20 @@ function Options({ pane, multi }) {
 }
 
 function Mock({ active }) {
+  // Panes share one grid cell, so the stage would always be as tall as the
+  // longest one. Size it to the visible pane instead (and follow its resizes).
+  const stageRef = useRef(null);
+  const [stageH, setStageH] = useState();
+  useEffect(() => {
+    const pane = stageRef.current?.querySelector('.qj-pane.is-on');
+    if (!pane) return undefined;
+    const measure = () => setStageH(pane.offsetHeight);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(pane);
+    return () => ro.disconnect();
+  }, [active]);
+
   return (
     <div className="qj-mock" aria-hidden="true">
       <div className="qj-mock__top">
@@ -196,7 +210,7 @@ function Mock({ active }) {
       </div>
       </div>
 
-      <div className="qj-mock__stage">
+      <div className="qj-mock__stage" ref={stageRef} style={stageH ? { height: stageH } : undefined}>
         <div className={`qj-pane${active === 1 ? ' is-on' : ''}`}><Options pane={PANES[1]} /></div>
         <div className={`qj-pane${active === 2 ? ' is-on' : ''}`}><Options pane={PANES[2]} multi /></div>
         <div className={`qj-pane${active === 3 ? ' is-on' : ''}`}><Options pane={PANES[3]} multi /></div>

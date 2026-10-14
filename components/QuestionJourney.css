@@ -44,7 +44,7 @@
 }
 .qj-mock__steps span.is-done { color: var(--ink); border-top-color: var(--brand); }
 
-.qj-mock__stage { display: grid; }
+.qj-mock__stage { display: grid; align-items: start; overflow: hidden; transition: height 0.45s ease; }
 .qj-pane {
   grid-area: 1 / 1;
   display: grid;
@@ -84,7 +84,7 @@
   .qj-side { position: static; order: -1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .qj-pane, .qj-step h3, .qj-step__ask, .qj-step__body, .qj-mock__steps span { transition: none; }
+  .qj-mock__stage, .qj-pane, .qj-step h3, .qj-step__ask, .qj-step__body, .qj-mock__steps span { transition: none; }
 }
 
 .qj-pane__prompt { font-family: var(--font-heading); font-size: 17px; font-weight: 500; color: var(--ink); line-height: 1.35; }

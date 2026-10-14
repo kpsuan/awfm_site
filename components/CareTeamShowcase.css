@@ -2,7 +2,7 @@
 .ct-stage {
   position: relative; overflow: hidden;
   min-height: 100vh; min-height: 100svh;
-  display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: clamp(32px, 4vw, 72px); align-items: center;
+  display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 900px); justify-content: center; gap: clamp(32px, 4vw, 72px); align-items: center;
   padding: 120px clamp(24px, 5vw, 96px) 72px;
   background:
     radial-gradient(70% 80% at 75% 40%, rgba(180, 50, 163, 0.35), transparent 70%),
@@ -14,7 +14,7 @@
 .ct-intro__k { font-family: var(--font-heading); font-size: 15px; color: #e6a8dd; }
 .ct-intro h2 { color: #fff; font-size: clamp(30px, 3vw, 44px); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance; }
 .ct-intro p { font-size: 16.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.7); }
-.ct-stage__app { justify-self: end; width: min(900px, 100%); }
+.ct-stage__app { width: 100%; }
 .ct-panel {
   display: grid; gap: 2px; padding: 10px; border-radius: 18px;
   background: rgba(38, 26, 40, 0.72); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
