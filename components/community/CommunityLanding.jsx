@@ -65,17 +65,17 @@ const ART = {
 // Global Problems: the community's three courses (copy from the community).
 const COURSES = [
   {
-    q: 'Why', title: 'The Conspiracy of Silence', tag: '#BreakTheSilence', meta: '12 lessons · 1 quiz', art: ART.a,
+    q: 'Why', title: 'The Conspiracy of Silence', tag: '#BreakTheSilence', post: '/blog/the-conspiracy-of-silence/', meta: '12 lessons · 1 quiz', art: ART.a,
     body: 'Why diaspora families suffer at end of life — why a terminal diagnosis vanishes between the family, the physician, and a system with no room for the conversation.',
     breaks: 'Breaks the silence about death',
   },
   {
-    q: 'Where', title: 'The Worst Places to Die', tag: '#DeathDebtIsStructural', meta: '8 lessons', art: ART.b,
+    q: 'Where', title: 'The Worst Places to Die', tag: '#DeathDebtIsStructural', post: '/blog/the-worst-places-to-die/', meta: '8 lessons', art: ART.b,
     body: 'Where the suffering concentrates, and why in twelve countries: ten structural factors, three feedback loops, and the true cost of dying.',
     breaks: 'Breaks the silence about money',
   },
   {
-    q: 'How', title: 'The Six-Headed Hydra', tag: '#FightTheHydra', meta: '11 lessons', art: ART.c,
+    q: 'How', title: 'The Six-Headed Hydra', tag: '#FightTheHydra', post: '/blog/the-six-headed-hydra/', meta: '11 lessons', art: ART.c,
     body: 'How the same pattern replicates across six colonial language pipelines — English, French, Belgian, Dutch, Portuguese and Spanish — and how it regenerates.',
     breaks: 'Names the system you live inside',
   },
@@ -213,7 +213,8 @@ export default function CommunityLanding() {
             </div>
             <div className="cm-courses">
               {COURSES.map((c) => (
-                <article className="cm-course" key={c.title} data-reveal style={{ backgroundImage: `url(${c.art})` }}>
+                <a className="cm-course" href={c.post} key={c.title} data-reveal>
+                  <span className="cm-course__art" style={{ backgroundImage: `url(${c.art})` }} aria-hidden="true" />
                   <span className="cm-course__q">{c.q}</span>
                   <div className="cm-course__body">
                     <span className="cm-course__meta">{c.meta}</span>
@@ -221,8 +222,9 @@ export default function CommunityLanding() {
                     <p>{c.body}</p>
                     <span className="cm-course__breaks">{c.breaks}</span>
                     <span className="cm-course__tag">{c.tag}</span>
+                    <span className="cm-course__more">Read about it &rarr;</span>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
           </div>
