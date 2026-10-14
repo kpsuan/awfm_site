@@ -1060,7 +1060,7 @@
 }
 .cm-course::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,15,25,0.15) 0%, rgba(26,15,25,0.55) 45%, rgba(26,15,25,0.92) 100%); }
 .cm-course > * { position: relative; }
-.cm-course__q { font-family: var(--font-heading); font-size: clamp(54px, 6vw, 84px); font-weight: 300; line-height: 1; letter-spacing: -0.03em; color: #fff; }
+.cm-course__q { font-family: var(--font-body); font-size: clamp(56px, 6.4vw, 90px); font-weight: 300; line-height: 1; letter-spacing: -0.04em; color: #fff; }
 .cm-course__body { display: grid; gap: 10px; justify-items: start; }
 .cm-course__meta { font-family: var(--font-heading); font-size: 13px; color: rgba(255,255,255,0.7); }
 .cm-course h3 { font-size: 26px; font-weight: 400; line-height: 1.15; color: #fff; }
