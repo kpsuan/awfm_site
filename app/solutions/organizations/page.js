@@ -13,8 +13,8 @@ export default function Organizations() {
       kicker="For organizations & associations"
       title="One receipt. Many families."
       lead="Associations, diaspora networks, congregations — sponsor a whole block of families in a single transaction, and let each family plan their care together."
-      image="https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1400,ar_5:4,c_fill/v1791190625/Dreamy_Bayanihan_at_Sunrise_s80ewz.png"
-      imageAlt="Neighbours carrying a house together at sunrise — bayanihan."
+      image="https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1400,ar_5:4,c_fill,g_auto/v1791963936/business-people-walking-in-urban-environment-2026-09-23-13-13-44-utc_huhemc.jpg"
+      imageAlt="Colleagues walking together through a city."
       ctas={[{ label: 'Sponsor as an organization', href: `${SPONSOR_URL}/organizations` }, { label: 'Sponsor one family', href: '/solutions/sponsors/' }]}
       stepsTitle="Sponsor many families at once"
       steps={[
