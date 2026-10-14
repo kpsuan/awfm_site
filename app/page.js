@@ -114,6 +114,8 @@ export default function Home() {
         </div>
       </section>
 
+      <StoryDeck />
+
       {/* ── The three circles of care ── */}
       <section className="home-circles">
         <div className="wrap home-circles__grid">
@@ -128,8 +130,6 @@ export default function Home() {
           <HeroOrbit />
         </div>
       </section>
-
-      <StoryDeck />
 
       {/* ── Plan: the checkpoint conversation ── */}
       <section id="plan" className="section">
