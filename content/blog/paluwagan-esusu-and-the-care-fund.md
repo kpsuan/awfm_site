@@ -4,7 +4,7 @@ description: "Our cultures already know how to pool money. The Care Fund turns t
 date: "2026-10-10"
 category: "Care Fund"
 author: "A Whole Family Matter"
-cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791962848/10_1_gmmqza.jpg"
+cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791964164/Motion-Blurred_Philippine_Coins_on_U.S._Currency_hppjhq.png"
 ---
 
 In the Philippines it's called *paluwagan*. In Nigeria, *esusu*. Across our cultures, families and neighbours have always pooled money so that when one person needs it, it's there.

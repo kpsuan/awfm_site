@@ -5,7 +5,7 @@ date: "2026-10-04"
 category: "Community"
 author: "A Whole Family Matter"
 cta: "community"
-cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791190625/Dreamy_Bayanihan_at_Sunrise_s80ewz.png"
+cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791965881/compassionate-hand-holding-with-gentle-support-and-2026-09-22-18-23-38-utc_rpaqma.jpg"
 ---
 
 You can have the best tools in the world and still feel alone with them at 2 a.m., a continent away from the people you're caring for.
