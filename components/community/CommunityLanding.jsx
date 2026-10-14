@@ -195,7 +195,7 @@ export default function CommunityLanding() {
         </section>
 
         {/* ── Global Problems: three courses ── */}
-        <section className="cm-problems">
+        <section id="courses" className="cm-problems">
           <div className="cl-wrap">
             <div className="cm-head cm-head--light" data-reveal>
               <span className="cl-eyebrow">Global Problems</span>
@@ -224,7 +224,7 @@ export default function CommunityLanding() {
         </section>
 
         {/* ── Leading Solutions ── */}
-        <section className="cm-sec cm-sec--cream">
+        <section id="solutions" className="cm-sec cm-sec--cream">
           <div className="cl-wrap cm-split">
             <div className="cm-head" data-reveal>
               <span className="cl-eyebrow">Leading Solutions</span>
@@ -244,7 +244,7 @@ export default function CommunityLanding() {
         </section>
 
         {/* ── Our Innovations ── */}
-        <section className="cm-sec">
+        <section id="innovations" className="cm-sec">
           <div className="cl-wrap">
             <div className="cm-head" data-reveal>
               <span className="cl-eyebrow">Our Innovations</span>
@@ -328,7 +328,7 @@ export default function CommunityLanding() {
         </section>
 
         {/* ── Community Support Groups ── */}
-        <section className="cm-sec cm-groups">
+        <section id="groups" className="cm-sec cm-groups">
           <div className="cl-wrap cm-split">
             <div className="cm-head" data-reveal>
               <span className="cl-eyebrow">Community Support Groups</span>

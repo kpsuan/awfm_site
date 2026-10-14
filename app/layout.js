@@ -1,7 +1,9 @@
 import './globals.css';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
+import HashScroll from '@/components/HashScroll';
 import { SITE_URL, LEGAL_ENTITY } from '@/config/site';
+import { getAllPosts } from '@/lib/blog';
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -46,9 +48,10 @@ export default function RootLayout({ children }) {
             sameAs: ['https://awholefamilymatter.app', 'https://awholefamilymatter.com'],
           }) }}
         />
-        <SiteNav />
+        <SiteNav featured={(({ slug, title, cover }) => ({ slug, title, cover }))(getAllPosts()[0])} />
         <main>{children}</main>
         <SiteFooter />
+        <HashScroll />
       </body>
     </html>
   );

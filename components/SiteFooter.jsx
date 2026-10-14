@@ -17,25 +17,30 @@ export default function SiteFooter() {
         </div>
         <div className="foot__cols">
           <div className="foot__col">
-            <h4>Platform</h4>
-            <Link href="/#plan">Care team planning</Link>
-            <Link href="/#fund">Care fund pooling</Link>
-            <Link href="/#advocate">Patient advocacy</Link>
-          </div>
-          <div className="foot__col">
-            <h4>Organisation</h4>
-            <Link href="/about/">Our Story</Link>
-            <Link href="/team/">Team</Link>
-            <Link href="/security/">Security</Link>
+            <h4>Product</h4>
+            <Link href="/">Platform</Link>
             <Link href="/community/">Community</Link>
-            <Link href="/blog/">Blog</Link>
+            <Link href="/security/">Security</Link>
+            <Link href="/pricing/">Pricing</Link>
           </div>
           <div className="foot__col">
-            <h4>Account</h4>
-            <a href={REGISTER_URL}>Join free</a>
-            <a href={LOGIN_URL}>Sign in</a>
+            <h4>Solutions</h4>
+            <Link href="/solutions/families/">Families</Link>
+            <Link href="/solutions/sponsors/">Sponsors</Link>
+            <Link href="/solutions/organizations/">Organizations</Link>
+          </div>
+          <div className="foot__col">
+            <h4>Resources</h4>
+            <Link href="/blog/">Blog</Link>
+            <Link href="/events/">Events</Link>
             <a href={HELP_URL}>Help Center</a>
-            <a href={`${APP_URL}/legal`}>Privacy &amp; Legal Center</a>
+          </div>
+          <div className="foot__col">
+            <h4>Company</h4>
+            <Link href="/about/">Our story</Link>
+            <Link href="/team/">Team</Link>
+            <a href={`${APP_URL}/legal`}>Privacy &amp; Legal</a>
+            <a href={LOGIN_URL}>Sign in</a>
           </div>
         </div>
       </div>

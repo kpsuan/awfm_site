@@ -1,0 +1,33 @@
+.ev-wrap { max-width: 1280px; margin: 0 auto; padding-inline: 24px; }
+.ev-k { display: block; font-family: var(--font-heading); font-size: 16px; color: var(--muted); margin-bottom: 18px; }
+.ev-hero { background: #fbfaf8; padding: clamp(140px, 19vh, 190px) 0 56px; }
+.ev-hero__top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; }
+@media (max-width: 860px) { .ev-hero__top { grid-template-columns: 1fr; } }
+.ev-hero h1 { font-size: clamp(40px, 5vw, 68px); font-weight: 400; line-height: 1.04; letter-spacing: -0.025em; }
+.ev-hero__top > p { font-size: clamp(18px, 1.8vw, 20px); color: var(--muted); max-width: 46ch; }
+.ev-list { background: #fbfaf8; border-top: 1px solid var(--line); padding-block: 56px clamp(80px, 12vh, 130px); }
+.ev-list h2 { font-size: 26px; font-weight: 400; margin-bottom: 24px; }
+.ev-past { margin-top: 64px; }
+.ev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
+.ev-card { display: grid; text-decoration: none; color: inherit; border-radius: 20px; overflow: hidden; background: #fff; box-shadow: 0 0 0 1px var(--line); }
+.ev-card__img { position: relative; aspect-ratio: 16 / 9; background-size: cover; background-position: center; }
+.ev-date {
+  position: absolute; left: 16px; top: 16px; display: grid; justify-items: center; min-width: 56px; padding: 8px 10px;
+  border-radius: 12px; background: #fff; box-shadow: 0 8px 20px -10px rgba(38, 32, 59, 0.5);
+}
+.ev-date b { font-family: var(--font-heading); font-size: 22px; font-weight: 500; line-height: 1; color: var(--ink); }
+.ev-date em { font-style: normal; font-family: var(--font-heading); font-size: 12px; color: var(--brand); text-transform: uppercase; margin-top: 2px; }
+.ev-card__body { display: grid; gap: 8px; padding: 22px 24px 26px; }
+.ev-meta { font-family: var(--font-heading); font-size: 13.5px; color: var(--faint); }
+.ev-meta b { font-weight: 500; color: var(--brand); }
+.ev-card__body strong { font-family: var(--font-heading); font-size: 21px; font-weight: 400; line-height: 1.25; color: var(--ink); }
+.ev-desc { font-size: 15.5px; color: var(--muted); }
+.ev-empty { font-size: 17px; color: var(--muted); }
+.ev-community {
+  margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px;
+  padding: 26px 28px; border-radius: 20px; background: linear-gradient(160deg, #faf1f8, #f1ecfb);
+}
+.ev-community div { display: grid; gap: 4px; }
+.ev-community strong { font-family: var(--font-heading); font-size: 20px; font-weight: 400; color: var(--ink); }
+.ev-community span { font-size: 15.5px; color: var(--muted); }
+.ev-btn { font-family: var(--font-heading); font-size: 15px; font-weight: 500; color: #fff; text-decoration: none; padding: 11px 20px; border-radius: 8px; background: linear-gradient(180deg, var(--brand), var(--brand-2)); }

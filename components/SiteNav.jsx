@@ -4,44 +4,20 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LOGIN_URL, REGISTER_URL } from '@/config/site';
-import { SOLUTIONS, COMPANY } from '@/config/solutions';
-
-const MENUS = { solutions: SOLUTIONS, company: COMPANY };
+import { MENUS } from './NavMenus';
 import './SiteNav.css';
 
 const LINKS = [
-  { href: '/', label: 'The app' },
+  { menu: 'product', label: 'Product' },
   { menu: 'solutions', label: 'Solutions' },
-  { href: '/community/', label: 'Community' },
+  { menu: 'resources', label: 'Resources' },
   { href: '/pricing/', label: 'Pricing' },
-  { href: '/security/', label: 'Security' },
-  { href: '/blog/', label: 'Blog' },
   { menu: 'company', label: 'Company' },
 ];
 
-function MegaMenu({ cols, open, onClose }) {
-  return (
-    <div className={`mega${open ? ' is-open' : ''}${cols.length === 1 ? ' mega--single' : ''}`} role="menu" aria-hidden={!open}>
-      {cols.map((col) => (
-        <div className="mega__col" key={col.heading}>
-          <span className="mega__h">{col.heading}</span>
-          {col.items.map((it) => (
-            <a key={it.title} className="mega__item" href={it.href} role="menuitem" tabIndex={open ? 0 : -1} onClick={onClose}>
-              <span className="mega__ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{it.icon}</svg>
-              </span>
-              <span><strong>{it.title}{it.soon && <i className="mega__soon">Coming soon</i>}</strong><em>{it.body}</em></span>
-            </a>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
 // Fixed nav. On the community page it starts transparent over the film hero;
 // everywhere it turns into a compact glass bar once the visitor scrolls.
-export default function SiteNav() {
+export default function SiteNav({ featured }) {
   const pathname = usePathname();
   const overlay = ['/', '/security/', '/security'].includes(pathname);
   const [scrolled, setScrolled] = useState(false);
@@ -92,7 +68,9 @@ export default function SiteNav() {
               {l.label}
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </button>
-            <MegaMenu cols={MENUS[l.menu]} open={menu === l.menu} onClose={() => { setMenu(null); setOpen(false); }} />
+            <div className={`mega${menu === l.menu ? ' is-open' : ''}`} role="menu" aria-hidden={menu !== l.menu}>
+              {(() => { const M = MENUS[l.menu]; return <M close={() => { setMenu(null); setOpen(false); }} featured={featured} />; })()}
+            </div>
           </div>
         ) : (
           <Link key={l.href} href={l.href} aria-current={pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href)) ? 'page' : undefined}>
