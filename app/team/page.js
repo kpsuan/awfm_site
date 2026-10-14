@@ -7,23 +7,26 @@ export const metadata = {
   description: 'Meet the Filipino innovators building A Whole Family Matter — interdependent care planning for medical migrants and their collectivist families.',
 };
 
-// Names, titles and universities from the startup team slide. Photos: drop
-// files in /public/team/ and set `photo`; initials render until then.
+// Names, titles and universities from the startup team slide. Photos are on
+// Cloudinary; a member without `photo` renders initials.
 const TEAM = [
   {
     name: 'Norman Yuson Cuaño',
+    photo: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_240/v1791969634/Ellipse_42_klwppo.png',
     role: 'Interdependent Care Planning Creator',
     school: 'University of the Philippines – Los Baños',
     bio: 'Created Interdependent Care Planning and leads A Whole Family Matter’s mission to break the silence around death and dying for medical migrants and their collectivist families.',
   },
   {
     name: 'Kismet Fran Suan',
+    photo: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_240/v1791969635/Ellipse_43_awk9k5.png',
     role: 'ICP Platform Innovation Leader',
     school: 'University of the Philippines – Visayas',
     bio: 'Leads product research, design and full-stack development — turning care planning that was traditionally done on paper into a healthcare app built for whole families.',
   },
   {
     name: 'William Staclara',
+    photo: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_240/v1791969634/Ellipse_44_bvsmwb.png',
     role: 'ICP Research & Community Leader',
     school: 'University of the Philippines – Los Baños',
     bio: 'Leads the research behind Interdependent Care Planning and the community where medical migrants and their families learn and support each other.',
