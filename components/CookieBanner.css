@@ -30,3 +30,5 @@
 }
 @media (prefers-reduced-motion: reduce) { .ck { animation: none; } }
 
+.foot__cookie { background: none; border: 0; padding: 0; cursor: pointer; font: inherit; font-size: 14.5px; color: var(--ink); text-align: left; }
+.foot__cookie:hover { color: var(--brand); }
