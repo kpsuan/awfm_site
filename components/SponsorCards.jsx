@@ -25,7 +25,7 @@ const CARDS = [
     href: SPONSOR_URL, cta: 'Sponsor',
     media: (
       <div className="sc-media sc-media--family">
-        <img className="sc-photo" src={`${CLD}/video/upload/so_1,f_auto,q_auto,w_900,ar_4:3,c_fill,g_auto/v1791184558/affectionate-couple-embracing-in-urban-canal-setti-2026-10-02-19-21-48-utc_oggy0e.jpg`} alt="" />
+        <img className="sc-photo" src={`${CLD}/image/upload/f_auto,q_auto,w_900,ar_4:3,c_fill,g_auto/v1791266522/a3b49eac3bd0e12cd395a5a6261d3f4a_vxkhrf.jpg`} alt="" />
         <div className="sc-glass sc-glass--a"><span>A family in Yogyakarta</span><b>€30</b><em>Needs: their plan unlock</em></div>
         <div className="sc-glass sc-glass--b"><span>Status</span><b className="sc-ok">✓ Plan unlocked</b><em>Whole team, at once</em></div>
         <div className="sc-glass sc-glass--c"><span>Privacy</span><b>Nothing about the family flows to you</b></div>
@@ -38,7 +38,7 @@ const CARDS = [
     href: '/solutions/organizations/', cta: 'Explore',
     media: (
       <div className="sc-media">
-        <img className="sc-photo sc-photo--framed" src={`${CLD}/image/upload/f_auto,q_auto,w_900/v1791190625/Dreamy_Bayanihan_at_Sunrise_s80ewz.png`} alt="" />
+        <img className="sc-photo sc-photo--framed" src={`${CLD}/image/upload/f_auto,q_auto,w_900/v1791963926/busy-crossing-street-in-hong-kong-china-2026-09-25-08-19-34-utc_wktfrp.jpg`} alt="" />
       </div>
     ),
   },
