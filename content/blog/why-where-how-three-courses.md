@@ -5,7 +5,7 @@ date: "2026-10-09"
 category: "Global problems"
 author: "A Whole Family Matter"
 cta: "community"
-cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791187465/59c4149d07a67ba0f32acc98ef1bde0d_utvwmp.jpg"
+cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791962845/1.3_wdidx3.jpg"
 ---
 
 You work a shift in London or Paris, Rotterdam or Lisbon, Madrid or Brussels. You deliver a good death every working day. Then you call home — and your family is dying inside a system that does not have what you have.

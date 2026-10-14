@@ -4,7 +4,7 @@ description: "Care planning is a conversation, not a form. Here's how a whole fa
 date: "2026-10-13"
 category: "Product"
 author: "A Whole Family Matter"
-cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791187404/b94fc3aa09ef24e08186dd440d436b2d_obahds.jpg"
+cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791962845/Q4c_ccuj1x.jpg"
 ---
 
 Advance care planning has traditionally been done on paper: one person fills in a form, signs it, and files it away. For collectivist families — where the family, not only the patient, decides — that model leaves almost everyone out.

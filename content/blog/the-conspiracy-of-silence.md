@@ -5,7 +5,7 @@ date: "2026-10-12"
 category: "Global problems"
 author: "A Whole Family Matter"
 cta: "community"
-cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791187465/59c4149d07a67ba0f32acc98ef1bde0d_utvwmp.jpg"
+cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791962844/12.1_1_tcncpf.jpg"
 ---
 
 Because the family — not the patient — makes decisions in our collectivist cultures, **77 to 98 percent of our terminal patients don't know they're dying.** They are kept safe from the truth by families who love them and care for them.

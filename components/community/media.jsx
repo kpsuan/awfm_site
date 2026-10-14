@@ -10,6 +10,8 @@ export const HERO_VIDEOS = [
   'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791179341/smiling-woman-assisted-by-caregiver-in-a-living-ro-2026-10-03-05-37-16-utc_hmz827.mp4',
   'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791184558/affectionate-couple-embracing-in-urban-canal-setti-2026-10-02-19-21-48-utc_oggy0e.mp4',
   'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791183998/healthcare-worker-with-senior-in-green-urban-park-2026-10-02-14-07-52-utc_ubgjuy.mp4',
+  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791963282/loving-father-drawing-with-child-at-home-2026-10-02-11-03-30-utc_wleowv.mp4',
+  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791963285/man-meditating-on-a-rooftop-at-sunrise-2026-10-02-22-56-32-utc_q1ko9r.mp4',
 ];
 const HERO_CLIP_SECONDS = 7;
 
