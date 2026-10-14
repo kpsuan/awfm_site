@@ -5,7 +5,7 @@ date: "2026-10-06"
 category: "Guides"
 author: "A Whole Family Matter"
 cta: "community"
-cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791965840/supportive-woman-cares-for-an-elderly-woman-at-hom-2026-10-05-20-01-10-utc_jmxl8e.jpg"
+cover: "https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1600/v1791967069/A_Tender_Springtime_Embrace_egnlis.png"
 ---
 
 Here's something most platforms would never say: **you need what's in this article whether or not you ever use A Whole Family Matter.**
