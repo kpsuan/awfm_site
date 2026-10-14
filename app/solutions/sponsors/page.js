@@ -15,10 +15,10 @@ export default function Sponsors() {
       lead="Paid once, for the whole team. Your gift covers their platform fee — it never passes through anyone’s pockets, and nothing about the family flows back to you."
       image="https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1400,ar_5:4,c_fill,g_auto/v1791962846/0.1_wpqlos.jpg"
       imageAlt="Two people planning together over a laptop at a café table."
-      ctas={[{ label: 'Sponsor a family — €30', href: SPONSOR_URL }, { label: 'Sponsoring as an organization?', href: '/solutions/organizations/' }]}
+      ctas={[{ label: 'Sponsor as an organization', href: `${SPONSOR_URL}/organizations` }, { label: 'See how sponsoring a family will work', href: SPONSOR_URL }]}
       stepsTitle="How your €30 travels"
       steps={[
-        ['Choose how you give', 'Pick a family who chose to share their story.'],
+        ['Choose how you give', 'Today: sponsor care teams as an organization. Soon: pick a family who chose to share their story.'],
         ['Secure checkout', 'Pay the €30 fee on a secure hosted page. Your gift covers their fee — it never becomes cash.'],
         ['Their plan unlocks', 'The whole family’s journey opens at once — and their card retires from the page.'],
         ['The wall holds', 'You’ll know a family was helped — never who they are, what they wrote, or how they decide.'],
@@ -32,7 +32,7 @@ export default function Sponsors() {
         ['EU consumer rights honored', 'Clear terms on every purchase.'],
         ['No account needed', 'Give in a couple of clicks — and you can give anonymously.'],
       ]}
-      close={{ title: 'Stand behind a family you’ll never meet.', label: 'Sponsor a family — €30', href: SPONSOR_URL }}
+      close={{ title: 'Stand behind families you’ll never meet.', label: 'Sponsor as an organization', href: `${SPONSOR_URL}/organizations` }}
     />
   );
 }

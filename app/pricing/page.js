@@ -174,8 +174,8 @@ export default function Pricing() {
             </p>
           </div>
           <div className="pr-sponsor__ctas">
-            <a className="pr-btn pr-btn--solid" href={SPONSOR_URL}>Sponsor a family — €30</a>
-            <a className="pr-btn" href={`${SPONSOR_URL}/organizations`}>Sponsor as an organization</a>
+            <a className="pr-btn pr-btn--solid" href={`${SPONSOR_URL}/organizations`}>Sponsor as an organization</a>
+            <a className="pr-btn" href={SPONSOR_URL}>Sponsoring a family: preview</a>
           </div>
         </div>
       </section>

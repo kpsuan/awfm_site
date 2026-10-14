@@ -20,25 +20,25 @@ const SOON_ICONS = [
 
 const CARDS = [
   {
-    key: 'family', badge: 'SF', tone: 'brand', label: 'Sponsor a family', status: 'Live today · €30',
-    title: 'Sponsor a family', body: 'Pick a family who shared their story. €30 opens their whole care plan, once — and nothing about them flows back to you.',
-    href: SPONSOR_URL, cta: 'Sponsor',
+    key: 'org', badge: 'OA', tone: 'amber', label: 'Organizations & associations', status: 'Live today · €30 per team',
+    title: 'Organizations & associations', body: 'Associations, diaspora networks and congregations activate 5, 10, 25 or 50 care teams at €30 each — one charge, one receipt.',
+    href: `${SPONSOR_URL}/organizations`, cta: 'Sponsor now',
     media: (
-      <div className="sc-media sc-media--family">
-        <img className="sc-photo" src={`${CLD}/image/upload/f_auto,q_auto,w_900,ar_4:3,c_fill,g_auto/v1791266522/a3b49eac3bd0e12cd395a5a6261d3f4a_vxkhrf.jpg`} alt="" />
-        <div className="sc-glass sc-glass--a"><span>A family in Yogyakarta</span><b>€30</b><em>Needs: their plan unlock</em></div>
-        <div className="sc-glass sc-glass--b"><span>Status</span><b className="sc-ok">✓ Plan unlocked</b><em>Whole team, at once</em></div>
-        <div className="sc-glass sc-glass--c"><span>Privacy</span><b>Nothing about the family flows to you</b></div>
+      <div className="sc-media">
+        <img className="sc-photo sc-photo--framed" src={`${CLD}/image/upload/f_auto,q_auto,w_900/v1791963926/busy-crossing-street-in-hong-kong-china-2026-09-25-08-19-34-utc_wktfrp.jpg`} alt="" />
       </div>
     ),
   },
   {
-    key: 'org', badge: 'OA', tone: 'amber', label: 'Organizations & associations', status: 'One receipt',
-    title: 'Organizations & associations', body: 'Associations, diaspora networks and congregations sponsor a whole block of families in a single transaction.',
-    href: '/solutions/organizations/', cta: 'Explore',
+    key: 'family', badge: 'SF', tone: 'brand', label: 'Sponsor a family', status: 'Preview',
+    title: 'Sponsor a family', body: 'Soon you’ll pick a family who shared their story and open their whole care plan — with nothing about them flowing back to you. See how it will work.',
+    href: SPONSOR_URL, cta: 'See how it works',
     media: (
-      <div className="sc-media">
-        <img className="sc-photo sc-photo--framed" src={`${CLD}/image/upload/f_auto,q_auto,w_900/v1791963926/busy-crossing-street-in-hong-kong-china-2026-09-25-08-19-34-utc_wktfrp.jpg`} alt="" />
+      <div className="sc-media sc-media--family">
+        <img className="sc-photo" src={`${CLD}/image/upload/f_auto,q_auto,w_900,ar_4:3,c_fill,g_auto/v1791266522/a3b49eac3bd0e12cd395a5a6261d3f4a_vxkhrf.jpg`} alt="" />
+        <div className="sc-glass sc-glass--a"><span>Sample family · Yogyakarta</span><b>€30</b><em>Needs: their plan unlock</em></div>
+        <div className="sc-glass sc-glass--b"><span>Status</span><b className="sc-ok">✓ Plan unlocked</b><em>Whole team, at once</em></div>
+        <div className="sc-glass sc-glass--c"><span>Privacy</span><b>Nothing about the family flows to you</b></div>
       </div>
     ),
   },
