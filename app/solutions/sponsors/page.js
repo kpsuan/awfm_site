@@ -13,8 +13,8 @@ export default function Sponsors() {
       kicker="For sponsors"
       title="€30 opens a family’s whole care plan"
       lead="Paid once, for the whole team. Your gift covers their platform fee — it never passes through anyone’s pockets, and nothing about the family flows back to you."
-      image="https://res.cloudinary.com/de3kbbv2o/video/upload/so_1,f_auto,q_auto,w_1400,ar_5:4,c_fill,g_auto/v1791184558/affectionate-couple-embracing-in-urban-canal-setti-2026-10-02-19-21-48-utc_oggy0e.jpg"
-      imageAlt="Two people embracing beside a canal."
+      image="https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_1400,ar_5:4,c_fill,g_auto/v1791962846/0.1_wpqlos.jpg"
+      imageAlt="Two people planning together over a laptop at a café table."
       ctas={[{ label: 'Sponsor a family — €30', href: SPONSOR_URL }, { label: 'Sponsoring as an organization?', href: '/solutions/organizations/' }]}
       stepsTitle="How your €30 travels"
       steps={[
