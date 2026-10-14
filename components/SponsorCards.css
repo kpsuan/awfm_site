@@ -17,30 +17,30 @@
 .sc-badge--amber { background: #d98a1d; }
 .sc-badge--violet { background: #6d5bd0; }
 
-.sc-media { position: relative; margin: 0 -1px; border-radius: 20px; background: #1d1519; overflow: hidden; display: grid; place-items: center; padding: 26px; }
+.sc-media { position: relative; margin: 0 -1px; border-radius: 20px; background: radial-gradient(80% 70% at 30% 20%, #fbeaf6 0%, transparent 70%), radial-gradient(70% 70% at 90% 100%, #ece6fb 0%, transparent 70%), #f6f1f5; overflow: hidden; display: grid; place-items: center; padding: 26px; }
 .sc-photo { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; display: block; }
-.sc-media--family .sc-photo { width: min(440px, 100%); height: 82%; opacity: 0.9; }
-.sc-photo--framed { border: 1px solid rgba(255, 255, 255, 0.25); }
+.sc-media--family .sc-photo { width: min(440px, 100%); height: 82%; box-shadow: 0 24px 50px -28px rgba(38, 32, 59, 0.45); }
+.sc-photo--framed { box-shadow: 0 24px 50px -28px rgba(38, 32, 59, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.8); }
 .sc-glass {
-  position: absolute; display: grid; gap: 4px; padding: 14px 16px; border-radius: 14px; color: #fff; max-width: 230px;
-  background: rgba(40, 30, 36, 0.62); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  position: absolute; display: grid; gap: 4px; padding: 14px 16px; border-radius: 14px; color: var(--ink); max-width: 230px;
+  background: rgba(255, 255, 255, 0.78); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: 0 20px 40px -22px rgba(38, 32, 59, 0.4);
   opacity: 0; transform: translateY(10px); transition: opacity 0.4s ease, transform 0.4s ease;
 }
 .sc-card.is-open .sc-glass { opacity: 1; transform: none; }
 .sc-card.is-open .sc-glass--b { transition-delay: 0.1s; }
 .sc-card.is-open .sc-glass--c { transition-delay: 0.2s; }
-.sc-glass span { font-size: 12px; color: rgba(255, 255, 255, 0.65); }
+.sc-glass span { font-size: 12px; color: var(--faint); }
 .sc-glass b { font-family: var(--font-heading); font-size: 17px; font-weight: 500; line-height: 1.25; }
-.sc-glass em { font-style: normal; font-size: 12px; color: rgba(255, 255, 255, 0.6); }
+.sc-glass em { font-style: normal; font-size: 12px; color: var(--muted); }
 .sc-glass--a { left: 24px; top: 26px; }
 .sc-glass--a b { font-size: 28px; font-weight: 400; }
 .sc-glass--b { right: 24px; top: 34%; }
-.sc-ok { color: #6ee0ad; }
+.sc-ok { color: #157a46; }
 .sc-glass--c { left: 15%; bottom: 24px; }
 .sc-glass--c b { font-size: 15px; }
 .sc-icons { display: grid; grid-template-columns: repeat(3, 44px); gap: 16px; }
-.sc-icons span { width: 44px; height: 44px; border-radius: 99px; display: grid; place-items: center; color: rgba(255, 255, 255, 0.85); background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); }
+.sc-icons span { width: 44px; height: 44px; border-radius: 99px; display: grid; place-items: center; color: var(--brand); background: #fff; border: 1px solid #ecdfea; box-shadow: 0 10px 22px -16px rgba(38, 32, 59, 0.4); }
 .sc-icons svg { width: 19px; height: 19px; }
 
 .sc-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; padding: 22px 24px 26px; background: #fff; min-width: 0; }
