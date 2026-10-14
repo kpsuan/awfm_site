@@ -5,8 +5,8 @@ import './SiteFooter.css';
 
 const HELLO = 'help@awholefamilymatter.com';
 // Engraved family-under-the-sky illustration; its plain sky blends into the
-// footer ground (#483876), so the content sits on "sky".
-const ART = 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_2400/v1791980820/Family_Beneath_the_Vast_Purple_Sky_u340vm.png';
+// footer ground (#a499d1), so the content sits on "sky".
+const ART = 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_2400/v1791980820/Etched_Lavender_Family_Horizon_w6boif.png';
 
 const Icon = {
   mail: <path d="M3 6.5h18v11H3zM3.5 7l8.5 6.5L20.5 7" />,
@@ -90,7 +90,7 @@ export default function SiteFooter() {
         </div>
       </div>
 
-      <div className="foot__art" role="img" aria-label="A family standing together in a wide field beneath a purple sky." style={{ backgroundImage: `url(${ART})` }} />
+      <div className="foot__art" role="img" aria-label="A family standing together in a wide field beneath a lavender sky." style={{ backgroundImage: `url(${ART})` }} />
     </footer>
   );
 }
