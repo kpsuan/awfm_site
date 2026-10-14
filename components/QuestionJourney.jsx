@@ -59,7 +59,7 @@ const PPR = {
 };
 
 // Real footage for the video-recording demo (licensed hero clip, cropped).
-const REC_CLIP = 'https://res.cloudinary.com/de3kbbv2o/video/upload/so_4,eo_11,c_crop,w_760,h_600,x_220,y_0/c_scale,w_480/q_auto/v1791179341/smiling-woman-assisted-by-caregiver-in-a-living-ro-2026-10-03-05-37-16-utc_hmz827';
+const REC_CLIP = 'https://res.cloudinary.com/de3kbbv2o/video/upload/so_1,eo_9/c_scale,w_480/q_auto/v1791964556/friendly-woman-waving-and-talking-during-a-video-c-2026-10-03-13-40-08-utc_e9iygh';
 
 const REASON = 'Papa always said we don’t talk about these things. I think that’s exactly why we should — together, before we have to.';
 const MODES = ['Video', 'Audio', 'Text'];
@@ -105,7 +105,7 @@ function Recorder({ on }) {
           <div className="qj-video">
             <video
               src={`${REC_CLIP}.mp4`}
-              poster={`${REC_CLIP.replace('so_4,eo_11', 'so_6')}.jpg`}
+              poster={`${REC_CLIP.replace('so_1,eo_9', 'so_8')}.jpg`}
               muted
               loop
               autoPlay
