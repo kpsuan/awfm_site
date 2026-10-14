@@ -231,83 +231,63 @@ function Tabs({ active }) {
   );
 }
 
+const DWELL = 6500;
+
+// Teton-style stage: a large artwork panel holding the app mock, with a
+// frosted numbered list floating top-left. Click a feature, or let it
+// auto-advance (a thin bar shows the time left) while the stage is in view.
 export default function CareTeamShowcase() {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
-  const [scrollMode, setScrollMode] = useState(false);
+  const [inView, setInView] = useState(false);
   const root = useRef(null);
-  const track = useRef(null);
 
-  // Desktop: the section pins while the visitor scrolls through it; each
-  // stretch of scroll advances one feature.
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
-    const set = () => setScrollMode(mq.matches);
-    set();
-    mq.addEventListener('change', set);
-    return () => mq.removeEventListener('change', set);
+    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), { threshold: 0.35 });
+    io.observe(root.current);
+    return () => io.disconnect();
   }, []);
 
   useEffect(() => {
-    if (!scrollMode) return undefined;
-    const onScroll = () => {
-      const el = track.current;
-      if (!el) return;
-      const r = el.getBoundingClientRect();
-      const span = el.offsetHeight - window.innerHeight;
-      const p = Math.min(Math.max(-r.top / span, 0), 0.999);
-      setActive(Math.floor(p * FEATURES.length));
-    };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [scrollMode]);
+    if (!auto || !inView || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+    const t = setTimeout(() => setActive((a) => (a + 1) % FEATURES.length), DWELL);
+    return () => clearTimeout(t);
+  }, [active, auto, inView]);
 
-  // Mobile / reduced motion: auto-advance while in view until a tap.
-  useEffect(() => {
-    if (scrollMode || !auto || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
-    let timer;
-    const io = new IntersectionObserver(([e]) => {
-      clearInterval(timer);
-      if (e.isIntersecting) timer = setInterval(() => setActive((a) => (a + 1) % FEATURES.length), 5200);
-    }, { threshold: 0.35 });
-    io.observe(root.current);
-    return () => { io.disconnect(); clearInterval(timer); };
-  }, [auto, scrollMode]);
-
-  const pick = (i) => {
-    if (scrollMode && track.current) {
-      const el = track.current;
-      const span = el.offsetHeight - window.innerHeight;
-      const top = el.getBoundingClientRect().top + window.scrollY + span * ((i + 0.5) / FEATURES.length);
-      window.scrollTo({ top, behavior: 'smooth' });
-      return;
-    }
-    setAuto(false);
-    setActive(i);
-  };
-
+  const pick = (i) => { setAuto(false); setActive(i); };
   const Card = FEATURES[active].C;
+
   return (
-    <div className={`ct-track${scrollMode ? ' is-scroll' : ''}`} ref={track} style={{ '--n': FEATURES.length }}>
-    <div className="ct" ref={root}>
-      <div className="ct-list" role="tablist" aria-label="Care team features">
+    <div className="ct-stage" ref={root}>
+      <div className="ct-panel" role="tablist" aria-label="Care team features">
         {FEATURES.map((f, i) => (
           <button
             key={f.title}
             type="button"
             role="tab"
             aria-selected={active === i}
-            className={`ct-item${active === i ? ' is-active' : ''}${active === i && auto && !scrollMode ? ' is-timed' : ''}`}
+            className={`ct-row${active === i ? ' is-active' : ''}`}
             onClick={() => pick(i)}
           >
-            <strong>{f.title}</strong>
-            <span>{f.body}</span>
-            <i className="ct-item__timer" />
+            <b className="ct-row__n">{String(i + 1).padStart(2, '0')}</b>
+            <span className="ct-row__txt">
+              <strong>{f.title}</strong>
+              <em>{f.body}</em>
+            </span>
+            {active === i && (
+              <i className="ct-row__bar">
+                <i
+                  key={`${active}-${auto}-${inView}`}
+                  className={auto && inView ? 'is-running' : 'is-full'}
+                  style={{ animationDuration: `${DWELL}ms` }}
+                />
+              </i>
+            )}
           </button>
         ))}
       </div>
 
+      <div className="ct-stage__app">
       <div className="ct-app" aria-hidden="true">
         <div className="ct-app__banner" />
         <div className="ct-app__head">
@@ -330,7 +310,7 @@ export default function CareTeamShowcase() {
           <div className="ct-swap" key={active}><Card /></div>
         </div>
       </div>
-    </div>
+      </div>
     </div>
   );
 }

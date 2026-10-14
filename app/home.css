@@ -132,7 +132,9 @@
 }
 .diff__item--wide { grid-column: span 3; }
 @media (max-width: 960px) {
-  .diff { grid-template-columns: 1fr; }
+  .diff { grid-template-columns: minmax(0, 1fr); }
+  .diff__art--we, .diff__art--money { flex-wrap: wrap; gap: 14px; }
+  .we-arrow, .diff__link { display: none; }
   .diff__item, .diff__item--wide { grid-column: auto; grid-template-columns: 1fr; }
 }
 .diff__item h3 { font-size: 23px; font-weight: 400; line-height: 1.2; color: var(--ink); }
