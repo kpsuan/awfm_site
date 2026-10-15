@@ -14,7 +14,7 @@ import './home.css';
 
 export const metadata = {
   alternates: { canonical: '/' },
-  title: { absolute: 'A Whole Family Matter — Interdependent care planning' },
+  title: { absolute: 'AWFM - Social Impact Startup' },
 };
 
 
@@ -73,10 +73,8 @@ export default function Home() {
   return (
     <>
       <FilmHero
-        kicker="A healthcare app for end-of-life care"
-        title="Every day, 20,000 of our people die in pain, in debt, and in silence."
+        title="Interdependent care planning for medical migrants and their collectivist families across the globe."
         longTitle
-        sub="A Whole Family Matter brings your three circles of care into one app, so they can plan, fund, and advocate for a dignified death — together."
         prompts={[
           { chip: 'Q8', text: 'How do you really feel about death and dying?' },
           { chip: 'Q5', text: 'Who are the most important people in your life?' },

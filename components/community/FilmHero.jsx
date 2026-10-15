@@ -89,9 +89,9 @@ export default function FilmHero({ kicker, title, sub, prompts, primary, seconda
           <div className={`cl-hero__scrim${image ? ' cl-hero__scrim--still' : ''}`} />
         </div>
         <div className="cl-hero__inner">
-          <span className="cl-eyebrow" data-reveal>{kicker}</span>
+          {kicker && <span className="cl-eyebrow" data-reveal>{kicker}</span>}
           <h1 className={`cl-h1${longTitle ? ' cl-h1--long' : ''}`} data-reveal>{title}</h1>
-          <p className="cl-sub" data-reveal>{sub}</p>
+          {sub && <p className="cl-sub" data-reveal>{sub}</p>}
           {prompts && prompts.length > 0 && (
             <div className="cl-ask" data-reveal aria-hidden="true">
               <TypedPrompt prompts={prompts} />

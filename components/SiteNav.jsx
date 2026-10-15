@@ -8,7 +8,7 @@ import { MENUS } from './NavMenus';
 import './SiteNav.css';
 
 const LINKS = [
-  { menu: 'product', label: 'Product' },
+  { menu: 'product', label: 'Products' },
   { menu: 'solutions', label: 'Solutions' },
   { menu: 'resources', label: 'Resources' },
   { href: '/pricing/', label: 'Pricing' },

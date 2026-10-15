@@ -26,6 +26,9 @@
 .nav__brand img { width: 34px; height: 34px; }
 .nav__brand strong { font-weight: 700; }
 .nav__links { display: flex; align-items: center; gap: clamp(16px, 2vw, 28px); }
+.nav__links > a { /* same box as the dropdown buttons, so Pricing sits on their line */
+  display: inline-flex; align-items: center; line-height: inherit;
+}
 .nav__links a {
   font-family: var(--font-heading);
   font-size: 15px;
@@ -112,7 +115,7 @@
 .nav__menubtn:focus-visible { outline: 2px solid var(--brand); outline-offset: 4px; border-radius: 4px; }
 .nav--overlay:not(.is-scrolled):not(.is-open) .nav__menubtn { color: rgba(255, 255, 255, 0.82); }
 
-.nav__menu { position: relative; }
+.nav__menu { position: relative; display: flex; align-items: center; }
 .mega {
   position: absolute; top: calc(100% + 14px); left: 50%; width: 340px; padding: 8px;
   border-radius: 14px; background: #fff;

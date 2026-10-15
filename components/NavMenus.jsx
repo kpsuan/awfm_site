@@ -15,9 +15,9 @@ const List = ({ items, close }) => (
 export function ProductMenu({ close }) {
   return (
     <List close={close} items={[
-      { href: '/', title: 'Platform', body: 'The care planning app for your whole family.' },
-      { href: '/community/', title: 'Community', body: 'Free courses and support for medical migrants and their families.' },
-      { href: '/security/', title: 'Security', body: 'How we protect your family’s most private conversations.' },
+      { href: APP_URL, title: 'Work App', body: 'Plan to pool and learn to advocate for each other on our Collective Work App.' },
+      { href: '/community/', title: 'Community', body: 'Get educational and collaborative support in our Community Action Center.' },
+      { href: '/security/', title: 'GDPR Security', body: 'Learn how we protect what matters most — your family’s collective work products.' },
     ]} />
   );
 }
@@ -25,10 +25,10 @@ export function ProductMenu({ close }) {
 export function SolutionsMenu({ close }) {
   return (
     <List close={close} items={[
-      { href: '/solutions/families/', title: 'Families & medical migrants', body: 'Lead your three circles of care as one team.' },
-      { href: '/solutions/sponsors/', title: 'Sponsors', body: '€30 opens a family’s whole care plan.' },
-      { href: '/solutions/organizations/', title: 'Organizations', body: 'Sponsor many families with one receipt.' },
-      { href: `${APP_URL}/facilitator-preview`, title: 'ICP Facilitators', body: 'Guides from your own diaspora.', soon: true },
+      { href: '/solutions/families/', title: 'Medical Migrants', body: 'Lead your whole family support system to plan, pool, and advocate together.' },
+      { href: '/solutions/sponsors/', title: 'Sponsors', body: '€30 helps a biological family or 🏳️‍🌈 chosen care team get started.' },
+      { href: '/solutions/organizations/', title: 'Organizations', body: 'Help many families and teams out of kindness and compassion.' },
+      { href: `${APP_URL}/facilitator-preview`, title: 'ICP Facilitators', body: 'Get an interdependent care planning facilitator. Discover our ICP Facilitator Network.', soon: true },
     ]} />
   );
 }
@@ -37,8 +37,8 @@ export function ResourcesMenu({ close, featured }) {
   return (
     <div className="mm-split">
       <List close={close} items={[
-        { href: '/blog/', title: 'Blog', body: 'Research, stories and product notes.' },
-        { href: '/events/', title: 'Events', body: 'Launches, conferences and community sessions.' },
+        { href: '/blog/', title: 'Blog', body: 'Research, stories, product notes.' },
+        { href: '/events/', title: 'Events', body: 'Launches, webinars, conferences.' },
         { href: HELP_URL, title: 'Help Center', body: 'Guides and answers for every role.' },
       ]} />
       {featured && (
@@ -57,9 +57,9 @@ export function ResourcesMenu({ close, featured }) {
 export function CompanyMenu({ close }) {
   return (
     <List close={close} items={[
-      { href: '/about/', title: 'Our story', body: 'Why we exist, and where we’re going.' },
-      { href: '/team/', title: 'Team', body: 'The three Filipino innovators behind it.' },
-      { href: `${APP_URL}/legal`, title: 'Privacy & Legal', body: 'Policies, terms and your rights.' },
+      { href: '/about/', title: 'Our Story', body: 'Our why, what we believe, where we’re going.' },
+      { href: '/team/', title: 'Startup Team', body: 'Filipino innovators fighting for social justice.' },
+      { href: `${APP_URL}/legal`, title: 'Privacy & Legal', body: 'Policies and terms, consent and your rights.' },
     ]} />
   );
 }
