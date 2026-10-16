@@ -18,18 +18,18 @@ const TEAM = [
     bio: 'Created Interdependent Care Planning and leads A Whole Family Matter’s mission to break the silence around death and dying for medical migrants and their collectivist families.',
   },
   {
-    name: 'Kismet Fran Suan',
-    photo: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_240/v1791969635/Ellipse_43_awk9k5.png',
-    role: 'ICP Platform Innovation Leader',
-    school: 'University of the Philippines – Visayas',
-    bio: 'Leads product research, design and full-stack development — turning care planning that was traditionally done on paper into a healthcare app built for whole families.',
-  },
-  {
     name: 'William Staclara',
     photo: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_240/v1791969634/Ellipse_44_bvsmwb.png',
     role: 'ICP Research & Community Leader',
     school: 'University of the Philippines – Los Baños',
     bio: 'Leads the research behind Interdependent Care Planning and the community where medical migrants and their families learn and support each other.',
+  },
+  {
+    name: 'Kismet Fran Suan',
+    photo: 'https://res.cloudinary.com/de3kbbv2o/image/upload/f_auto,q_auto,w_240/v1791969635/Ellipse_43_awk9k5.png',
+    role: 'ICP Platform Innovation Leader',
+    school: 'University of the Philippines – Visayas',
+    bio: 'Leads product research, design and full-stack development — turning care planning that was traditionally done on paper into a healthcare app built for whole families.',
   },
 ];
 
