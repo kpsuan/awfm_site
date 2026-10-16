@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
             legalName: LEGAL_ENTITY.name,
             url: SITE_URL,
             logo: `${SITE_URL}/logo.png`,
-            email: LEGAL_ENTITY.email,
+            email: LEGAL_ENTITY.infoEmail,
             telephone: LEGAL_ENTITY.phone,
             address: { '@type': 'PostalAddress', streetAddress: 'Fluwelen Burgwal 58', postalCode: '2511 CJ', addressLocality: 'The Hague', addressCountry: 'NL' },
             sameAs: ['https://awholefamilymatter.app', 'https://awholefamilymatter.com'],

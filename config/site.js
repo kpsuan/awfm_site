@@ -13,6 +13,8 @@ export const LEGAL_ENTITY = {
   name: 'A Whole Family Matter B.V.',
   address: 'Fluwelen Burgwal 58, 2511 CJ The Hague, Netherlands',
   kvk: '42050497',
-  email: 'privacy@awholefamilymatter.com',
+  email: 'privacy@awholefamilymatter.com', // legal & data requests
+  infoEmail: 'info@awholefamilymatter.com', // general contact
+  helpEmail: 'help@awholefamilymatter.com', // support
   phone: '+31 6 12523334',
 };

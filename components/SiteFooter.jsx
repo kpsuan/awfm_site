@@ -53,7 +53,7 @@ export default function SiteFooter() {
           <strong>{LEGAL_ENTITY.name}</strong>
           <span>{LEGAL_ENTITY.address}</span>
           <span>KVK {LEGAL_ENTITY.kvk}</span>
-          <a href={`mailto:${LEGAL_ENTITY.email}`}>{LEGAL_ENTITY.email}</a>
+          <a href={`mailto:${LEGAL_ENTITY.infoEmail}`}>{LEGAL_ENTITY.infoEmail}</a>
           <span>{LEGAL_ENTITY.phone}</span>
         </p>
       </div>
