@@ -27,7 +27,7 @@ export function SolutionsMenu({ close }) {
     <List close={close} items={[
       { href: '/solutions/families/', title: 'Medical Migrants', body: 'Lead your whole family support system to plan, pool, and advocate together.' },
       { href: '/solutions/sponsors/', title: 'Sponsors', body: '€30 helps a biological family or 🏳️‍🌈 chosen care team get started.' },
-      { href: '/solutions/organizations/', title: 'Organizations', body: 'Help many families and teams out of kindness and compassion.' },
+      { href: '/solutions/organizations/', title: 'Organizations', body: 'Help many families and teams, out of kindness and compassion for their hard work.' },
       { href: `${APP_URL}/facilitator-preview`, title: 'ICP Facilitators', body: 'Get an interdependent care planning facilitator. Discover our ICP Facilitator Network.', soon: true },
     ]} />
   );
