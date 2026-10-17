@@ -4,14 +4,14 @@ import { useEffect, useLayoutEffect, useState } from 'react';
 
 export const useIsoLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-// Hero background montage (licensed Envato clips on Cloudinary).
+// Hero background montage — clips chosen for the communities we serve
+// (Cloudinary collection, 16 Oct 2026).
 export const HERO_VIDEOS = [
-  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791178169/healthcare-provider-holding-elderly-patient-s-hand-2026-10-02-19-15-58-utc_rzhb0i.mp4',
-  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791179341/smiling-woman-assisted-by-caregiver-in-a-living-ro-2026-10-03-05-37-16-utc_hmz827.mp4',
-  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791184558/affectionate-couple-embracing-in-urban-canal-setti-2026-10-02-19-21-48-utc_oggy0e.mp4',
-  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791183998/healthcare-worker-with-senior-in-green-urban-park-2026-10-02-14-07-52-utc_ubgjuy.mp4',
-  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791963282/loving-father-drawing-with-child-at-home-2026-10-02-11-03-30-utc_wleowv.mp4',
-  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1791963285/man-meditating-on-a-rooftop-at-sunrise-2026-10-02-22-56-32-utc_q1ko9r.mp4',
+  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1792146639/ElevenLabs_video_seedance-2-5-video-edit_please_turn_whi_2026-10-16T10_18_16_x42kpj.mp4',
+  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1792146620/ElevenLabs_video_seedance-2-5_Turn_this_image_2026-10-16T10_29_19_rs6hwo.mp4',
+  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1792146598/compassionate-nurse-supporting-senior-man-outdoors-2026-10-03-13-05-19-utc_li7fb5.mp4',
+  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1792154925/ElevenLabs_video_seedance-2-5-video-edit_change_couple_e_2026-10-16T11_28_05_ccluyc.mp4',
+  'https://res.cloudinary.com/de3kbbv2o/video/upload/f_auto,q_auto:best,w_1920/v1792146649/ElevenLabs_video_seedance-2-5_Create_video_of_2026-10-16T07_38_48_izomef.mp4',
 ];
 const HERO_CLIP_SECONDS = 7;
 
